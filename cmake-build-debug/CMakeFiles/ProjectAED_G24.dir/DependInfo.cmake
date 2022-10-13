@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Schedule.cpp" "CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj" "gcc" "CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj.d"
+  "C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Student.cpp" "CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj" "gcc" "CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj.d"
   "C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/main.cpp" "CMakeFiles/ProjectAED_G24.dir/main.cpp.obj" "gcc" "CMakeFiles/ProjectAED_G24.dir/main.cpp.obj.d"
   )
 

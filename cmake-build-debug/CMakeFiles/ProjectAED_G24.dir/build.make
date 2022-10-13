@@ -82,19 +82,51 @@ CMakeFiles/ProjectAED_G24.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectAED_G24.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\main.cpp -o CMakeFiles\ProjectAED_G24.dir\main.cpp.s
 
+CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj: CMakeFiles/ProjectAED_G24.dir/flags.make
+CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj: ../Schedule.cpp
+CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj: CMakeFiles/ProjectAED_G24.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj -MF CMakeFiles\ProjectAED_G24.dir\Schedule.cpp.obj.d -o CMakeFiles\ProjectAED_G24.dir\Schedule.cpp.obj -c C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\Schedule.cpp
+
+CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\Schedule.cpp > CMakeFiles\ProjectAED_G24.dir\Schedule.cpp.i
+
+CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\Schedule.cpp -o CMakeFiles\ProjectAED_G24.dir\Schedule.cpp.s
+
+CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj: CMakeFiles/ProjectAED_G24.dir/flags.make
+CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj: ../Student.cpp
+CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj: CMakeFiles/ProjectAED_G24.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj -MF CMakeFiles\ProjectAED_G24.dir\Student.cpp.obj.d -o CMakeFiles\ProjectAED_G24.dir\Student.cpp.obj -c C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\Student.cpp
+
+CMakeFiles/ProjectAED_G24.dir/Student.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjectAED_G24.dir/Student.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\Student.cpp > CMakeFiles\ProjectAED_G24.dir\Student.cpp.i
+
+CMakeFiles/ProjectAED_G24.dir/Student.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectAED_G24.dir/Student.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\Student.cpp -o CMakeFiles\ProjectAED_G24.dir\Student.cpp.s
+
 # Object files for target ProjectAED_G24
 ProjectAED_G24_OBJECTS = \
-"CMakeFiles/ProjectAED_G24.dir/main.cpp.obj"
+"CMakeFiles/ProjectAED_G24.dir/main.cpp.obj" \
+"CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj" \
+"CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj"
 
 # External object files for target ProjectAED_G24
 ProjectAED_G24_EXTERNAL_OBJECTS =
 
 ProjectAED_G24.exe: CMakeFiles/ProjectAED_G24.dir/main.cpp.obj
+ProjectAED_G24.exe: CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj
+ProjectAED_G24.exe: CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj
 ProjectAED_G24.exe: CMakeFiles/ProjectAED_G24.dir/build.make
 ProjectAED_G24.exe: CMakeFiles/ProjectAED_G24.dir/linklibs.rsp
 ProjectAED_G24.exe: CMakeFiles/ProjectAED_G24.dir/objects1.rsp
 ProjectAED_G24.exe: CMakeFiles/ProjectAED_G24.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ProjectAED_G24.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\InesO\Desktop\feup\2ano\1semestre\AED\ProjectAED_G24\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ProjectAED_G24.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProjectAED_G24.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -128,6 +128,54 @@ ProjectAED_G24/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/build
 .PHONY : ProjectAED_G24/fast
 
+Schedule.obj: Schedule.cpp.obj
+.PHONY : Schedule.obj
+
+# target to build an object file
+Schedule.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj
+.PHONY : Schedule.cpp.obj
+
+Schedule.i: Schedule.cpp.i
+.PHONY : Schedule.i
+
+# target to preprocess a source file
+Schedule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.i
+.PHONY : Schedule.cpp.i
+
+Schedule.s: Schedule.cpp.s
+.PHONY : Schedule.s
+
+# target to generate assembly for a file
+Schedule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.s
+.PHONY : Schedule.cpp.s
+
+Student.obj: Student.cpp.obj
+.PHONY : Student.obj
+
+# target to build an object file
+Student.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj
+.PHONY : Student.cpp.obj
+
+Student.i: Student.cpp.i
+.PHONY : Student.i
+
+# target to preprocess a source file
+Student.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Student.cpp.i
+.PHONY : Student.cpp.i
+
+Student.s: Student.cpp.s
+.PHONY : Student.s
+
+# target to generate assembly for a file
+Student.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Student.cpp.s
+.PHONY : Student.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +209,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProjectAED_G24
+	@echo ... Schedule.obj
+	@echo ... Schedule.i
+	@echo ... Schedule.s
+	@echo ... Student.obj
+	@echo ... Student.i
+	@echo ... Student.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

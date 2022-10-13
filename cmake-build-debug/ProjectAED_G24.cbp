@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Schedule.cpp">
+			<Option target="ProjectAED_G24"/>
+		</Unit>
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Schedule.h">
+			<Option target="ProjectAED_G24"/>
+		</Unit>
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Student.cpp">
+			<Option target="ProjectAED_G24"/>
+		</Unit>
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Student.h">
+			<Option target="ProjectAED_G24"/>
+		</Unit>
 		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/main.cpp">
 			<Option target="ProjectAED_G24"/>
 		</Unit>

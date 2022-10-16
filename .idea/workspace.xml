@@ -15,17 +15,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc87d5b2-2766-4448-b049-14a9e768d71a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Schedule.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Schedule.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Student.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Student.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UniClass.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UniClass.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-49e2b9415ab3d850296c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-13T14-02-16-0609.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ProjectAED_G24-Debug-4b772408363de77cc86a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Schedule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Schedule.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Schedule.h" beforeDir="false" afterPath="$PROJECT_DIR$/Schedule.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Student.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student.h" beforeDir="false" afterPath="$PROJECT_DIR$/Student.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniClass.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UniClass.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniClass.h" beforeDir="false" afterPath="$PROJECT_DIR$/UniClass.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/build.make" afterDir="false" />
@@ -75,6 +72,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -83,12 +81,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="ProjectAED_G24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjectAED_G24" TARGET_NAME="ProjectAED_G24" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjectAED_G24" RUN_TARGET_NAME="ProjectAED_G24">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectAED_G24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjectAED_G24" TARGET_NAME="ProjectAED_G24" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjectAED_G24" RUN_TARGET_NAME="ProjectAED_G24">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -102,7 +100,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665669285494</updated>
-      <workItem from="1665669287946" duration="4482000" />
+      <workItem from="1665669287946" duration="11034000" />
+      <workItem from="1665956291985" duration="4833000" />
     </task>
     <servers />
   </component>

@@ -176,6 +176,30 @@ Student.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Student.cpp.s
 .PHONY : Student.cpp.s
 
+UniClass.obj: UniClass.cpp.obj
+.PHONY : UniClass.obj
+
+# target to build an object file
+UniClass.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/UniClass.cpp.obj
+.PHONY : UniClass.cpp.obj
+
+UniClass.i: UniClass.cpp.i
+.PHONY : UniClass.i
+
+# target to preprocess a source file
+UniClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/UniClass.cpp.i
+.PHONY : UniClass.cpp.i
+
+UniClass.s: UniClass.cpp.s
+.PHONY : UniClass.s
+
+# target to generate assembly for a file
+UniClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/UniClass.cpp.s
+.PHONY : UniClass.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -215,6 +239,9 @@ help:
 	@echo ... Student.obj
 	@echo ... Student.i
 	@echo ... Student.s
+	@echo ... UniClass.obj
+	@echo ... UniClass.i
+	@echo ... UniClass.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

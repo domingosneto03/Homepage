@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProjectAED_G24.dir/Schedule.cpp.obj.d"
   "CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj"
   "CMakeFiles/ProjectAED_G24.dir/Student.cpp.obj.d"
+  "CMakeFiles/ProjectAED_G24.dir/UniClass.cpp.obj"
+  "CMakeFiles/ProjectAED_G24.dir/UniClass.cpp.obj.d"
   "CMakeFiles/ProjectAED_G24.dir/main.cpp.obj"
   "CMakeFiles/ProjectAED_G24.dir/main.cpp.obj.d"
   "ProjectAED_G24.exe"

@@ -1,6 +1,3 @@
-//
-// Created by InesO on 13/10/2022.
-//
 
 #include "Schedule.h"
 

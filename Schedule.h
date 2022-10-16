@@ -1,6 +1,3 @@
-//
-// Created by InesO on 13/10/2022.
-//
 
 #ifndef PROJECTAED_G24_HORARIOS_H
 #define PROJECTAED_G24_HORARIOS_H

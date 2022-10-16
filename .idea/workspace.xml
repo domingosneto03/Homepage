@@ -8,26 +8,25 @@
       <config projectName="ProjectAED_G24" targetName="ProjectAED_G24" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc87d5b2-2766-4448-b049-14a9e768d71a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Application.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Menu.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Menu.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Schedule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Schedule.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Schedule.h" beforeDir="false" afterPath="$PROJECT_DIR$/Schedule.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Student.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Student.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Student.h" beforeDir="false" afterPath="$PROJECT_DIR$/Student.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniClass.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UniClass.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniClass.h" beforeDir="false" afterPath="$PROJECT_DIR$/UniClass.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/objects1.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/progress.make" afterDir="false" />
@@ -36,6 +35,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ProjectAED_G24.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ProjectAED_G24.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ProjectAED_G24.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ProjectAED_G24.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665669285494</updated>
       <workItem from="1665669287946" duration="11034000" />
-      <workItem from="1665956291985" duration="4833000" />
+      <workItem from="1665956291985" duration="7225000" />
     </task>
     <servers />
   </component>

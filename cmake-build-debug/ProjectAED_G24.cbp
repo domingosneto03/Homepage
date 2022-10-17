@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Application.cpp">
+			<Option target="ProjectAED_G24"/>
+		</Unit>
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Application.h">
+			<Option target="ProjectAED_G24"/>
+		</Unit>
 		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Menu.cpp">
 			<Option target="ProjectAED_G24"/>
 		</Unit>

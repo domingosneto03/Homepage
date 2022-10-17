@@ -1,8 +1,6 @@
 #include <iostream>
-#include "Application.cpp"
-
+#include "Menu.h"
 int main() {
-    Application() ;
     Menu menu = Menu();
     return 0;
 }

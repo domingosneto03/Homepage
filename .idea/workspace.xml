@@ -15,11 +15,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc87d5b2-2766-4448-b049-14a9e768d71a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Application.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Menu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Menu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Application.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniClass.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UniClass.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniClass.h" beforeDir="false" afterPath="$PROJECT_DIR$/UniClass.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectAED_G24.dir/build.make" afterDir="false" />
@@ -81,12 +83,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="ProjectAED_G24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjectAED_G24" TARGET_NAME="ProjectAED_G24" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjectAED_G24" RUN_TARGET_NAME="ProjectAED_G24">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="ProjectAED_G24" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjectAED_G24" TARGET_NAME="ProjectAED_G24" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjectAED_G24" RUN_TARGET_NAME="ProjectAED_G24">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -101,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1665669285494</updated>
       <workItem from="1665669287946" duration="11034000" />
-      <workItem from="1665956291985" duration="7225000" />
+      <workItem from="1665956291985" duration="7644000" />
+      <workItem from="1666021606451" duration="9573000" />
     </task>
     <servers />
   </component>

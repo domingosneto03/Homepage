@@ -2,12 +2,15 @@
 #define PROJECT_AED_MENU_CPP
 
 #include "Menu.h"
+#include "Application.h"
 #include <iostream>
 
 using namespace std;
 
 Menu::Menu() {
-    mainMenu();
+    Application app = Application();
+    app.readUniclasses();
+    //mainMenu();
 }
 
 void Menu::mainMenu() {

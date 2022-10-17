@@ -128,6 +128,30 @@ ProjectAED_G24/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/build
 .PHONY : ProjectAED_G24/fast
 
+Application.obj: Application.cpp.obj
+.PHONY : Application.obj
+
+# target to build an object file
+Application.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Application.cpp.obj
+.PHONY : Application.cpp.obj
+
+Application.i: Application.cpp.i
+.PHONY : Application.i
+
+# target to preprocess a source file
+Application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Application.cpp.i
+.PHONY : Application.cpp.i
+
+Application.s: Application.cpp.s
+.PHONY : Application.s
+
+# target to generate assembly for a file
+Application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectAED_G24.dir\build.make CMakeFiles/ProjectAED_G24.dir/Application.cpp.s
+.PHONY : Application.cpp.s
+
 Menu.obj: Menu.cpp.obj
 .PHONY : Menu.obj
 
@@ -257,6 +281,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProjectAED_G24
+	@echo ... Application.obj
+	@echo ... Application.i
+	@echo ... Application.s
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s

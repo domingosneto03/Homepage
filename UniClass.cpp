@@ -2,13 +2,23 @@
 #include <string>
 using namespace std;
 
-UniClass::UniClass(int classCode, int ucCode, int weekDay, float startHour, float duration, CLASS_TYPE classType) : CLASSCODE(classCode), UCCODE(ucCode), WEEKDAY(weekDay), STARTHOUR(startHour), DURATION(duration), CLASSTYPE(classType) {}
+UniClass::UniClass(string classCode, string ucCode, int weekDay, double startHour, double duration, std::string classType) : CLASSCODE(classCode), UCCODE(ucCode), WEEKDAY(weekDay), STARTHOUR(startHour), DURATION(duration) {
+    if (classType=="TP"){
+        CLASSTYPE = TP;
+    }
+    else if(classType=="T"){
+        CLASSTYPE = T;
+    }
+    else {
+        CLASSTYPE = PL;
+    }
+}
 
-int UniClass::getClassCode() const{
+string UniClass::getClassCode() const{
     return CLASSCODE;
 }
 
-int UniClass::getUcCode() const{
+string UniClass::getUcCode() const{
     return UCCODE;
 }
 
@@ -16,11 +26,11 @@ int UniClass::getWeekDay() const {
     return WEEKDAY;
 }
 
-float UniClass::getStartHour() const {
+double UniClass::getStartHour() const {
     return STARTHOUR;
 }
 
-float UniClass::getDuration() const {
+double UniClass::getDuration() const {
     return DURATION;
 }
 
@@ -28,11 +38,11 @@ CLASS_TYPE UniClass::getClassType() const {
     return CLASSTYPE;
 }
 
-void UniClass::setClassCode(int classCode) {
+void UniClass::setClassCode(string classCode) {
     this -> CLASSCODE = classCode;
 }
 
-void UniClass::setUcCode(int ucCode) {
+void UniClass::setUcCode(string ucCode) {
     this -> UCCODE = ucCode;
 }
 
@@ -40,11 +50,11 @@ void UniClass::setWeekDay(int weekDay) {
     this -> WEEKDAY = weekDay;
 }
 
-void UniClass::setStartHour(float startHour) {
+void UniClass::setStartHour(double startHour) {
     this-> STARTHOUR = startHour;
 }
 
-void UniClass::setDuration(float duration) {
+void UniClass::setDuration(double duration) {
     this -> DURATION = duration;
 }
 

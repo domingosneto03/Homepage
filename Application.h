@@ -9,6 +9,7 @@
 class Application {
 public:
     void readUniclasses();
+    void readStudents();
 };
 
 

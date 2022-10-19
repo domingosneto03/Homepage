@@ -98,13 +98,34 @@ vector<Student> Application::readStudents() {
     int teste = 0;
     teste++;
     return list;
-
 }
 
-/*
-vector<string> Application::StudentClass(){
+//neste metodo criamos uma lista que junta tudo do primeiro e ultimo ficheiros
+vector<studentAndClass> Application::StudentClass() {
     vector<Student> list = readStudents();
     vector<UniClass> uniClassList = readUniclasses();
-    list[0].getClass();
+    vector<studentAndClass> studentAndClasses = {};
 
-}*/
+    for (int i = 0; i < uniClassList.size(); ++i) {
+        for (Student st: list) {
+            vector<string> st_class = st.getClass();
+            if (st_class[1] == uniClassList[i].getClassCode() && st_class[0] == uniClassList[i].getUcCode()) {
+                studentAndClasses.push_back(
+                        {st.getStudentCode(), st.getName(), uniClassList[i].getClassCode(), uniClassList[i].getUcCode(), uniClassList[i].getWeekDay(),
+                         uniClassList[i].getClassType(), uniClassList[i].getDuration()});
+            }
+        }
+    }
+    return studentAndClasses;
+}
+
+vector<studentAndClass> Application::StudentSchedule(string studentCode) {
+    vector<studentAndClass> studentAndClasses = StudentClass();
+    vector<studentAndClass> studentSchedule = {};
+    for (int i = 0; i < studentAndClasses.size(); ++i) {
+        if (studentAndClasses[i].studentCode == studentCode) {
+            studentSchedule.push_back(studentAndClasses[i]);
+        }
+    }
+    return studentSchedule;
+}

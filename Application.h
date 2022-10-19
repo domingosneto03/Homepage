@@ -5,12 +5,24 @@
 
 #include "Student.h"
 #include "UniClass.h"
+#include <map>
+
+struct studentAndClass {
+    string studentCode;
+    string name;
+    string classCode;
+    string ucCode;
+    int weekDay;
+    CLASS_TYPE classType;
+    double duration;
+};
 
 class Application {
 public:
     vector<UniClass> readUniclasses();
     vector<Student> readStudents();
-    vector<string> StudentClass();
+    vector<studentAndClass> StudentClass();
+    vector<studentAndClass> StudentSchedule(string studentCode);
 };
 
 

@@ -9,7 +9,7 @@ public:
 private:
     void mainMenu();
 
-    void StudentSchedule();
+    void SchedulePerStudent();
 
     void TurmasMenu();
 

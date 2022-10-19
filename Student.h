@@ -10,19 +10,17 @@ using namespace std;
 class Student {
 
 public:
-        Student(string studentCode, string name,vector<string> Class);
+        Student(int studentCode, string name);
         static bool addSchedules(Schedule schedule);
         void setName(string name);
         string getName();
-        string getStudentCode();
+        int getStudentCode();
         void setStudentCode();
-        void addClass(vector<string> Class);
 
 private:
-    string studentCode;
+    int studentCode;
     string name;
     vector <Schedule>schedules={};
-    vector <vector<string>>classes={};
 
 
 };

@@ -10,7 +10,6 @@ using namespace std;
 Menu::Menu() {
     Application app = Application();
     app.readUniclasses();
-    app.readStudents();
     //mainMenu();
 }
 

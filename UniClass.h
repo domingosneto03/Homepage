@@ -10,8 +10,6 @@ enum CLASS_TYPE {
 
 class UniClass {
 
-
-
 public:
     UniClass(string classCode, string ucCode, int weekDay, double startHour, double duration, string classType);
     string getClassCode() const;

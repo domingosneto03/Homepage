@@ -56,7 +56,11 @@ void Menu::SchedulePerStudent() {
     vector<string> classTypeNames = {"T", "TP", "PL"};
     cout << "Horario da " << nome << ", com up" << option << endl;
     for (int i = 0; i < studentAndClass.size(); i++) {
-        cout << "WeekDay: " << weekdayNames[studentAndClass[i].weekDay] << " | UcCode: " << studentAndClass[i].ucCode << " | ClassCode: " << studentAndClass[i].classCode << " | ClassType: " << classTypeNames[studentAndClass[i].classType] << " | Duration: " << studentAndClass[i].duration << endl;
+        int startHour = studentAndClass[i].startHour;
+        double startMin = (studentAndClass[i].startHour - startHour)*60;
+        int endHour = (studentAndClass[i].startHour + studentAndClass[i].duration);
+        double endMin = (studentAndClass[i].startHour + studentAndClass[i].duration - endHour)*60;
+        cout << "WeekDay: " << weekdayNames[studentAndClass[i].weekDay] << " | UcCode: " << studentAndClass[i].ucCode << " | ClassCode: " << studentAndClass[i].classCode << " | ClassType: " << classTypeNames[studentAndClass[i].classType] << " | Time: " << startHour << ":" << startMin<<"-"<<endHour<<":"<<endMin<< endl;
     }
 }
 

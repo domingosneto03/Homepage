@@ -112,7 +112,7 @@ vector<studentAndClass> Application::StudentClass() {
             if (st_class[1] == uniClassList[i].getClassCode() && st_class[0] == uniClassList[i].getUcCode()) {
                 studentAndClasses.push_back(
                         {st.getStudentCode(), st.getName(), uniClassList[i].getClassCode(), uniClassList[i].getUcCode(), uniClassList[i].getWeekDay(),
-                         uniClassList[i].getClassType(), uniClassList[i].getDuration()});
+                         uniClassList[i].getClassType(),uniClassList[i].getStartHour(),uniClassList[i].getDuration()});
             }
         }
     }

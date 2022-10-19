@@ -47,13 +47,16 @@ void Menu::SchedulePerStudent() {
     vector<studentAndClass> studentAndClass = app.StudentSchedule(option);
     for (int i = 0; i < studentAndClass.size(); i++) {
         if (studentAndClass[i].studentCode == option){
-            nome== studentAndClass[i].name;
+            nome = studentAndClass[i].name;
             break;
         }
     }
+
+    vector<string> weekdayNames = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+    vector<string> classTypeNames = {"T", "TP", "PL"};
     cout << "Horario da " << nome << ", com up" << option << endl;
     for (int i = 0; i < studentAndClass.size(); i++) {
-        cout << "WeekDay: " << studentAndClass[i].weekDay << " | UcCode: " << studentAndClass[i].ucCode << " | ClassCode: " << studentAndClass[i].classCode << " | ClassType: " << studentAndClass[i].classType << " | Duration: " << studentAndClass[i].duration << endl;
+        cout << "WeekDay: " << weekdayNames[studentAndClass[i].weekDay] << " | UcCode: " << studentAndClass[i].ucCode << " | ClassCode: " << studentAndClass[i].classCode << " | ClassType: " << classTypeNames[studentAndClass[i].classType] << " | Duration: " << studentAndClass[i].duration << endl;
     }
 }
 

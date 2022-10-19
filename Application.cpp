@@ -42,12 +42,12 @@ void Application::readUniclasses() {
 
 
         // Print the found data
-        cout << "ClassCode:" << classCode << " \n";
-        cout << "UcCode: " << UcCode << "\n";
-        cout << "WeekDay: " << Weekday << "\n";
-        cout << "StartHour: " << StartHour << "\n";
-        cout << "Duration: " << Duration << "\n";
-        cout << "ClassType: " << ClassType << "\n\n";
+        //cout << "ClassCode:" << classCode << " \n";
+        //cout << "UcCode: " << UcCode << "\n";
+        //cout << "WeekDay: " << Weekday << "\n";
+        //cout << "StartHour: " << StartHour << "\n";
+        //cout << "Duration: " << Duration << "\n";
+        //cout << "ClassType: " << ClassType << "\n\n";
         int weekday;
 
         if (row[2] == "Monday") {
@@ -63,9 +63,14 @@ void Application::readUniclasses() {
         }
         uniClassList.emplace_back(UniClass(classCode, UcCode, weekday, stod(StartHour), stod(Duration), ClassType));
     }
+
+    //código para testar se guardou na lista
+    for (int i = 0; i < uniClassList.size(); i++) {
+        cout << uniClassList[i].getClassCode() << "\n";
+    }
 }
 
-void Application::readStudents(){
+void Application::readStudents() {
     vector<Student> list = {};
     fstream fin;
     fin.open("./schedule/students_classes.csv", ios::in);
@@ -73,37 +78,37 @@ void Application::readStudents(){
     string line, word, temp;
     int count = 0;
     int n = 0;
-while(true){
-    row.clear();
-    getline(fin, line);
-    if (line == "") break;
-    stringstream s(line);
-    while (getline(s, word, ',')) {
-        row.push_back(word);
-    }
-    if (count == 0) {
-        count++;
-        continue;
-    }
-    string StudentCode = row[0];
-    string StudentName = row[1];
-    string UcCode = row[2];
-    string ClassCode = row[3];
-    vector<string> Aula = {UcCode,ClassCode};
+    while (true) {
+        row.clear();
+        getline(fin, line);
+        if (line == "") break;
+        stringstream s(line);
+        while (getline(s, word, ',')) {
+            row.push_back(word);
+        }
+        if (count == 0) {
+            count++;
+            continue;
+        }
+        string StudentCode = row[0];
+        string StudentName = row[1];
+        string UcCode = row[2];
+        string ClassCode = row[3];
+        vector<string> Aula = {UcCode, ClassCode};
 
-
-
-    if(list.size()==0) {
-        list.push_back(Student(StudentCode, StudentName, Aula));
-        n++;
+        if (list.size() == 0) {
+            list.push_back(Student(StudentCode, StudentName, Aula));
+            n++;
+        } else if (StudentCode == list[n - 1].getStudentCode()) {
+            list[n - 1].addClass(Aula);
+        } else {
+            list.push_back(Student(StudentCode, StudentName, Aula));
+            n++;
+        }
     }
-    else if(StudentCode == list[n-1].getStudentCode()){
-        list[n-1].addClass(Aula);
-    }
-    else{
-        list.push_back(Student(StudentCode,StudentName,Aula));
-        n++;
-    }
-}
 
+    //código para testar se guardou na lista
+    for (int i=0; i<list.size(); i++) {
+        cout << list[i].getName() << "\n";
+    }
 }

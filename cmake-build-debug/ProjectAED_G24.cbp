@@ -8,110 +8,114 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug"/>
+				<Option working_dir="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ProjectAED_G24">
-				<Option output="/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/ProjectAED_G24" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug"/>
+				<Option output="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/ProjectAED_G24.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjectAED_G24"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjectAED_G24"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ProjectAED_G24/fast">
-				<Option output="/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/ProjectAED_G24" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug"/>
+				<Option output="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/ProjectAED_G24.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjectAED_G24/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProjectAED_G24/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug"/>
+				<Option working_dir="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug"/>
+				<Option working_dir="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/luiscontreiras/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/Application.cpp">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Application.cpp">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/Application.h">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Application.h">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/Menu.cpp">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Menu.cpp">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/Menu.h">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Menu.h">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/Schedule.cpp">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Schedule.cpp">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/Schedule.h">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Schedule.h">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/Student.cpp">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Student.cpp">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/Student.h">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/Student.h">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/UniClass.cpp">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/UniClass.cpp">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/UniClass.h">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/UniClass.h">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/main.cpp">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/main.cpp">
 			<Option target="ProjectAED_G24"/>
 		</Unit>
-		<Unit filename="/Users/luiscontreiras/ProjectAED_G24/CMakeLists.txt">
+		<Unit filename="C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED_G24/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

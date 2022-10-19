@@ -10,6 +10,7 @@ class Application {
 public:
     void readUniclasses();
     void readStudents();
+    void readClassesPerUc();
 };
 
 

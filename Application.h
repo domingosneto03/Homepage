@@ -1,14 +1,16 @@
-//
-// Created by InesO on 17/10/2022.
-//
 
 #ifndef PROJECTAED_G24_APPLICATION_H
 #define PROJECTAED_G24_APPLICATION_H
 
 
+#include "Student.h"
+#include "UniClass.h"
+
 class Application {
 public:
-    void readUniclasses();
+    vector<UniClass> readUniclasses();
+    vector<Student> readStudents();
+    vector<string> StudentClass();
 };
 
 

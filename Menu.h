@@ -9,7 +9,7 @@ public:
 private:
     void mainMenu();
 
-    void FaculdadeMenu();
+    void StudentSchedule();
 
     void TurmasMenu();
 

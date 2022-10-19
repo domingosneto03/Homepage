@@ -10,17 +10,20 @@ using namespace std;
 class Student {
 
 public:
-        Student(int studentCode, string name);
+        Student(string studentCode, string name,vector<string> Class);
         static bool addSchedules(Schedule schedule);
         void setName(string name);
         string getName();
-        int getStudentCode();
+        string getStudentCode();
+        vector<string> getClass();
         void setStudentCode();
+        void addClass(vector<string> Class);
 
 private:
-    int studentCode;
+    string studentCode;
     string name;
     vector <Schedule>schedules={};
+    vector <vector<string>>classes={};
 
 
 };

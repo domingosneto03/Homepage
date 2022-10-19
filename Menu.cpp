@@ -17,7 +17,7 @@ Menu::Menu() {
 void Menu::mainMenu() {
     int option;
     cout << "=======================================" << endl;
-    cout << "1 - Menu das faculdades" << endl;
+    cout << "1 - Horário de estudante" << endl;
     cout << "2 - Menu das turmas" << endl;
     cout << "3 - Sair" << endl;
     cout << "=======================================" << endl;
@@ -29,7 +29,7 @@ void Menu::mainMenu() {
 
     switch (option) {
         case 1:
-            FaculdadeMenu();
+            StudentSchedule();
             break;
         case 2:
             TurmasMenu();
@@ -39,8 +39,13 @@ void Menu::mainMenu() {
     }
 }
 
-void Menu::FaculdadeMenu() {
-   cout << "entrou";
+void Menu::StudentSchedule() {
+    int option;
+   cout << "Introduza o seu número de estudante";
+   cin >> option;
+
+
+
 }
 
 void Menu::TurmasMenu() {

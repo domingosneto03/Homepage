@@ -15,6 +15,7 @@ public:
         void setName(string name);
         string getName();
         string getStudentCode();
+        vector<string> getClass();
         void setStudentCode();
         void addClass(vector<string> Class);
 

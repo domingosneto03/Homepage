@@ -7,7 +7,7 @@ Student::Student(string studentCode, string name,vector<string> Class) {
     this->studentCode = studentCode;
     this->name = name;
     classes.push_back(Class);
-    //this->schedules = schedules;
+
 }
 
 bool Student::addSchedules(Schedule schedule) {
@@ -31,4 +31,8 @@ string Student::getStudentCode()  {
 
 string Student::getName() {
     return this->name;
+}
+
+vector<string> Student::getClass() {
+    return this->classes[0];
 }

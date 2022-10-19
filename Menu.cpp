@@ -6,17 +6,18 @@
 #include <iostream>
 
 using namespace std;
+Application app;
 
 Menu::Menu() {
-    Application app = Application();
+    app.readStudents();
     app.readUniclasses();
-    //mainMenu();
+    mainMenu();
 }
 
 void Menu::mainMenu() {
     int option;
     cout << "=======================================" << endl;
-    cout << "1 - Menu das faculdades" << endl;
+    cout << "1 - Horario de estudante" << endl;
     cout << "2 - Menu das turmas" << endl;
     cout << "3 - Sair" << endl;
     cout << "=======================================" << endl;
@@ -28,7 +29,7 @@ void Menu::mainMenu() {
 
     switch (option) {
         case 1:
-            FaculdadeMenu();
+            SchedulePerStudent();
             break;
         case 2:
             TurmasMenu();
@@ -38,8 +39,25 @@ void Menu::mainMenu() {
     }
 }
 
-void Menu::FaculdadeMenu() {
-   cout << "entrou";
+void Menu::SchedulePerStudent() {
+    string option;
+    cout << "Introduza o seu numero de estudante:"  << endl;
+    cin >> option;
+    string nome;
+    vector<studentAndClass> studentAndClass = app.StudentSchedule(option);
+    for (int i = 0; i < studentAndClass.size(); i++) {
+        if (studentAndClass[i].studentCode == option){
+            nome = studentAndClass[i].name;
+            break;
+        }
+    }
+
+    vector<string> weekdayNames = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+    vector<string> classTypeNames = {"T", "TP", "PL"};
+    cout << "Horario da " << nome << ", com up" << option << endl;
+    for (int i = 0; i < studentAndClass.size(); i++) {
+        cout << "WeekDay: " << weekdayNames[studentAndClass[i].weekDay] << " | UcCode: " << studentAndClass[i].ucCode << " | ClassCode: " << studentAndClass[i].classCode << " | ClassType: " << classTypeNames[studentAndClass[i].classType] << " | Duration: " << studentAndClass[i].duration << endl;
+    }
 }
 
 void Menu::TurmasMenu() {

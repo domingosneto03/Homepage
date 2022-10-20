@@ -18,13 +18,20 @@ struct studentAndClass {
     double duration;
 };
 
+struct schedule {
+    string classCode;
+    string ucCode;
+};
+
 class Application {
+
 public:
     vector<UniClass> readUniclasses();
     vector<Student> readStudents();
+    vector<schedule> readClassesPerStudent();
     vector<studentAndClass> StudentClass();
     vector<studentAndClass> StudentSchedule(string studentCode);
+    vector<schedule> ClassesSchedule(string classCode);
 };
-
 
 #endif //PROJECTAED_G24_APPLICATION_H

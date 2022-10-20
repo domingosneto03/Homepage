@@ -8,11 +8,8 @@ public:
 
 private:
     void mainMenu();
-
     void SchedulePerStudent();
-
-    void TurmasMenu();
-
+    void SchedulePerClass();
 };
 
 #endif //PROJECTAED_G24_MENU_H

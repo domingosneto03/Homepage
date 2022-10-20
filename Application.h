@@ -32,6 +32,9 @@ public:
     vector<studentAndClass> StudentClass();
     vector<studentAndClass> StudentSchedule(string studentCode);
     vector<schedule> ClassesSchedule(string classCode);
+    vector<string> StudentPerClass(string classCode);
+    string StartDate(float startHourClass);
+    string EndDate(float endHourClass);
 };
 
 #endif //PROJECTAED_G24_APPLICATION_H

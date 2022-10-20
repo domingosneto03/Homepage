@@ -166,20 +166,50 @@ vector<studentAndClass> Application::StudentClass() {
             vector<string> st_class = st.getClass();
             if (st_class[1] == uniClassList[i].getClassCode() && st_class[0] == uniClassList[i].getUcCode()) {
                 studentAndClasses.push_back(
-                        {st.getStudentCode(), st.getName(), uniClassList[i].getClassCode(), uniClassList[i].getUcCode(),
-                         uniClassList[i].getWeekDay(),
-                         uniClassList[i].getClassType(), uniClassList[i].getDuration()});
+                        {st.getStudentCode(), st.getName(), uniClassList[i].getClassCode(),
+                         uniClassList[i].getUcCode(),uniClassList[i].getWeekDay(),
+                         uniClassList[i].getClassType(),uniClassList[i].getStartHour(), uniClassList[i].getDuration()});
             }
         }
     }
     return studentAndClasses;
 }
 
+string Application::StartDate(float startHourClass) {
+    int startMin;
+    int startHour;
+    string horaInicio;
+    if (startHourClass - int(startHourClass) == 0) {
+        startHour = int(startHourClass);
+        startMin = 00;
+    } else {
+        startHour = int(startHourClass);
+        startMin = 30;
+    }
+    horaInicio = to_string(startHour) + "h:" + to_string(startMin) + "m";
+    return horaInicio;
+}
+
+string Application::EndDate(float endHourClass) {
+    int endMin;
+    int endHour;
+    string horaInicio;
+    if (endHourClass - int(endHourClass) == 0) {
+        endHour = int(endHourClass);
+        endMin = 00;
+    } else {
+        endHour = int(endHourClass);
+        endMin = 30;
+    }
+    horaInicio = to_string(endHour) + "h:" + to_string(endMin) + "m";
+    return horaInicio;
+}
+
 //neste metodo criamos uma lista com os estudantes que tinham o up que o utilizador introduziu
 vector<studentAndClass> Application::StudentSchedule(string studentCode) {
     vector<studentAndClass> studentAndClasses = StudentClass();
     vector<studentAndClass> studentSchedule = {};
-    for (int i = 0; i < studentAndClasses.size(); i++) {
+    for(int i = 0; i < studentAndClasses.size(); i++) {
         if (studentAndClasses[i].studentCode == studentCode) {
             studentSchedule.push_back(studentAndClasses[i]);
         }
@@ -199,3 +229,22 @@ vector <schedule> Application::ClassesSchedule(string classCode) {
     }
     return classSchedule;
 }
+
+/* //este metodo é para dizer quantos alunos tem por turma mas nao funciona
+vector <string> Application::StudentPerClass(string classCode) {
+    vector<studentAndClass> studentAndClasses = StudentClass();
+    vector<string> studentPerClass = {};
+
+    for (int i = 0; i < studentAndClasses.size(); i++) {
+        for (int j = 0; j < studentAndClasses.size(); j++) {
+            if (studentAndClasses[i].classCode == classCode) {
+                if(studentAndClasses[i].studentCode != studentAndClasses[j].studentCode){
+                    studentPerClass.push_back(studentAndClasses[i].name);
+                    break;
+                }
+            }
+        }
+    }
+    return studentPerClass;
+}
+*/

@@ -18,7 +18,6 @@ void Menu::mainMenu() {
     int option;
     cout << "=======================================" << endl;
     cout << "1 - Horario de estudante" << endl;
-    cout << "2 - Horario de uma turma" << endl;
     cout << "2 - Menu das turmas" << endl;
     cout << "3 - Sair" << endl;
     cout << "=======================================" << endl;
@@ -33,7 +32,7 @@ void Menu::mainMenu() {
             SchedulePerStudent();
             break;
         case 2:
-            SchedulePerClass();
+            ClassMenu();
             break;
         case 3:
             break;
@@ -42,32 +41,61 @@ void Menu::mainMenu() {
 
 void Menu::SchedulePerStudent() {
     string option;
-    cout << "Introduza o seu numero de estudante:"  << endl;
+    cout << "Introduza o seu numero de estudante:" << endl;
     cin >> option;
     string nome;
-    vector<studentAndClass> studentAndClass = app.StudentSchedule(option);
+    vector <studentAndClass> studentAndClass = app.StudentSchedule(option);
     for (int i = 0; i < studentAndClass.size(); i++) {
         if (studentAndClass[i].studentCode == option){
             nome = studentAndClass[i].name;
             break;
         }
     }
-    vector<string> weekdayNames = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-    vector<string> classTypeNames = {"T", "TP", "PL"};
+    vector <string> weekdayNames = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+    vector <string> classTypeNames = {"T", "TP", "PL"};
     cout << "Horario de " << nome << ", up" << option << endl;
     for (int i = 0; i < studentAndClass.size(); i++) {
-        int startHour = studentAndClass[i].startHour;
-        double startMin = (studentAndClass[i].startHour - startHour)*60;
-        int endHour = (studentAndClass[i].startHour + studentAndClass[i].duration);
-        double endMin = (studentAndClass[i].startHour + studentAndClass[i].duration - endHour)*60;
-        cout << "WeekDay: " << weekdayNames[studentAndClass[i].weekDay] << " | UcCode: " << studentAndClass[i].ucCode << " | ClassCode: " << studentAndClass[i].classCode << " | ClassType: " << classTypeNames[studentAndClass[i].classType] << " | Time: " << startHour << ":" << startMin<<"-"<<endHour<<":"<<endMin<< endl;
+        float startHour = studentAndClass[i].startHour;
+        float endHour = (studentAndClass[i].startHour + studentAndClass[i].duration);
+        cout << "WeekDay: " << weekdayNames[studentAndClass[i].weekDay] << " | UcCode: " << studentAndClass[i].ucCode << " | ClassCode: " << studentAndClass[i].classCode << " | ClassType: " << classTypeNames[studentAndClass[i].classType] << " | Time: " << app.StartDate(startHour) <<"-" << app.EndDate(endHour) << endl;
     }
+
 }
 
+void Menu::ClassMenu(){
+    int option;
+    cout << "Escolha uma opcao:" << endl;
+    cout << "1 - Horario da turma" << endl;
+    cout << "2 - Ocupacao da turma" << endl;
+    cout << "3 - Inscritos numa UC" << endl;
+
+    cin >> option;
+    switch (option) {
+        case 1:
+            SchedulePerClass();
+            break;
+        case 2:
+            OcupationPerClass();
+            break;
+        case 3:
+            break;
+    }
+}
+string Menu::ConstruirATurma(int ano, int turma) {
+    string turmaFinal;
+
+    if (turma > 0 && turma < 9) {
+        turmaFinal = to_string(ano) + "LEIC0" + to_string(turma);
+    }
+    else {
+        turmaFinal = to_string(ano) + "LEIC" + to_string(turma);
+    }
+    return turmaFinal;
+}
 void Menu::SchedulePerClass() {
     int ano;
     int turma;
-    string turmaFinal;
+
     cout << "Introduza o ano curricular (1 a 3): "  << endl;
     cin >> ano;
     while(ano < 1 || ano > 3) {
@@ -80,18 +108,35 @@ void Menu::SchedulePerClass() {
         cout << "A turma introduzida e invalida! Introduza novamente: "  << endl;
         cin >> turma;
     }
-    if (turma > 0 && turma < 9) {
-        turmaFinal = to_string(ano) + "LEIC0" + to_string(turma);
-    }
-    else {
-        turmaFinal = to_string(ano) + "LEIC" + to_string(turma);
-    }
+    string turmaFinal= ConstruirATurma(ano, turma);
 
     vector <schedule> classesSchedule = app.ClassesSchedule(turmaFinal);
     cout << "A turma " << turmaFinal << " tem o seguinte horario:" << endl;
     for (int i = 0; i < classesSchedule.size(); i++) {
         cout << "ClassCode: " << classesSchedule[i].classCode << " | UcCode: " << classesSchedule[i].ucCode << endl; // << " | UC: " << UcsMap[classesSchedule[i].ucCode];
     }
+}
+
+void Menu::OcupationPerClass() {
+    int ano;
+    int turma;
+    cout << "Introduza o ano curricular (1 a 3): " << endl;
+    cin >> ano;
+    while(ano < 1 || ano > 3) {
+        cout << "O ano introduzido e invalido! Introduza novamente: " << endl;
+        cin >> ano;
+    }
+    cout << "Introduza o numero da turma (1 a 16): " << endl;
+    cin >> turma;
+    while(turma < 1 || turma > 16) {
+        cout << "A turma introduzida e invalida! Introduza novamente: " << endl;
+        cin >> turma;
+    }
+    string turmaFinal= ConstruirATurma(ano, turma);
+
+    // vector <string> studentPerClasse = app.StudentPerClass(turmaFinal);
+    // int count = studentPerClasse.size();
+    // cout << "A turma " << turmaFinal << " tem " << count << " alunos." << endl;
 }
 
 #endif // PROJECT_AED_MENU_CPP

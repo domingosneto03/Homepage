@@ -14,6 +14,7 @@ struct studentAndClass {
     string ucCode;
     int weekDay;
     CLASS_TYPE classType;
+    double startHour;
     double duration;
 };
 

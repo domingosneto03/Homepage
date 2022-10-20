@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Application.h"
 #include "UniClass.h"
+#include "Student.h"
 
 using namespace std;
 
@@ -12,17 +13,17 @@ void Application() {
 
 }
 
-void Application::readUniclasses() {
-    vector<UniClass> list = {};
-    fstream fin;
-    fin.open("./schedule/classes.csv", ios::in);
+vector<UniClass> Application::readUniclasses() {
+    vector<UniClass> uniClassList = {};
+    fstream fin_classes;
+    fin_classes.open("./schedule/classes.csv", ios::in);
     vector<string> row;
     string line, word, temp;
     int count = 0;
 
     while (true) {
         row.clear();
-        getline(fin, line);
+        getline(fin_classes, line);
         if (line == "") break;
         stringstream s(line);
         while (getline(s, word, ',')) {
@@ -32,16 +33,14 @@ void Application::readUniclasses() {
             count++;
             continue;
         }
+        string classCode = row[0];
+        string UcCode = row[1];
+        string Weekday = row[2];
+        string StartHour = row[3];
+        string Duration = row[4];
+        string ClassType = row[5];
 
-        // Print the found data
-        cout << "ClassCode:" << row[0] << " \n";
-        cout << "UcCode: " << row[1] << "\n";
-        cout << "WeekDay: " << row[2] << "\n";
-        cout << "StartHour: " << row[3] << "\n";
-        cout << "Duration: " << row[4] << "\n";
-        cout << "ClassType: " << row[5] << "\n\n";
         int weekday;
-
 
         if (row[2] == "Monday") {
             weekday = 1;
@@ -54,6 +53,79 @@ void Application::readUniclasses() {
         } else if (row[2] == "Friday") {
             weekday = 5;
         }
-        list.emplace_back(row[0], row[1], weekday, stod(row[3]), stod(row[4]), row[5]);
+        uniClassList.emplace_back(UniClass(classCode, UcCode, weekday, stod(StartHour), stod(Duration), ClassType));
     }
+    return uniClassList;
+}
+
+vector<Student> Application::readStudents() {
+    vector<Student> list = {};
+    fstream fin;
+    fin.open("./schedule/students_classes.csv", ios::in);
+    vector<string> row;
+    string line, word, temp;
+    int count = 0;
+    int n = 0;
+    while (true) {
+        row.clear();
+        getline(fin, line);
+        if (line == "") break;
+        stringstream s(line);
+        while (getline(s, word, ',')) {
+            row.push_back(word);
+        }
+        if (count == 0) {
+            count++;
+            continue;
+        }
+        string StudentCode = row[0];
+        string StudentName = row[1];
+        string UcCode = row[2];
+        string ClassCode = row[3];
+        vector<string> Aula = {UcCode, ClassCode};
+
+
+        if (list.size() == 0) {
+            list.push_back(Student(StudentCode, StudentName, Aula));
+            n++;
+        } else if (StudentCode == list[n - 1].getStudentCode()) {
+            list[n - 1].addClass(Aula);
+        } else {
+            list.push_back(Student(StudentCode, StudentName, Aula));
+            n++;
+        }
+    }
+    int teste = 0;
+    teste++;
+    return list;
+}
+
+//neste metodo criamos uma lista que junta tudo do primeiro e ultimo ficheiros
+vector<studentAndClass> Application::StudentClass() {
+    vector<Student> list = readStudents();
+    vector<UniClass> uniClassList = readUniclasses();
+    vector<studentAndClass> studentAndClasses = {};
+
+    for (int i = 0; i < uniClassList.size(); ++i) {
+        for (Student st: list) {
+            vector<string> st_class = st.getClass();
+            if (st_class[1] == uniClassList[i].getClassCode() && st_class[0] == uniClassList[i].getUcCode()) {
+                studentAndClasses.push_back(
+                        {st.getStudentCode(), st.getName(), uniClassList[i].getClassCode(), uniClassList[i].getUcCode(), uniClassList[i].getWeekDay(),
+                         uniClassList[i].getClassType(),uniClassList[i].getStartHour(),uniClassList[i].getDuration()});
+            }
+        }
+    }
+    return studentAndClasses;
+}
+
+vector<studentAndClass> Application::StudentSchedule(string studentCode) {
+    vector<studentAndClass> studentAndClasses = StudentClass();
+    vector<studentAndClass> studentSchedule = {};
+    for (int i = 0; i < studentAndClasses.size(); ++i) {
+        if (studentAndClasses[i].studentCode == studentCode) {
+            studentSchedule.push_back(studentAndClasses[i]);
+        }
+    }
+    return studentSchedule;
 }

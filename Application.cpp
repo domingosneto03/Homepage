@@ -1,7 +1,3 @@
-//
-// Created by InesO on 20/10/2022.
-//
-
 #include <fstream>
 #include <vector>
 #include <sstream>
@@ -13,31 +9,31 @@
 
 using namespace std;
 
-map <string, string> UcsMap = {{"L.EIC001", "ALGA"},
-                               {"L.EIC002", "AM I"},
-                               {"L.EIC003", "FP"},
-                               {"L.EIC004", "FSC"},
-                               {"L.EIC005", "MD"},
-                               {"L.EIC006", "AC"},
-                               {"L.EIC007", "AM II"},
-                               {"L.EIC008", "F I"},
-                               {"L.EIC009", "P"},
-                               {"L.EIC010", "TC"},
-                               {"L.EIC011", "AED"},
-                               {"L.EIC012", "BD"},
-                               {"L.EIC013", "F II"},
-                               {"L.EIC014", "LDTS"},
-                               {"L.EIC015", "SO"},
-                               {"L.EIC016", "DA"},
-                               {"L.EIC017", "ES"},
-                               {"L.EIC018", "LC"},
-                               {"L.EIC019", "LTW"},
-                               {"L.EIC020", "ME"},
-                               {"L.EIC021", "FSI"},
-                               {"L.EIC022", "IPC"},
-                               {"L.EIC023", "LBAW"},
-                               {"L.EIC024", "PFL"},
-                               {"L.EIC025", "RC"}};
+map<string, string> UcsMap = {{"L.EIC001", "ALGA"},
+                              {"L.EIC002", "AM I"},
+                              {"L.EIC003", "FP"},
+                              {"L.EIC004", "FSC"},
+                              {"L.EIC005", "MD"},
+                              {"L.EIC006", "AC"},
+                              {"L.EIC007", "AM II"},
+                              {"L.EIC008", "F I"},
+                              {"L.EIC009", "P"},
+                              {"L.EIC010", "TC"},
+                              {"L.EIC011", "AED"},
+                              {"L.EIC012", "BD"},
+                              {"L.EIC013", "F II"},
+                              {"L.EIC014", "LDTS"},
+                              {"L.EIC015", "SO"},
+                              {"L.EIC016", "DA"},
+                              {"L.EIC017", "ES"},
+                              {"L.EIC018", "LC"},
+                              {"L.EIC019", "LTW"},
+                              {"L.EIC020", "ME"},
+                              {"L.EIC021", "FSI"},
+                              {"L.EIC022", "IPC"},
+                              {"L.EIC023", "LBAW"},
+                              {"L.EIC024", "PFL"},
+                              {"L.EIC025", "RC"}};
 
 void Application() {
 
@@ -163,12 +159,14 @@ vector<studentAndClass> Application::StudentClass() {
 
     for (int i = 0; i < uniClassList.size(); ++i) {
         for (Student st: list) {
-            vector<string> st_class = st.getClass();
-            if (st_class[1] == uniClassList[i].getClassCode() && st_class[0] == uniClassList[i].getUcCode()) {
-                studentAndClasses.push_back(
-                        {st.getStudentCode(), st.getName(), uniClassList[i].getClassCode(),
-                         uniClassList[i].getUcCode(),uniClassList[i].getWeekDay(),
-                         uniClassList[i].getClassType(),uniClassList[i].getStartHour(), uniClassList[i].getDuration()});
+            for (vector<string> st_class: st.getClasses()) {
+                if (st_class[0] == uniClassList[i].getUcCode() && st_class[1] == uniClassList[i].getClassCode()) {
+                    studentAndClasses.push_back(
+                            {st.getStudentCode(), st.getName(), uniClassList[i].getClassCode(),
+                             uniClassList[i].getUcCode(), uniClassList[i].getWeekDay(),
+                             uniClassList[i].getClassType(), uniClassList[i].getStartHour(),
+                             uniClassList[i].getDuration()});
+                }
             }
         }
     }
@@ -209,7 +207,7 @@ string Application::EndDate(float endHourClass) {
 vector<studentAndClass> Application::StudentSchedule(string studentCode) {
     vector<studentAndClass> studentAndClasses = StudentClass();
     vector<studentAndClass> studentSchedule = {};
-    for(int i = 0; i < studentAndClasses.size(); i++) {
+    for (int i = 0; i < studentAndClasses.size(); i++) {
         if (studentAndClasses[i].studentCode == studentCode) {
             studentSchedule.push_back(studentAndClasses[i]);
         }
@@ -218,7 +216,7 @@ vector<studentAndClass> Application::StudentSchedule(string studentCode) {
 }
 
 
-vector <schedule> Application::ClassesSchedule(string classCode) {
+vector<schedule> Application::ClassesSchedule(string classCode) {
     vector<schedule> classesPerStudentList = readClassesPerStudent();
     vector<schedule> classSchedule = {};
 

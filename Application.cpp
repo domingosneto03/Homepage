@@ -42,7 +42,7 @@ void Application() {
 vector<UniClass> Application::readUniclasses() {
     vector<UniClass> uniClassList = {};
     fstream fin_classes;
-    fin_classes.open("./schedule/classes.csv", ios::in);
+    fin_classes.open("../schedule/classes.csv", ios::in);
     vector<string> row;
     string line, word, temp;
     int count = 0;
@@ -87,7 +87,7 @@ vector<UniClass> Application::readUniclasses() {
 vector<Student> Application::readStudents() {
     vector<Student> list = {};
     fstream fin;
-    fin.open("./schedule/students_classes.csv", ios::in);
+    fin.open("../schedule/students_classes.csv", ios::in);
     vector<string> row;
     string line, word, temp;
     int count = 0;
@@ -127,7 +127,7 @@ vector<Student> Application::readStudents() {
 vector<schedule> Application::readClassesPerStudent() {
     vector<schedule> classesPerStudent = {};
     fstream fin;
-    fin.open("./schedule/classes_per_uc.csv", ios::in);
+    fin.open("../schedule/classes_per_uc.csv", ios::in);
     vector<string> row;
     string line, word, temp;
     int count = 0;

@@ -15,7 +15,7 @@ private:
     void OcupationPerClass();
     void ClassMenu();
 
-    std::__cxx11::basic_string<char> ConstruirATurma(int ano, int turma);
+    std::basic_string<char> ConstruirATurma(int ano, int turma);
 };
 
 #endif //PROJECTAED_G24_MENU_H

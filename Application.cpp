@@ -108,6 +108,10 @@ vector<Student> Application::readStudents() {
         string StudentName = row[1];
         string UcCode = row[2];
         string ClassCode = row[3];
+        // For MacOS users!!!
+        if(ClassCode[ClassCode.size()-1] == '\r'){
+            ClassCode.pop_back();
+        }
         vector<string> Aula = {UcCode, ClassCode};
 
 

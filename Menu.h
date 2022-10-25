@@ -11,11 +11,13 @@ public:
 private:
     void mainMenu();
     void SchedulePerStudent();
-    void SchedulePerClass();
-    void OcupationPerClass();
-    void ClassMenu();
+     /*
+     void SchedulePerClass();
+     void OcupationPerClass();
+     void ClassMenu();
 
-    std::basic_string<char> ConstruirATurma(int ano, int turma);
+     std::basic_string<char> ConstruirATurma(int ano, int turma);
+     */
 };
 
 #endif //PROJECTAED_G24_MENU_H

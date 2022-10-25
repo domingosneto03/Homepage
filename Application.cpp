@@ -6,6 +6,8 @@
 #include "Application.h"
 #include "UniClass.h"
 #include "Student.h"
+#include <iterator>
+#include <set>
 
 using namespace std;
 
@@ -39,8 +41,8 @@ void Application() {
 
 }
 
-vector<UniClass> Application::readUniclasses() {
-    vector<UniClass> uniClassList = {};
+set<UniClass *> Application::readUniclasses() {
+    set<UniClass *> uniClassSet;
     fstream fin_classes;
     fin_classes.open("../schedule/classes.csv", ios::in);
     vector<string> row;
@@ -79,13 +81,15 @@ vector<UniClass> Application::readUniclasses() {
         } else if (row[2] == "Friday") {
             weekday = 5;
         }
-        uniClassList.emplace_back(UniClass(classCode, UcCode, weekday, stod(StartHour), stod(Duration), ClassType));
+        UniClass *uniClass;
+        uniClassSet.insert(new UniClass(classCode, UcCode, weekday, stod(StartHour), stod(Duration), ClassType));
     }
-    return uniClassList;
+
+    return uniClassSet;
 }
 
-vector<Student> Application::readStudents() {
-    vector<Student> list = {};
+set<Student *> Application::readStudents() {
+    set<Student *> studentSet;
     fstream fin;
     fin.open("../schedule/students_classes.csv", ios::in);
     vector<string> row;
@@ -109,23 +113,16 @@ vector<Student> Application::readStudents() {
         string UcCode = row[2];
         string ClassCode = row[3];
         // For MacOS users!!!
-        if(ClassCode[ClassCode.size()-1] == '\r'){
+        if (ClassCode[ClassCode.size() - 1] == '\r') {
             ClassCode.pop_back();
         }
         vector<string> Aula = {UcCode, ClassCode};
 
-
-        if (list.size() == 0) {
-            list.push_back(Student(StudentCode, StudentName, Aula));
-            n++;
-        } else if (StudentCode == list[n - 1].getStudentCode()) {
-            list[n - 1].addClass(Aula);
-        } else {
-            list.push_back(Student(StudentCode, StudentName, Aula));
-            n++;
-        }
+        Student *student;
+        student = new Student(StudentCode, StudentName, Aula);
+        studentSet.insert(student);
     }
-    return list;
+    return studentSet;
 }
 
 vector<schedule> Application::readClassesPerStudent() {
@@ -156,24 +153,26 @@ vector<schedule> Application::readClassesPerStudent() {
 }
 
 //neste metodo criamos uma lista que junta tudo do primeiro e ultimo ficheiros
-vector<studentAndClass> Application::StudentClass() {
-    vector<Student> list = readStudents();
-    vector<UniClass> uniClassList = readUniclasses();
-    vector<studentAndClass> studentAndClasses = {};
+set<studentAndClass> Application::StudentClass() {
+    if (studentsClassSet.size() > 0) {
+        return studentsClassSet;
+    }
+    set<Student*> student = readStudents();
+    set<UniClass*> uniClassSet = readUniclasses();
+    set<studentAndClass> studentAndClasses;
 
-    for (int i = 0; i < uniClassList.size(); ++i) {
-        for (Student st: list) {
-            for (vector<string> st_class: st.getClasses()) {
-                if (st_class[0] == uniClassList[i].getUcCode() && st_class[1] == uniClassList[i].getClassCode()) {
-                    studentAndClasses.push_back(
-                            {st.getStudentCode(), st.getName(), uniClassList[i].getClassCode(),
-                             uniClassList[i].getUcCode(), uniClassList[i].getWeekDay(),
-                             uniClassList[i].getClassType(), uniClassList[i].getStartHour(),
-                             uniClassList[i].getDuration()});
+    for (auto uniClassNew: uniClassSet) {
+        for (auto studentNew: student) {
+            for (vector<string> st_class: studentNew->getClasses()) {
+                if (st_class[0] == uniClassNew->getUcCode() && st_class[1] == uniClassNew->getClassCode()) {
+                    studentAndClasses.insert({studentNew->getStudentCode(), studentNew->getName(), uniClassNew->getClassCode(), uniClassNew->getUcCode(),
+                    uniClassNew->getWeekDay(),uniClassNew->getClassType(), uniClassNew->getStartHour(), uniClassNew->getDuration()});
                 }
             }
         }
     }
+
+    studentsClassSet = studentAndClasses;
     return studentAndClasses;
 }
 
@@ -208,6 +207,20 @@ string Application::EndDate(float endHourClass) {
 }
 
 //neste metodo criamos uma lista com os estudantes que tinham o up que o utilizador introduziu
+set<studentAndClass> Application::StudentSchedule(string studentCode) {
+    set<studentAndClass> studentAndClasses = StudentClass();
+    set<studentAndClass> studentSchedule = {};
+    for (auto studentAndClassesSet: studentAndClasses) {
+        if (studentAndClassesSet.studentCode == studentCode) {
+            studentSchedule.insert(studentAndClassesSet);
+        }
+    }
+    return studentSchedule;
+}
+
+
+/*
+//neste metodo criamos uma lista com os estudantes que tinham o up que o utilizador introduziu
 vector<studentAndClass> Application::StudentSchedule(string studentCode) {
     vector<studentAndClass> studentAndClasses = StudentClass();
     vector<studentAndClass> studentSchedule = {};
@@ -232,7 +245,7 @@ vector<schedule> Application::ClassesSchedule(string classCode) {
     return classSchedule;
 }
 
-/* //este metodo é para dizer quantos alunos tem por turma mas nao funciona
+ //este metodo é para dizer quantos alunos tem por turma mas nao funciona
 vector <string> Application::StudentPerClass(string classCode) {
     vector<studentAndClass> studentAndClasses = StudentClass();
     vector<string> studentPerClass = {};

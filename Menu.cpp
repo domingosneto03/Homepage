@@ -9,9 +9,8 @@ using namespace std;
 Application app;
 
 Menu::Menu() {
-    app.readStudents();
-    app.readUniclasses();
     mainMenu();
+
 }
 
 void Menu::mainMenu() {
@@ -30,19 +29,51 @@ void Menu::mainMenu() {
         cin >> option;
     }
 
-
     switch (option) {
         case 1:
             SchedulePerStudent();
             break;
         case 2:
-            ClassMenu();
+            //ClassMenu();
             break;
         case 3:
             break;
     }
 }
 
+
+void Menu::SchedulePerStudent() {
+    string option;
+    cout << "Introduza o seu numero de estudante:" << endl;
+    cin >> option;
+    string nome;
+    set<studentAndClass> studentAndClass = app.StudentSchedule(option);
+    for (auto studentAndClassSet: studentAndClass) {
+        if (studentAndClassSet.studentCode == option) {
+            nome = studentAndClassSet.name;
+            break;
+        }
+    }
+
+    vector<string> weekdayNames = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+    vector<string> classTypeNames = {"T", "TP", "PL"};
+
+    if (studentAndClass.size() != 0) {
+        cout << "Horario de " << nome << ", up" << option << endl;
+        for (auto studentAndClassSet: studentAndClass) {
+            float startHour = studentAndClassSet.startHour;
+            float endHour = (studentAndClassSet.startHour + studentAndClassSet.duration);
+            cout << "WeekDay: " << weekdayNames[studentAndClassSet.weekDay] << " | UcCode: " << studentAndClassSet.ucCode <<
+                 " | ClassCode: " << studentAndClassSet.classCode << " | ClassType: " << classTypeNames[studentAndClassSet.classType] <<
+                 " | Time: " << app.StartDate(startHour) << "-" << app.EndDate(endHour) << endl;
+        }
+    } else {
+        cout << "O numero que introduziu nao e valido!" << endl;
+        SchedulePerStudent();
+    }
+}
+
+/*
 void Menu::SchedulePerStudent() {
     string option;
     cout << "Introduza o seu numero de estudante:" << endl;
@@ -154,5 +185,6 @@ void Menu::OcupationPerClass() {
     // int count = studentPerClasse.size();
     // cout << "A turma " << turmaFinal << " tem " << count << " alunos." << endl;
 }
+*/
 
 #endif // PROJECT_AED_MENU_CPP

@@ -11,38 +11,14 @@
 
 using namespace std;
 
-map<string, string> UcsMap = {{"L.EIC001", "ALGA"},
-                              {"L.EIC002", "AM I"},
-                              {"L.EIC003", "FP"},
-                              {"L.EIC004", "FSC"},
-                              {"L.EIC005", "MD"},
-                              {"L.EIC006", "AC"},
-                              {"L.EIC007", "AM II"},
-                              {"L.EIC008", "F I"},
-                              {"L.EIC009", "P"},
-                              {"L.EIC010", "TC"},
-                              {"L.EIC011", "AED"},
-                              {"L.EIC012", "BD"},
-                              {"L.EIC013", "F II"},
-                              {"L.EIC014", "LDTS"},
-                              {"L.EIC015", "SO"},
-                              {"L.EIC016", "DA"},
-                              {"L.EIC017", "ES"},
-                              {"L.EIC018", "LC"},
-                              {"L.EIC019", "LTW"},
-                              {"L.EIC020", "ME"},
-                              {"L.EIC021", "FSI"},
-                              {"L.EIC022", "IPC"},
-                              {"L.EIC023", "LBAW"},
-                              {"L.EIC024", "PFL"},
-                              {"L.EIC025", "RC"}};
-
 void Application() {
 
 }
 
-set<UniClass *> Application::readUniclasses() {
-    set<UniClass *> uniClassSet;
+set <UniClass*> Application::readUniclasses() {
+    if (uniClassSet.size() > 0) {
+        return uniClassSet;
+    }
     fstream fin_classes;
     fin_classes.open("../schedule/classes.csv", ios::in);
     vector<string> row;
@@ -88,8 +64,10 @@ set<UniClass *> Application::readUniclasses() {
     return uniClassSet;
 }
 
-set<Student *> Application::readStudents() {
-    set<Student *> studentSet;
+set <Student*> Application::readStudents() {
+    if (studentSet.size() > 0) {
+        return studentSet;
+    }
     fstream fin;
     fin.open("../schedule/students_classes.csv", ios::in);
     vector<string> row;
@@ -119,14 +97,16 @@ set<Student *> Application::readStudents() {
         vector<string> Aula = {UcCode, ClassCode};
 
         Student *student;
-        student = new Student(StudentCode, StudentName, Aula);
-        studentSet.insert(student);
+        studentSet.insert(new Student(StudentCode, StudentName, Aula));
     }
     return studentSet;
 }
+/*
+set <schedule> Application::readClassesPerStudent() {
+    if (classesPerStudentSet.size() > 0) {
+        return classesPerStudentSet;
+    }
 
-vector<schedule> Application::readClassesPerStudent() {
-    vector<schedule> classesPerStudent = {};
     fstream fin;
     fin.open("../schedule/classes_per_uc.csv", ios::in);
     vector<string> row;
@@ -147,26 +127,32 @@ vector<schedule> Application::readClassesPerStudent() {
         }
         string UcCode = row[0];
         string ClassCode = row[1];
-        classesPerStudent.push_back({ClassCode, UcCode});
-    }
-    return classesPerStudent;
-}
 
+        schedule schedule;
+        classesPerStudentSet.insert(UcCode, ClassCode);
+
+    }
+    return classesPerStudentSet;
+}
+*/
 //neste metodo criamos uma lista que junta tudo do primeiro e ultimo ficheiros
 set<studentAndClass> Application::StudentClass() {
     if (studentsClassSet.size() > 0) {
         return studentsClassSet;
     }
-    set<Student*> student = readStudents();
-    set<UniClass*> uniClassSet = readUniclasses();
+    set<Student *> student = readStudents();
+    set<UniClass *> uniClassSet = readUniclasses();
     set<studentAndClass> studentAndClasses;
 
     for (auto uniClassNew: uniClassSet) {
         for (auto studentNew: student) {
             for (vector<string> st_class: studentNew->getClasses()) {
                 if (st_class[0] == uniClassNew->getUcCode() && st_class[1] == uniClassNew->getClassCode()) {
-                    studentAndClasses.insert({studentNew->getStudentCode(), studentNew->getName(), uniClassNew->getClassCode(), uniClassNew->getUcCode(),
-                    uniClassNew->getWeekDay(),uniClassNew->getClassType(), uniClassNew->getStartHour(), uniClassNew->getDuration()});
+                    studentAndClasses.insert(
+                            {studentNew->getStudentCode(), studentNew->getName(), uniClassNew->getClassCode(),
+                             uniClassNew->getUcCode(),
+                             uniClassNew->getWeekDay(), uniClassNew->getClassType(), uniClassNew->getStartHour(),
+                             uniClassNew->getDuration()});
                 }
             }
         }
@@ -217,33 +203,21 @@ set<studentAndClass> Application::StudentSchedule(string studentCode) {
     }
     return studentSchedule;
 }
-
-
 /*
-//neste metodo criamos uma lista com os estudantes que tinham o up que o utilizador introduziu
-vector<studentAndClass> Application::StudentSchedule(string studentCode) {
-    vector<studentAndClass> studentAndClasses = StudentClass();
-    vector<studentAndClass> studentSchedule = {};
-    for (int i = 0; i < studentAndClasses.size(); i++) {
-        if (studentAndClasses[i].studentCode == studentCode) {
-            studentSchedule.push_back(studentAndClasses[i]);
-        }
-    }
-    return studentSchedule;
-}
 
+set<schedule> Application::ClassesSchedule(string classCode) {
+    set<schedule> classesPerStudentSet = readClassesPerStudent();
+    set<schedule> classSchedule = {};
 
-vector<schedule> Application::ClassesSchedule(string classCode) {
-    vector<schedule> classesPerStudentList = readClassesPerStudent();
-    vector<schedule> classSchedule = {};
-
-    for (int i = 0; i < classesPerStudentList.size(); i++) {
-        if (classesPerStudentList[i].classCode == classCode) {
-            classSchedule.push_back(classesPerStudentList[i]);
+    for (auto newClassesPerStudentSet : classesPerStudentSet) {
+        if (newClassesPerStudentSet.classCode == classCode) {
+            classSchedule.insert(newClassesPerStudentSet);
         }
     }
     return classSchedule;
 }
+
+
 
  //este metodo é para dizer quantos alunos tem por turma mas nao funciona
 vector <string> Application::StudentPerClass(string classCode) {

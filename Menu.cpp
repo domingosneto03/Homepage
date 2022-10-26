@@ -37,6 +37,7 @@ void Menu::mainMenu() {
             ClassMenu();
             break;
         case 3:
+            UcNumbers();
             break;
         case 4:
             exit(-1);
@@ -139,7 +140,6 @@ void Menu::SchedulePerClass() {
      */
 }
 
-
 void Menu::OcupationPerClass() {
     int ano;
     int turma;
@@ -156,6 +156,28 @@ void Menu::OcupationPerClass() {
         cin >> turma;
     }
     string turmaFinal = ConstruirATurma(ano, turma);
+}
+
+void Menu::UcNumbers() {
+    int n;
+    cout << "Indique o numero de Ucs: ";
+    cin >> n;
+    int count=0;
+
+    BST<StudentUcs> studentUc = app.StudentUC();
+
+    for(auto i=studentUc.begin(); i!=studentUc.end() ; i++) {
+        if (stoi((*i).count) > n) {
+            cout << (*i).name << " [" << (*i).studentCode << "]" << endl;
+            count++;
+        }
+    }
+    if(count!=0){
+        cout << "Existem " << count << " estudantes com mais de " << n << " UCs." << endl;
+    } else {
+        cout << "Nao existem estudantes com mais de " << n << " UCs." << endl;
+    }
+
 }
 
 #endif // PROJECT_AED_MENU_CPP

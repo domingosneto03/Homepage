@@ -27,10 +27,24 @@ string Student::getStudentCode()  {
     return this->studentCode;
 }
 
-string Student::getName() {
+string Student::getName() const{
     return this->name;
 }
 
-vector <vector<string>> Student::getClasses() {
+vector <vector<string>> Student::getClasses() const {
     return this->classes;
+}
+
+bool Student::operator<(const Student &s1) const {
+    if (classes.size() == s1.getClasses().size()) return name < s1.getName();
+    return classes.size() < s1.classes.size();
+}
+
+bool Student::operator>(const Student &s1) const {
+    if (classes.size() == s1.getClasses().size()) return name > s1.getName();
+    return classes.size() > s1.classes.size();
+}
+
+bool Student::operator==(const Student &s1) const{
+    return (this->studentCode == s1.studentCode);
 }

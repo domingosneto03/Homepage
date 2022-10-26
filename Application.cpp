@@ -6,6 +6,7 @@
 #include "Application.h"
 #include "UniClass.h"
 #include "Student.h"
+#include "bst.h"
 #include <iterator>
 #include <set>
 
@@ -15,7 +16,7 @@ void Application() {
 
 }
 
-set <UniClass*> Application::readUniclasses() {
+set<UniClass *> Application::readUniclasses() {
     if (uniClassSet.size() > 0) {
         return uniClassSet;
     }
@@ -64,7 +65,7 @@ set <UniClass*> Application::readUniclasses() {
     return uniClassSet;
 }
 
-set <Student*> Application::readStudents() {
+set<Student *> Application::readStudents() {
     if (studentSet.size() > 0) {
         return studentSet;
     }
@@ -74,6 +75,7 @@ set <Student*> Application::readStudents() {
     string line, word, temp;
     int count = 0;
     int n = 0;
+    //set<string> codes = {};
     while (true) {
         row.clear();
         getline(fin, line);
@@ -97,14 +99,22 @@ set <Student*> Application::readStudents() {
         vector<string> Aula = {UcCode, ClassCode};
 
         Student *student;
+        /*
+        if studentCode in codes then
+            find student in set Students
+            student.classes.append(Aula)
+        else
+            studentSet.insert(new Student)
+        */
+        //if (studentSet.count())
         studentSet.insert(new Student(StudentCode, StudentName, Aula));
     }
     return studentSet;
 }
-/*
-set <schedule> Application::readClassesPerStudent() {
-    if (classesPerStudentSet.size() > 0) {
-        return classesPerStudentSet;
+
+set<schedule> Application::readClassesPerUC() {
+    if (classesPerUcSet.size() > 0) {
+        return classesPerUcSet;
     }
 
     fstream fin;
@@ -129,12 +139,14 @@ set <schedule> Application::readClassesPerStudent() {
         string ClassCode = row[1];
 
         schedule schedule;
-        classesPerStudentSet.insert(UcCode, ClassCode);
+        schedule.ucCode = UcCode;
+        schedule.classCode = ClassCode;
+        classesPerUcSet.insert(schedule);
 
     }
-    return classesPerStudentSet;
+    return classesPerUcSet;
 }
-*/
+
 //neste metodo criamos uma lista que junta tudo do primeiro e ultimo ficheiros
 set<studentAndClass> Application::StudentClass() {
     if (studentsClassSet.size() > 0) {
@@ -157,7 +169,6 @@ set<studentAndClass> Application::StudentClass() {
             }
         }
     }
-
     studentsClassSet = studentAndClasses;
     return studentAndClasses;
 }
@@ -203,8 +214,31 @@ set<studentAndClass> Application::StudentSchedule(string studentCode) {
     }
     return studentSchedule;
 }
-/*
 
+BST<StudentUcs> Application::StudentUC() {
+    set<Student *> student = readStudents();
+    BST<string> studentCount = BST<string>{""};
+    StudentUcs studentUcsNull = {"", "",""};
+    BST<StudentUcs> studentUcBst = BST<StudentUcs>(studentUcsNull);
+
+    for (auto nameStudent: student) {
+        string name = nameStudent->getName();
+        if(studentCount.find(name)!=name){
+            studentCount.insert(name);
+            int count = 0;
+            for (auto compararName: student) {
+                if (compararName->getName() == name) {
+                    count++;
+                }
+            }
+            StudentUcs studentUcs = {name,nameStudent->getStudentCode(), to_string(count)};
+            studentUcBst.insert(studentUcs);
+        }
+    }
+    return studentUcBst;
+}
+
+/*
 set<schedule> Application::ClassesSchedule(string classCode) {
     set<schedule> classesPerStudentSet = readClassesPerStudent();
     set<schedule> classSchedule = {};
@@ -216,7 +250,6 @@ set<schedule> Application::ClassesSchedule(string classCode) {
     }
     return classSchedule;
 }
-
 
 
  //este metodo é para dizer quantos alunos tem por turma mas nao funciona

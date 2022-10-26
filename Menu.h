@@ -17,6 +17,7 @@ private:
     void ClassMenu();
     string ConstruirATurma(int ano, int turma);
 
+    void UcNumbers();
 };
 
 #endif //PROJECTAED_G24_MENU_H

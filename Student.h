@@ -13,11 +13,14 @@ public:
         Student(string studentCode, string name,vector<string> Class);
         static bool addSchedules(Schedule schedule);
         void setName(string name);
-        string getName();
+        string getName() const;
         string getStudentCode();
-        vector<vector<string>> getClasses();
+        vector<vector<string>> getClasses() const;
         void setStudentCode();
         void addClass(vector<string> Class);
+        bool operator<(const Student &s1) const;
+        bool operator>(const Student &s1) const;
+        bool operator==(const Student &s1) const;
 
 private:
     string studentCode;

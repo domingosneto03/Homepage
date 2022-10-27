@@ -80,20 +80,20 @@ void Menu::ClassMenu() {
     int option;
     cout << "==============CLASS MENU==============" << endl;
     cout << "1 - Horario da turma" << endl;
-    cout << "2 - Ocupacao da turma" << endl;
-    cout << "3 - Inscritos numa UC" << endl;
+    cout << "2 - Inscritos numa UC" << endl;
+    cout << "3 - Ocupacao da turma" << endl;
     cout << "4 - Voltar ao menu principal" << endl;
     cout << "======================================" << endl;
-    cout << "Escolha uma opcao:" << endl;
+    cout << "Escolha uma opcao: ";
     cin >> option;
     switch (option) {
         case 1:
             SchedulePerClass();
             break;
         case 2:
-            OcupationPerClass();
             break;
         case 3:
+            OcupationPerClass();
             break;
         case 4:
             mainMenu();
@@ -131,13 +131,13 @@ void Menu::SchedulePerClass() {
     }
     string turmaFinal = ConstruirATurma(ano, turma);
 
-    /*
+
     set<schedule> classesSchedule = app.ClassesSchedule(turmaFinal);
     cout << "A turma " << turmaFinal << " tem o seguinte horario:" << endl;
     for (auto classesScheduleSet: classesSchedule) {
-        cout << "ClassCode: " << classesScheduleSet.classCode << " | UcCode: " << classesScheduleSet.ucCode << endl; // << " | UC: " << UcsMap[classesSchedule[i].ucCode];
+        cout << "UcCode: " << classesScheduleSet.ucCode << " [" << app.UcsMap[classesScheduleSet.ucCode] << "]" << endl;
     }
-     */
+
 }
 
 void Menu::OcupationPerClass() {
@@ -177,7 +177,6 @@ void Menu::UcNumbers() {
     } else {
         cout << "Nao existem estudantes com mais de " << n << " UCs." << endl;
     }
-
 }
 
 #endif // PROJECT_AED_MENU_CPP

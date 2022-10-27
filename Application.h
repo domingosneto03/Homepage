@@ -1,7 +1,6 @@
 #ifndef PROJECTAED_G24_APPLICATION_H
 #define PROJECTAED_G24_APPLICATION_H
 
-
 #include "Student.h"
 #include "UniClass.h"
 #include "bst.h"
@@ -96,23 +95,18 @@ private:
     set<UniClass *> uniClassSet = {};
     set<Student *> studentSet = {};
     set<schedule> classesPerUcSet = {};
+    set<studentAndClass> studentSchedule={};
+    set<schedule> classSchedule = {};
+
 public:
     set<UniClass *> readUniclasses();
-
     set<Student *> readStudents();
-
     set<schedule> readClassesPerUC();
-
     set<studentAndClass> StudentClass();
-
     set<studentAndClass> StudentSchedule(string studentCode);
-
     string StartDate(float startHourClass);
-
     string EndDate(float endHourClass);
-
     set<schedule> ClassesSchedule(string classCode);
-
     BST<StudentUcs> StudentUC();
 
     map<string, string> UcsMap = {{"L.EIC001", "ALGA"},

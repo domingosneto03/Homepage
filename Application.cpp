@@ -1,6 +1,4 @@
-#include <fstream>
 #include <vector>
-#include <sstream>
 #include <string>
 #include <iostream>
 #include "Application.h"
@@ -23,7 +21,7 @@ set<UniClass *> Application::readUniclasses() {
     fstream fin_classes;
     fin_classes.open("../schedule/classes.csv", ios::in);
     vector<string> row;
-    string line, word, temp;
+    string line, word;
     int count = 0;
 
     while (true) {
@@ -99,14 +97,6 @@ set<Student *> Application::readStudents() {
         vector<string> Aula = {UcCode, ClassCode};
 
         Student *student;
-        /*
-        if studentCode in codes then
-            find student in set Students
-            student.classes.append(Aula)
-        else
-            studentSet.insert(new Student)
-        */
-        //if (studentSet.count())
         studentSet.insert(new Student(StudentCode, StudentName, Aula));
     }
     return studentSet;
@@ -205,6 +195,9 @@ string Application::EndDate(float endHourClass) {
 
 //neste metodo criamos uma lista com os estudantes que tinham o up que o utilizador introduziu
 set<studentAndClass> Application::StudentSchedule(string studentCode) {
+    if (studentSchedule.size() > 0) {
+        return studentSchedule;
+    }
     set<studentAndClass> studentAndClasses = StudentClass();
     set<studentAndClass> studentSchedule = {};
     for (auto studentAndClassesSet: studentAndClasses) {
@@ -213,6 +206,21 @@ set<studentAndClass> Application::StudentSchedule(string studentCode) {
         }
     }
     return studentSchedule;
+}
+
+set<schedule> Application::ClassesSchedule(string classCode) {
+    if (classSchedule.size() > 0) {
+        return classSchedule;
+    }
+    set<schedule> classesPerStudentSet = readClassesPerUC();
+    set<schedule> classSchedule = {};
+
+    for (auto newClassesPerStudentSet : classesPerStudentSet) {
+        if (newClassesPerStudentSet.classCode == classCode) {
+            classSchedule.insert(newClassesPerStudentSet);
+        }
+    }
+    return classSchedule;
 }
 
 BST<StudentUcs> Application::StudentUC() {
@@ -239,19 +247,6 @@ BST<StudentUcs> Application::StudentUC() {
 }
 
 /*
-set<schedule> Application::ClassesSchedule(string classCode) {
-    set<schedule> classesPerStudentSet = readClassesPerStudent();
-    set<schedule> classSchedule = {};
-
-    for (auto newClassesPerStudentSet : classesPerStudentSet) {
-        if (newClassesPerStudentSet.classCode == classCode) {
-            classSchedule.insert(newClassesPerStudentSet);
-        }
-    }
-    return classSchedule;
-}
-
-
  //este metodo é para dizer quantos alunos tem por turma mas nao funciona
 vector <string> Application::StudentPerClass(string classCode) {
     vector<studentAndClass> studentAndClasses = StudentClass();

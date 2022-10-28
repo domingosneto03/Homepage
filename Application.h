@@ -108,6 +108,7 @@ public:
     string EndDate(float endHourClass);
     set<schedule> ClassesSchedule(string classCode);
     BST<StudentUcs> StudentUC();
+    BST<pair<string, string>> StudentNumbYear(int ano);
 
     map<string, string> UcsMap = {{"L.EIC001", "ALGA"},
                                   {"L.EIC002", "AM I"},
@@ -135,6 +136,9 @@ public:
                                   {"L.EIC024", "PFL"},
                                   {"L.EIC025", "RC"}};
 
+    BST<pair<string, string>> StudentNumbUc(string uccode);
+
+    BST<pair<string, string>> StudentClassUc(string uccode, string turmaFinal);
 };
 
 #endif //PROJECTAED_G24_APPLICATION_H

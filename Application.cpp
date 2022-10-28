@@ -215,7 +215,7 @@ set<schedule> Application::ClassesSchedule(string classCode) {
     set<schedule> classesPerStudentSet = readClassesPerUC();
     set<schedule> classSchedule = {};
 
-    for (auto newClassesPerStudentSet : classesPerStudentSet) {
+    for (auto newClassesPerStudentSet: classesPerStudentSet) {
         if (newClassesPerStudentSet.classCode == classCode) {
             classSchedule.insert(newClassesPerStudentSet);
         }
@@ -226,12 +226,12 @@ set<schedule> Application::ClassesSchedule(string classCode) {
 BST<StudentUcs> Application::StudentUC() {
     set<Student *> student = readStudents();
     BST<string> studentCount = BST<string>{""};
-    StudentUcs studentUcsNull = {"", "",""};
+    StudentUcs studentUcsNull = {"", "", ""};
     BST<StudentUcs> studentUcBst = BST<StudentUcs>(studentUcsNull);
 
     for (auto nameStudent: student) {
         string name = nameStudent->getName();
-        if(studentCount.find(name)!=name){
+        if (studentCount.find(name) != name) {
             studentCount.insert(name);
             int count = 0;
             for (auto compararName: student) {
@@ -239,29 +239,61 @@ BST<StudentUcs> Application::StudentUC() {
                     count++;
                 }
             }
-            StudentUcs studentUcs = {name,nameStudent->getStudentCode(), to_string(count)};
+            StudentUcs studentUcs = {name, nameStudent->getStudentCode(), to_string(count)};
             studentUcBst.insert(studentUcs);
         }
     }
     return studentUcBst;
 }
 
-/*
- //este metodo é para dizer quantos alunos tem por turma mas nao funciona
-vector <string> Application::StudentPerClass(string classCode) {
-    vector<studentAndClass> studentAndClasses = StudentClass();
-    vector<string> studentPerClass = {};
+BST<pair<string, string>> Application::StudentNumbYear(int ano) {
+    set<Student *> student = readStudents();
+    BST<string> studentCount = BST<string>{""};
+    pair<string, string> studentNull = {"", ""};
+    BST<pair<string, string>> studentYearBst = BST<pair<string, string>>(studentNull);
 
-    for (int i = 0; i < studentAndClasses.size(); i++) {
-        for (int j = 0; j < studentAndClasses.size(); j++) {
-            if (studentAndClasses[i].classCode == classCode) {
-                if(studentAndClasses[i].studentCode != studentAndClasses[j].studentCode){
-                    studentPerClass.push_back(studentAndClasses[i].name);
-                    break;
-                }
+    for (auto studentList: student) {
+        for (vector<string> st_class: studentList->getClasses()) {
+            if (st_class[1].at(0)-'0' == ano) {
+                pair<string, string> studentYear = {studentList->getName(), studentList->getStudentCode()};
+                studentYearBst.insert(studentYear);
             }
         }
     }
-    return studentPerClass;
+    return studentYearBst;
 }
-*/
+
+BST<pair<string, string>> Application::StudentNumbUc(string uccode){
+    set<Student *> student = readStudents();
+    BST<string> studentCount = BST<string>{""};
+    pair<string, string> studentNull = {"", ""};
+    BST<pair<string, string>> studentUcBst = BST<pair<string, string>>(studentNull);
+
+    for (auto studentList: student) {
+        for (vector<string> st_class: studentList->getClasses()) {
+            if (st_class[0] == uccode) {
+                pair<string, string> studentUc = {studentList->getName(), studentList->getStudentCode()};
+                studentUcBst.insert(studentUc);
+            }
+        }
+    }
+
+    return studentUcBst;
+}
+
+BST<pair<string, string>> Application::StudentClassUc(string uccode, string turmaFinal) {
+    set<Student *> student = readStudents();
+    BST<string> studentCount = BST<string>{""};
+    pair<string, string> studentNull = {"", ""};
+    BST<pair<string, string>> studentUcBst = BST<pair<string, string>>(studentNull);
+
+    for (auto studentList: student) {
+        for (vector<string> st_class: studentList->getClasses()) {
+            if (st_class[0] == uccode && st_class[1] == turmaFinal) {
+                pair<string, string> studentUc = {studentList->getName(), studentList->getStudentCode()};
+                studentUcBst.insert(studentUc);
+            }
+        }
+    }
+    return studentUcBst;
+}

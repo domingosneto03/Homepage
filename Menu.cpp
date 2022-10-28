@@ -64,8 +64,10 @@ void Menu::SchedulePerStudent() {
         for (auto studentAndClassSet: studentAndClass) {
             float startHour = studentAndClassSet.startHour;
             float endHour = (studentAndClassSet.startHour + studentAndClassSet.duration);
-            cout << weekdayNames[studentAndClassSet.weekDay] << " -> " << studentAndClassSet.ucCode << ": " << app.UcsMap[studentAndClassSet.ucCode] <<
-                 " | " << studentAndClassSet.classCode << " | [ClassType] " << classTypeNames[studentAndClassSet.classType] <<
+            cout << weekdayNames[studentAndClassSet.weekDay] << " -> " << studentAndClassSet.ucCode << ": "
+                 << app.UcsMap[studentAndClassSet.ucCode] <<
+                 " | " << studentAndClassSet.classCode << " | [ClassType] "
+                 << classTypeNames[studentAndClassSet.classType] <<
                  " | " << app.StartDate(startHour) << "-" << app.EndDate(endHour) << endl;
         }
     } else {
@@ -79,27 +81,47 @@ void Menu::ClassMenu() {
     cout << "==============CLASS MENU==============" << endl;
     cout << "1 - Horario da turma" << endl;
     cout << "2 - Inscritos numa UC" << endl;
-    cout << "3 - Ocupacao da turma" << endl;
-    cout << "4 - Voltar ao menu principal" << endl;
+    cout << "3 - Inscritos num ano" << endl;
+    cout << "4 - Ocupacao da turma" << endl;
+    cout << "5 - Voltar ao menu principal" << endl;
     cout << "======================================" << endl;
-    cout << "Escolha uma opcao: ";
+    cout << "Escolha uma opcao:";
     cin >> option;
     switch (option) {
         case 1:
             SchedulePerClass();
             break;
         case 2:
+            StudentNUcs();
             break;
         case 3:
-            OcupationPerClass();
+            StudentYears();
             break;
         case 4:
+            OcupationPerClass();
+            break;
+        case 5:
             mainMenu();
             break;
     }
 }
 
-string Menu::ConstruirATurma(int ano, int turma) {
+string Menu::ConstruirATurma() {
+    int ano;
+    int turma;
+
+    cout << "Introduza o ano curricular (1 a 3):" << endl;
+    cin >> ano;
+    while (ano < 1 || ano > 3) {
+        cout << "O ano introduzido e invalido! Introduza novamente:" << endl;
+        cin >> ano;
+    }
+    cout << "Introduza o numero da turma (1 a 16):" << endl;
+    cin >> turma;
+    while (turma < 1 || turma > 16) {
+        cout << "A turma introduzida e invalida! Introduza novamente:" << endl;
+        cin >> turma;
+    }
     string turmaFinal;
     if (turma > 0 && turma < 9) {
         turmaFinal = to_string(ano) + "LEIC0" + to_string(turma);
@@ -110,67 +132,77 @@ string Menu::ConstruirATurma(int ano, int turma) {
 }
 
 void Menu::SchedulePerClass() {
-    int ano;
-    int turma;
-
-    cout << "Introduza o ano curricular (1 a 3):" << endl;
-    cin >> ano;
-    while (ano < 1 || ano > 3) {
-        cout << "O ano introduzido e invalido! Introduza novamente:" << endl;
-        cin >> ano;
-    }
-    cout << "Introduza o numero da turma (1 a 16):" << endl;
-    cin >> turma;
-    while (turma < 1 || turma > 16) {
-        cout << "A turma introduzida e invalida! Introduza novamente:" << endl;
-        cin >> turma;
-    }
-    string turmaFinal = ConstruirATurma(ano, turma);
+    string turmaFinal = ConstruirATurma();
     set<schedule> classesSchedule = app.ClassesSchedule(turmaFinal);
     cout << "A turma " << turmaFinal << " tem o seguinte horario:" << endl;
     for (auto classesScheduleSet: classesSchedule) {
         cout << "UcCode: " << classesScheduleSet.ucCode << " [" << app.UcsMap[classesScheduleSet.ucCode] << "]" << endl;
     }
-
 }
 
 void Menu::OcupationPerClass() {
-    int ano;
-    int turma;
-    cout << "Introduza o ano curricular (1 a 3):" << endl;
-    cin >> ano;
-    while (ano < 1 || ano > 3) {
-        cout << "O ano introduzido e invalido! Introduza novamente:" << endl;
-        cin >> ano;
+    string turmaFinal = ConstruirATurma();
+    string uccode;
+    cout << "Indique o codigo da Uc (formato: L.EIC00X):";
+    cin >> uccode;
+    BST<pair<string, string>> studentUc = app.StudentClassUc(uccode, turmaFinal);
+    int count = 0;
+    for (auto i = studentUc.begin(); i != studentUc.end(); i++) {
+        cout << (*i).first << " [" << (*i).second << "]" << endl;
+        count++;
     }
-    cout << "Introduza o numero da turma (1 a 16):" << endl;
-    cin >> turma;
-    while (turma < 1 || turma > 16) {
-        cout << "A turma introduzida e invalida! Introduza novamente:" << endl;
-        cin >> turma;
-    }
-    string turmaFinal = ConstruirATurma(ano, turma);
+    cout << "Existem " << count << " estudantes inscritos em " << app.UcsMap[uccode] << " na turma " << turmaFinal << endl;
 }
 
 void Menu::UcNumbers() {
     int n;
     cout << "Indique o numero de Ucs:";
     cin >> n;
-    int count=0;
+    int count = 0;
 
     BST<StudentUcs> studentUc = app.StudentUC();
 
-    for(auto i=studentUc.begin(); i!=studentUc.end() ; i++) {
+    for (auto i = studentUc.begin(); i != studentUc.end(); i++) {
         if (stoi((*i).count) > n) {
             cout << (*i).name << " [" << (*i).studentCode << "]" << endl;
             count++;
         }
     }
-    if(count!=0){
+    if (count != 0) {
         cout << "Existem " << count << " estudantes com mais de " << n << " UCs." << endl;
     } else {
         cout << "Nao existem estudantes com mais de " << n << " UCs." << endl;
     }
+}
+
+void Menu::StudentYears() {
+    int ano;
+    cout << "Indique o ano (de 1 a 3):";
+    cin >> ano;
+    while (ano < 1 || ano > 3) {
+        cout << "O ano introduzido e invalido! Introduza novamente:" << endl;
+        cin >> ano;
+    }
+    int count = 0;
+    BST<pair<string, string>> studentYear = app.StudentNumbYear(ano);
+    for (auto i = studentYear.begin(); i != studentYear.end(); i++) {
+        cout << (*i).first << " [" << (*i).second << "]" << endl;
+        count++;
+    }
+    cout << "Existem " << count << " estudantes inscritos no " << ano << " ano."<< endl;
+}
+
+void Menu::StudentNUcs() {
+    string uccode;
+    cout << "Indique o codigo da Uc (formato: L.EIC00X):";
+    cin >> uccode;
+    BST<pair<string, string>> studentUc = app.StudentNumbUc(uccode);
+    int count = 0;
+    for (auto i = studentUc.begin(); i != studentUc.end(); i++) {
+        cout << (*i).first << " [" << (*i).second << "]" << endl;
+        count++;
+    }
+    cout << "Existem " << count << " estudantes inscritos em " << app.UcsMap[uccode] << endl;
 }
 
 #endif // PROJECT_AED_MENU_CPP

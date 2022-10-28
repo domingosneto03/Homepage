@@ -15,9 +15,11 @@ private:
     void SchedulePerClass();
     void OcupationPerClass();
     void ClassMenu();
-    string ConstruirATurma(int ano, int turma);
-
     void UcNumbers();
+    string ConstruirATurma();
+    void StudentYears();
+    void StudentNUcs();
+
 };
 
 #endif //PROJECTAED_G24_MENU_H

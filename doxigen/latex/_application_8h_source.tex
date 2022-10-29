@@ -1,5 +1,4 @@
 \hypertarget{_application_8h_source}{}\doxysection{Application.\+h}
-\label{_application_8h_source}\index{C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED\_G24/Application.h@{C:/Users/InesO/Desktop/feup/2ano/1semestre/AED/ProjectAED\_G24/Application.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJECTAED\_G24\_APPLICATION\_H}}
@@ -94,53 +93,66 @@
 \DoxyCodeLine{90 \};}
 \DoxyCodeLine{91 }
 \DoxyCodeLine{92 \textcolor{keyword}{class }\mbox{\hyperlink{class_application}{Application}} \{}
-\DoxyCodeLine{93 \textcolor{keyword}{private}:}
-\DoxyCodeLine{94     set<studentAndClass> studentsClassSet = \{\};}
-\DoxyCodeLine{95     set<UniClass *> uniClassSet = \{\};}
-\DoxyCodeLine{96     set<Student *> studentSet = \{\};}
-\DoxyCodeLine{97     set<schedule> classesPerUcSet = \{\};}
-\DoxyCodeLine{98     set<studentAndClass> studentSchedule=\{\};}
-\DoxyCodeLine{99     set<schedule> classSchedule = \{\};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{keyword}{public}:}
+\DoxyCodeLine{99     set<UniClass*> \mbox{\hyperlink{class_application_a43057a2be3d89121d377e80678a1b0cc}{readUniclasses}}();}
 \DoxyCodeLine{100 }
-\DoxyCodeLine{101 \textcolor{keyword}{public}:}
-\DoxyCodeLine{102     set<UniClass *> readUniclasses();}
-\DoxyCodeLine{103     set<Student *> readStudents();}
-\DoxyCodeLine{104     set<schedule> readClassesPerUC();}
-\DoxyCodeLine{105     set<studentAndClass> StudentClass();}
-\DoxyCodeLine{106     set<studentAndClass> StudentSchedule(\textcolor{keywordtype}{string} studentCode);}
-\DoxyCodeLine{107     \textcolor{keywordtype}{string} StartDate(\textcolor{keywordtype}{float} startHourClass);}
-\DoxyCodeLine{108     \textcolor{keywordtype}{string} EndDate(\textcolor{keywordtype}{float} endHourClass);}
-\DoxyCodeLine{109     set<schedule> ClassesSchedule(\textcolor{keywordtype}{string} classCode);}
-\DoxyCodeLine{110     \mbox{\hyperlink{class_b_s_t}{BST<StudentUcs>}} StudentUC();}
-\DoxyCodeLine{111 }
-\DoxyCodeLine{112     map<string, string> UcsMap = \{\{\textcolor{stringliteral}{"{}L.EIC001"{}}, \textcolor{stringliteral}{"{}ALGA"{}}\},}
-\DoxyCodeLine{113                                   \{\textcolor{stringliteral}{"{}L.EIC002"{}}, \textcolor{stringliteral}{"{}AM I"{}}\},}
-\DoxyCodeLine{114                                   \{\textcolor{stringliteral}{"{}L.EIC003"{}}, \textcolor{stringliteral}{"{}FP"{}}\},}
-\DoxyCodeLine{115                                   \{\textcolor{stringliteral}{"{}L.EIC004"{}}, \textcolor{stringliteral}{"{}FSC"{}}\},}
-\DoxyCodeLine{116                                   \{\textcolor{stringliteral}{"{}L.EIC005"{}}, \textcolor{stringliteral}{"{}MD"{}}\},}
-\DoxyCodeLine{117                                   \{\textcolor{stringliteral}{"{}L.EIC006"{}}, \textcolor{stringliteral}{"{}AC"{}}\},}
-\DoxyCodeLine{118                                   \{\textcolor{stringliteral}{"{}L.EIC007"{}}, \textcolor{stringliteral}{"{}AM II"{}}\},}
-\DoxyCodeLine{119                                   \{\textcolor{stringliteral}{"{}L.EIC008"{}}, \textcolor{stringliteral}{"{}F I"{}}\},}
-\DoxyCodeLine{120                                   \{\textcolor{stringliteral}{"{}L.EIC009"{}}, \textcolor{stringliteral}{"{}P"{}}\},}
-\DoxyCodeLine{121                                   \{\textcolor{stringliteral}{"{}L.EIC010"{}}, \textcolor{stringliteral}{"{}TC"{}}\},}
-\DoxyCodeLine{122                                   \{\textcolor{stringliteral}{"{}L.EIC011"{}}, \textcolor{stringliteral}{"{}AED"{}}\},}
-\DoxyCodeLine{123                                   \{\textcolor{stringliteral}{"{}L.EIC012"{}}, \textcolor{stringliteral}{"{}BD"{}}\},}
-\DoxyCodeLine{124                                   \{\textcolor{stringliteral}{"{}L.EIC013"{}}, \textcolor{stringliteral}{"{}F II"{}}\},}
-\DoxyCodeLine{125                                   \{\textcolor{stringliteral}{"{}L.EIC014"{}}, \textcolor{stringliteral}{"{}LDTS"{}}\},}
-\DoxyCodeLine{126                                   \{\textcolor{stringliteral}{"{}L.EIC015"{}}, \textcolor{stringliteral}{"{}SO"{}}\},}
-\DoxyCodeLine{127                                   \{\textcolor{stringliteral}{"{}L.EIC016"{}}, \textcolor{stringliteral}{"{}DA"{}}\},}
-\DoxyCodeLine{128                                   \{\textcolor{stringliteral}{"{}L.EIC017"{}}, \textcolor{stringliteral}{"{}ES"{}}\},}
-\DoxyCodeLine{129                                   \{\textcolor{stringliteral}{"{}L.EIC018"{}}, \textcolor{stringliteral}{"{}LC"{}}\},}
-\DoxyCodeLine{130                                   \{\textcolor{stringliteral}{"{}L.EIC019"{}}, \textcolor{stringliteral}{"{}LTW"{}}\},}
-\DoxyCodeLine{131                                   \{\textcolor{stringliteral}{"{}L.EIC020"{}}, \textcolor{stringliteral}{"{}ME"{}}\},}
-\DoxyCodeLine{132                                   \{\textcolor{stringliteral}{"{}L.EIC021"{}}, \textcolor{stringliteral}{"{}FSI"{}}\},}
-\DoxyCodeLine{133                                   \{\textcolor{stringliteral}{"{}L.EIC022"{}}, \textcolor{stringliteral}{"{}IPC"{}}\},}
-\DoxyCodeLine{134                                   \{\textcolor{stringliteral}{"{}L.EIC023"{}}, \textcolor{stringliteral}{"{}LBAW"{}}\},}
-\DoxyCodeLine{135                                   \{\textcolor{stringliteral}{"{}L.EIC024"{}}, \textcolor{stringliteral}{"{}PFL"{}}\},}
-\DoxyCodeLine{136                                   \{\textcolor{stringliteral}{"{}L.EIC025"{}}, \textcolor{stringliteral}{"{}RC"{}}\}\};}
-\DoxyCodeLine{137 }
-\DoxyCodeLine{138 \};}
+\DoxyCodeLine{105     set<Student*> \mbox{\hyperlink{class_application_a3b9d53d51e4f73e983b9a9615a4e2fee}{readStudents}}();}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{111     set<schedule> \mbox{\hyperlink{class_application_a226a07333fac1e16b31dae1a3901fa3a}{readClassesPerUC}}();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{117     set<studentAndClass> \mbox{\hyperlink{class_application_a2c2e610777849477c7973f6d1763da83}{StudentClass}}();}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{124     set<studentAndClass> \mbox{\hyperlink{class_application_ac939db4835019d23523ad37511f4ff7f}{StudentSchedule}}(\textcolor{keywordtype}{string} studentCode);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{131     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_application_a9661e72fd75082215133323db9157a8b}{FormatDate}}(\textcolor{keywordtype}{float} hour);}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{138     set<schedule> \mbox{\hyperlink{class_application_a8f53867963236c8dedba28222a54722a}{ClassesSchedule}}(\textcolor{keywordtype}{string} classCode);}
 \DoxyCodeLine{139 }
-\DoxyCodeLine{140 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECTAED\_G24\_APPLICATION\_H}}
+\DoxyCodeLine{144     \mbox{\hyperlink{class_b_s_t}{BST<StudentUcs>}} \mbox{\hyperlink{class_application_a819ce38ea0b6a29e96cd04e0c385b9a4}{StudentUC}}();}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{151     \mbox{\hyperlink{class_b_s_t}{BST<pair<string, string>}}> \mbox{\hyperlink{class_application_a75e56879c033fd6acc74bdea58ef7423}{StudentNumbYear}}(\textcolor{keywordtype}{int} ano);}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{158     \mbox{\hyperlink{class_b_s_t}{BST<pair<string, string>}}> \mbox{\hyperlink{class_application_a225c6097ecf86a9768d462332aa043e6}{StudentNumbUc}}(\textcolor{keywordtype}{string} uccode);}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{166     \mbox{\hyperlink{class_b_s_t}{BST<pair<string, string>}}> \mbox{\hyperlink{class_application_a0dffbcccf5b313b29c28aaa7ba97827a}{StudentClassUc}}(\textcolor{keywordtype}{string} uccode, \textcolor{keywordtype}{string} turmaFinal);}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168     map<string, string> UcsMap = \{\{\textcolor{stringliteral}{"{}L.EIC001"{}}, \textcolor{stringliteral}{"{}ALGA"{}}\},}
+\DoxyCodeLine{169                                   \{\textcolor{stringliteral}{"{}L.EIC002"{}}, \textcolor{stringliteral}{"{}AM I"{}}\},}
+\DoxyCodeLine{170                                   \{\textcolor{stringliteral}{"{}L.EIC003"{}}, \textcolor{stringliteral}{"{}FP"{}}\},}
+\DoxyCodeLine{171                                   \{\textcolor{stringliteral}{"{}L.EIC004"{}}, \textcolor{stringliteral}{"{}FSC"{}}\},}
+\DoxyCodeLine{172                                   \{\textcolor{stringliteral}{"{}L.EIC005"{}}, \textcolor{stringliteral}{"{}MD"{}}\},}
+\DoxyCodeLine{173                                   \{\textcolor{stringliteral}{"{}L.EIC006"{}}, \textcolor{stringliteral}{"{}AC"{}}\},}
+\DoxyCodeLine{174                                   \{\textcolor{stringliteral}{"{}L.EIC007"{}}, \textcolor{stringliteral}{"{}AM II"{}}\},}
+\DoxyCodeLine{175                                   \{\textcolor{stringliteral}{"{}L.EIC008"{}}, \textcolor{stringliteral}{"{}F I"{}}\},}
+\DoxyCodeLine{176                                   \{\textcolor{stringliteral}{"{}L.EIC009"{}}, \textcolor{stringliteral}{"{}P"{}}\},}
+\DoxyCodeLine{177                                   \{\textcolor{stringliteral}{"{}L.EIC010"{}}, \textcolor{stringliteral}{"{}TC"{}}\},}
+\DoxyCodeLine{178                                   \{\textcolor{stringliteral}{"{}L.EIC011"{}}, \textcolor{stringliteral}{"{}AED"{}}\},}
+\DoxyCodeLine{179                                   \{\textcolor{stringliteral}{"{}L.EIC012"{}}, \textcolor{stringliteral}{"{}BD"{}}\},}
+\DoxyCodeLine{180                                   \{\textcolor{stringliteral}{"{}L.EIC013"{}}, \textcolor{stringliteral}{"{}F II"{}}\},}
+\DoxyCodeLine{181                                   \{\textcolor{stringliteral}{"{}L.EIC014"{}}, \textcolor{stringliteral}{"{}LDTS"{}}\},}
+\DoxyCodeLine{182                                   \{\textcolor{stringliteral}{"{}L.EIC015"{}}, \textcolor{stringliteral}{"{}SO"{}}\},}
+\DoxyCodeLine{183                                   \{\textcolor{stringliteral}{"{}L.EIC016"{}}, \textcolor{stringliteral}{"{}DA"{}}\},}
+\DoxyCodeLine{184                                   \{\textcolor{stringliteral}{"{}L.EIC017"{}}, \textcolor{stringliteral}{"{}ES"{}}\},}
+\DoxyCodeLine{185                                   \{\textcolor{stringliteral}{"{}L.EIC018"{}}, \textcolor{stringliteral}{"{}LC"{}}\},}
+\DoxyCodeLine{186                                   \{\textcolor{stringliteral}{"{}L.EIC019"{}}, \textcolor{stringliteral}{"{}LTW"{}}\},}
+\DoxyCodeLine{187                                   \{\textcolor{stringliteral}{"{}L.EIC020"{}}, \textcolor{stringliteral}{"{}ME"{}}\},}
+\DoxyCodeLine{188                                   \{\textcolor{stringliteral}{"{}L.EIC021"{}}, \textcolor{stringliteral}{"{}FSI"{}}\},}
+\DoxyCodeLine{189                                   \{\textcolor{stringliteral}{"{}L.EIC022"{}}, \textcolor{stringliteral}{"{}IPC"{}}\},}
+\DoxyCodeLine{190                                   \{\textcolor{stringliteral}{"{}L.EIC023"{}}, \textcolor{stringliteral}{"{}LBAW"{}}\},}
+\DoxyCodeLine{191                                   \{\textcolor{stringliteral}{"{}L.EIC024"{}}, \textcolor{stringliteral}{"{}PFL"{}}\},}
+\DoxyCodeLine{192                                   \{\textcolor{stringliteral}{"{}L.EIC025"{}}, \textcolor{stringliteral}{"{}RC"{}}\}\};}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 \textcolor{keyword}{private}:}
+\DoxyCodeLine{196     set<studentAndClass> studentsClassSet = \{\};}
+\DoxyCodeLine{197     set<UniClass *> uniClassSet = \{\};}
+\DoxyCodeLine{198     set<Student *> studentSet = \{\};}
+\DoxyCodeLine{199     set<schedule> classesPerUcSet = \{\};}
+\DoxyCodeLine{200     set<studentAndClass> studentSchedule = \{\};}
+\DoxyCodeLine{201     set<schedule> classSchedule = \{\};}
+\DoxyCodeLine{202 \};}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECTAED\_G24\_APPLICATION\_H}}
 
 \end{DoxyCode}

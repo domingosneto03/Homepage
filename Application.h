@@ -90,25 +90,80 @@ struct StudentUcs {
 };
 
 class Application {
-private:
-    set<studentAndClass> studentsClassSet = {};
-    set<UniClass *> uniClassSet = {};
-    set<Student *> studentSet = {};
-    set<schedule> classesPerUcSet = {};
-    set<studentAndClass> studentSchedule={};
-    set<schedule> classSchedule = {};
 
 public:
-    set<UniClass *> readUniclasses();
-    set<Student *> readStudents();
+    /**
+    * Reads the file classes.csv and stores it in a set, using the UniClass constructor.
+    * @return set<UniClass*>
+    */
+    set<UniClass*> readUniclasses();
+
+    /**
+    * Reads the file students_classes.csv and stores it in a set, using the Student constructor.
+    * @return set<UniClass*>
+    */
+    set<Student*> readStudents();
+
+    /**
+    * Reads the file classes_per_uc.csv and stores it in a set, using the schedule struct.
+    * @return set<UniClass*>
+    */
     set<schedule> readClassesPerUC();
+
+    /**
+    * Joins the sets from the functions readUniclasses and readStudents into a single set, to join all the information about schedules and students.
+    * @return set<studentAndClass>
+    */
     set<studentAndClass> StudentClass();
+
+    /**
+    * Goes through the set of the function StudentClass and adds to a new set (without duplicates) the student's classes that the user entered.
+    * @param studentCode
+    * @return set<UniClass*>
+    */
     set<studentAndClass> StudentSchedule(string studentCode);
-    string StartDate(float startHourClass);
-    string EndDate(float endHourClass);
+
+    /**
+    * Puts the time in the correct format (hh:mm).
+    * @param hour
+    * @return hourStart
+    */
+    string FormatDate(float hour);
+
+    /**
+    * Creates a set with all the lessons in a class, entered by the use.
+    * @param classCode
+    * @return set<UniClass*>
+    */
     set<schedule> ClassesSchedule(string classCode);
+
+    /**
+    * Create a bst with all students and their number of Ucs
+    * @return BST<StudentUcs>
+    */
     BST<StudentUcs> StudentUC();
+
+    /**
+    * Creates a bst with all students of a certain year (1, 2 or 3).
+    * @param ano
+    * @return  BST<pair<string, string>>
+    */
     BST<pair<string, string>> StudentNumbYear(int ano);
+
+    /**
+    * Creates a bst with all students enrolled in a given Uc.
+    * @param uccode
+    * @return BST<pair<string, string>>
+    */
+    BST<pair<string, string>> StudentNumbUc(string uccode);
+
+    /**
+    * Creates a bst with all students enrolled in a specific Uc in a specific class.
+    * @param uccode
+    * @param turmaFinal
+    * @return set<UniClass*>
+    */
+    BST<pair<string, string>> StudentClassUc(string uccode, string turmaFinal);
 
     map<string, string> UcsMap = {{"L.EIC001", "ALGA"},
                                   {"L.EIC002", "AM I"},
@@ -136,9 +191,14 @@ public:
                                   {"L.EIC024", "PFL"},
                                   {"L.EIC025", "RC"}};
 
-    BST<pair<string, string>> StudentNumbUc(string uccode);
 
-    BST<pair<string, string>> StudentClassUc(string uccode, string turmaFinal);
+private:
+    set<studentAndClass> studentsClassSet = {};
+    set<UniClass *> uniClassSet = {};
+    set<Student *> studentSet = {};
+    set<schedule> classesPerUcSet = {};
+    set<studentAndClass> studentSchedule = {};
+    set<schedule> classSchedule = {};
 };
 
 #endif //PROJECTAED_G24_APPLICATION_H

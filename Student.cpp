@@ -8,10 +8,6 @@ Student::Student(string studentCode, string name,vector<string> Class) {
     classes.push_back(Class);
 }
 
-bool Student::addSchedules(Schedule schedule) {
-    //confirmar se o aluno já tem aulas a essa hora
-    return false;
-}
 void Student::addClass(vector<string> Class){
     classes.push_back(Class);
 }
@@ -19,7 +15,7 @@ void Student::setName(string name) {
     this -> name = name;
 }
 
-void Student::setStudentCode(){
+void Student::setStudentCode(string studentCode){
     this -> studentCode = studentCode;
 }
 

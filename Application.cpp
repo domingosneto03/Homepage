@@ -163,34 +163,19 @@ set<studentAndClass> Application::StudentClass() {
     return studentAndClasses;
 }
 
-string Application::StartDate(float startHourClass) {
+string Application::FormatDate(float hour) {
     int startMin;
     int startHour;
-    string horaInicio;
-    if (startHourClass - int(startHourClass) == 0) {
-        startHour = int(startHourClass);
+    string finalHour;
+    if (hour - int(hour) == 0) {
+        startHour = int(hour);
         startMin = 00;
     } else {
-        startHour = int(startHourClass);
+        startHour = int(hour);
         startMin = 30;
     }
-    horaInicio = to_string(startHour) + "h:" + to_string(startMin) + "m";
-    return horaInicio;
-}
-
-string Application::EndDate(float endHourClass) {
-    int endMin;
-    int endHour;
-    string horaInicio;
-    if (endHourClass - int(endHourClass) == 0) {
-        endHour = int(endHourClass);
-        endMin = 00;
-    } else {
-        endHour = int(endHourClass);
-        endMin = 30;
-    }
-    horaInicio = to_string(endHour) + "h:" + to_string(endMin) + "m";
-    return horaInicio;
+    finalHour = to_string(startHour) + "h:" + to_string(startMin) + "m";
+    return finalHour;
 }
 
 //neste metodo criamos uma lista com os estudantes que tinham o up que o utilizador introduziu

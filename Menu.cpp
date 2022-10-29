@@ -44,7 +44,6 @@ void Menu::mainMenu() {
     }
 }
 
-
 void Menu::SchedulePerStudent() {
     string option;
     cout << "Introduza o seu numero de estudante:";
@@ -68,7 +67,18 @@ void Menu::SchedulePerStudent() {
                  << app.UcsMap[studentAndClassSet.ucCode] <<
                  " | " << studentAndClassSet.classCode << " | [ClassType] "
                  << classTypeNames[studentAndClassSet.classType] <<
-                 " | " << app.StartDate(startHour) << "-" << app.EndDate(endHour) << endl;
+                 " | " << app.FormatDate(startHour) << "-" << app.FormatDate(endHour) << endl;
+        }
+        string conti;
+        cout << "Deseja ver mais algum horario? (y/n)" << endl;
+        cin >> conti;
+        if(conti == "n" || conti == "N") {
+            mainMenu();
+        } else if (conti == "Y" || conti == "y") {
+            SchedulePerStudent();
+        } else {
+            cout << "A opcao nao e valida. Introduza novamente:" << endl;
+            cin >> conti;
         }
     } else {
         cout << "O numero que introduziu nao e valido!" << endl;
@@ -138,6 +148,17 @@ void Menu::SchedulePerClass() {
     for (auto classesScheduleSet: classesSchedule) {
         cout << "UcCode: " << classesScheduleSet.ucCode << " [" << app.UcsMap[classesScheduleSet.ucCode] << "]" << endl;
     }
+    string conti;
+    cout << "Deseja ver mais algum horario? (y/n)" << endl;
+    cin >> conti;
+    if(conti == "n" || conti == "N") {
+        ClassMenu();
+    } else if (conti == "Y" || conti == "y") {
+        SchedulePerClass();
+    } else {
+        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cin >> conti;
+    }
 }
 
 void Menu::OcupationPerClass() {
@@ -152,6 +173,17 @@ void Menu::OcupationPerClass() {
         count++;
     }
     cout << "Existem " << count << " estudantes inscritos em " << app.UcsMap[uccode] << " na turma " << turmaFinal << endl;
+    string conti;
+    cout << "Deseja ver mais alguma turma? (y/n)" << endl;
+    cin >> conti;
+    if(conti == "n" || conti == "N") {
+        ClassMenu();
+    } else if (conti == "Y" || conti == "y") {
+        OcupationPerClass();
+    } else {
+        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cin >> conti;
+    }
 }
 
 void Menu::UcNumbers() {
@@ -173,6 +205,18 @@ void Menu::UcNumbers() {
     } else {
         cout << "Nao existem estudantes com mais de " << n << " UCs." << endl;
     }
+
+    string conti;
+    cout << "Deseja ver mais algum numero de UCs? (y/n)" << endl;
+    cin >> conti;
+    if(conti == "n" || conti == "N") {
+        ClassMenu();
+    } else if (conti == "Y" || conti == "y") {
+        UcNumbers();
+    } else {
+        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cin >> conti;
+    }
 }
 
 void Menu::StudentYears() {
@@ -190,11 +234,22 @@ void Menu::StudentYears() {
         count++;
     }
     cout << "Existem " << count << " estudantes inscritos no " << ano << " ano."<< endl;
+    string conti;
+    cout << "Deseja ver mais algum ano? (y/n)" << endl;
+    cin >> conti;
+    if(conti == "n" || conti == "N") {
+        ClassMenu();
+    } else if (conti == "Y" || conti == "y") {
+        StudentYears();
+    } else {
+        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cin >> conti;
+    }
 }
 
 void Menu::StudentNUcs() {
     string uccode;
-    cout << "Indique o codigo da Uc (formato: L.EIC00X):";
+    cout << "Indique o codigo da Uc (formato: L.EIC0XX):";
     cin >> uccode;
     BST<pair<string, string>> studentUc = app.StudentNumbUc(uccode);
     int count = 0;
@@ -203,6 +258,17 @@ void Menu::StudentNUcs() {
         count++;
     }
     cout << "Existem " << count << " estudantes inscritos em " << app.UcsMap[uccode] << endl;
+    string conti;
+    cout << "Deseja ver mais alguma UC? (y/n)" << endl;
+    cin >> conti;
+    if(conti == "n" || conti == "N") {
+        ClassMenu();
+    } else if (conti == "Y" || conti == "y") {
+        StudentNUcs();
+    } else {
+        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cin >> conti;
+    }
 }
 
 #endif // PROJECT_AED_MENU_CPP

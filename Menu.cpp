@@ -64,15 +64,14 @@ void Menu::SchedulePerStudent() {
             float startHour = studentAndClassSet.startHour;
             float endHour = (studentAndClassSet.startHour + studentAndClassSet.duration);
             cout << weekdayNames[studentAndClassSet.weekDay] << " -> " << studentAndClassSet.ucCode << ": "
-                 << app.UcsMap[studentAndClassSet.ucCode] <<
-                 " | " << studentAndClassSet.classCode << " | [ClassType] "
-                 << classTypeNames[studentAndClassSet.classType] <<
-                 " | " << app.FormatDate(startHour) << "-" << app.FormatDate(endHour) << endl;
+                 << app.UcsMap[studentAndClassSet.ucCode] << " | " << studentAndClassSet.classCode << " | [ClassType] "
+                 << classTypeNames[studentAndClassSet.classType] << " | " << app.FormatDate(startHour) << "-"
+                 << app.FormatDate(endHour) << endl;
         }
         string conti;
         cout << "Deseja ver mais algum horario? (y/n)" << endl;
         cin >> conti;
-        if(conti == "n" || conti == "N") {
+        if (conti == "n" || conti == "N") {
             mainMenu();
         } else if (conti == "Y" || conti == "y") {
             SchedulePerStudent();
@@ -143,21 +142,34 @@ string Menu::ConstruirATurma() {
 
 void Menu::SchedulePerClass() {
     string turmaFinal = ConstruirATurma();
-    set<schedule> classesSchedule = app.ClassesSchedule(turmaFinal);
+    set<ClassSchelude> classesSchedule = app.ClassesSchedule(turmaFinal);
     cout << "A turma " << turmaFinal << " tem o seguinte horario:" << endl;
-    for (auto classesScheduleSet: classesSchedule) {
-        cout << "UcCode: " << classesScheduleSet.ucCode << " [" << app.UcsMap[classesScheduleSet.ucCode] << "]" << endl;
+    vector<string> weekdayNames = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+    vector<string> classTypeNames = {"T", "TP", "PL"};
+    for (auto x: classesSchedule) {
+        float startHour = x.startHour;
+        float endHour = (x.startHour + x.duration);
+        cout << weekdayNames[x.weekDay] << " -> " << x.ucCode << ": " << app.UcsMap[x.ucCode] << " | [ClassType] "
+             << classTypeNames[x.classType] << " | " << app.FormatDate(startHour) << "-" << app.FormatDate(endHour)
+             << endl;
     }
+
     string conti;
-    cout << "Deseja ver mais algum horario? (y/n)" << endl;
-    cin >> conti;
-    if(conti == "n" || conti == "N") {
+    cout << "Deseja ver mais algum horario? (y/n)" <<
+         endl;
+    cin >>
+        conti;
+    if (conti == "n" || conti == "N") {
         ClassMenu();
+
     } else if (conti == "Y" || conti == "y") {
         SchedulePerClass();
+
     } else {
-        cout << "A opcao nao e valida. Introduza novamente:" << endl;
-        cin >> conti;
+        cout << "A opcao nao e valida. Introduza novamente:" <<
+             endl;
+        cin >>
+            conti;
     }
 }
 
@@ -172,11 +184,12 @@ void Menu::OcupationPerClass() {
         cout << (*i).first << " [" << (*i).second << "]" << endl;
         count++;
     }
-    cout << "Existem " << count << " estudantes inscritos em " << app.UcsMap[uccode] << " na turma " << turmaFinal << endl;
+    cout << "Existem " << count << " estudantes inscritos em " << app.UcsMap[uccode] << " na turma " << turmaFinal
+         << endl;
     string conti;
     cout << "Deseja ver mais alguma turma? (y/n)" << endl;
     cin >> conti;
-    if(conti == "n" || conti == "N") {
+    if (conti == "n" || conti == "N") {
         ClassMenu();
     } else if (conti == "Y" || conti == "y") {
         OcupationPerClass();
@@ -209,7 +222,7 @@ void Menu::UcNumbers() {
     string conti;
     cout << "Deseja ver mais algum numero de UCs? (y/n)" << endl;
     cin >> conti;
-    if(conti == "n" || conti == "N") {
+    if (conti == "n" || conti == "N") {
         ClassMenu();
     } else if (conti == "Y" || conti == "y") {
         UcNumbers();
@@ -233,11 +246,11 @@ void Menu::StudentYears() {
         cout << (*i).first << " [" << (*i).second << "]" << endl;
         count++;
     }
-    cout << "Existem " << count << " estudantes inscritos no " << ano << " ano."<< endl;
+    cout << "Existem " << count << " estudantes inscritos no " << ano << " ano." << endl;
     string conti;
     cout << "Deseja ver mais algum ano? (y/n)" << endl;
     cin >> conti;
-    if(conti == "n" || conti == "N") {
+    if (conti == "n" || conti == "N") {
         ClassMenu();
     } else if (conti == "Y" || conti == "y") {
         StudentYears();
@@ -261,7 +274,7 @@ void Menu::StudentNUcs() {
     string conti;
     cout << "Deseja ver mais alguma UC? (y/n)" << endl;
     cin >> conti;
-    if(conti == "n" || conti == "N") {
+    if (conti == "n" || conti == "N") {
         ClassMenu();
     } else if (conti == "Y" || conti == "y") {
         StudentNUcs();

@@ -26,12 +26,12 @@ struct studentAndClass {
                         if (b.ucCode == a.ucCode) {
                             if (b.classType == a.classType) {
                                 if (b.startHour == a.startHour) {
-                                    return b.studentCode < a.studentCode;
+                                    return b.duration < a.duration;
                                 } else {
                                     return b.startHour < a.startHour;
                                 }
                             } else {
-                                return b.classCode < a.classCode;
+                                return b.classType < a.classType;
                             }
                         } else {
                             return b.ucCode < a.ucCode;
@@ -50,7 +50,6 @@ struct studentAndClass {
         }
     }
 };
-
 
 struct schedule {
     string classCode;
@@ -89,6 +88,34 @@ struct StudentUcs {
     }
 };
 
+struct ClassSchelude {
+    string ucCode;
+    int weekDay;
+    CLASS_TYPE classType;
+    double startHour;
+    double duration;
+
+    friend bool operator<(ClassSchelude a, ClassSchelude b) {
+        if (b.weekDay == a.weekDay) {
+            if (b.ucCode == a.ucCode) {
+                if (b.classType == a.classType) {
+                    if (b.startHour == a.startHour) {
+                        return b.duration < a.duration;
+                    } else {
+                        return b.startHour < a.startHour;
+                    }
+                } else {
+                    return b.classType < a.classType;
+                }
+            } else {
+                return b.ucCode < a.ucCode;
+            }
+        } else {
+            return b.weekDay > a.weekDay;
+        }
+    }
+};
+
 class Application {
 
 public:
@@ -96,13 +123,13 @@ public:
     * Reads the file classes.csv and stores it in a set, using the UniClass constructor.
     * @return set<UniClass*>
     */
-    set<UniClass*> readUniclasses();
+    set<UniClass *> readUniclasses();
 
     /**
     * Reads the file students_classes.csv and stores it in a set, using the Student constructor.
     * @return set<UniClass*>
     */
-    set<Student*> readStudents();
+    set<Student *> readStudents();
 
     /**
     * Reads the file classes_per_uc.csv and stores it in a set, using the schedule struct.
@@ -133,9 +160,9 @@ public:
     /**
     * Creates a set with all the lessons in a class, entered by the use.
     * @param classCode
-    * @return set<UniClass*>
+    * @return set<studentAndClass>
     */
-    set<schedule> ClassesSchedule(string classCode);
+    set<ClassSchelude> ClassesSchedule(string classCode);
 
     /**
     * Create a bst with all students and their number of Ucs
@@ -198,7 +225,7 @@ private:
     set<Student *> studentSet = {};
     set<schedule> classesPerUcSet = {};
     set<studentAndClass> studentSchedule = {};
-    set<schedule> classSchedule = {};
+    set<ClassSchelude> classSchedule = {};
 };
 
 #endif //PROJECTAED_G24_APPLICATION_H

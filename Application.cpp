@@ -142,8 +142,8 @@ set<studentAndClass> Application::StudentClass() {
     if (studentsClassSet.size() > 0) {
         return studentsClassSet;
     }
-    set<Student *> student = readStudents();
-    set<UniClass *> uniClassSet = readUniclasses();
+    set<Student*> student = readStudents();
+    set<UniClass*> uniClassSet = readUniclasses();
     set<studentAndClass> studentAndClasses;
 
     for (auto uniClassNew: uniClassSet) {
@@ -152,9 +152,8 @@ set<studentAndClass> Application::StudentClass() {
                 if (st_class[0] == uniClassNew->getUcCode() && st_class[1] == uniClassNew->getClassCode()) {
                     studentAndClasses.insert(
                             {studentNew->getStudentCode(), studentNew->getName(), uniClassNew->getClassCode(),
-                             uniClassNew->getUcCode(),
-                             uniClassNew->getWeekDay(), uniClassNew->getClassType(), uniClassNew->getStartHour(),
-                             uniClassNew->getDuration()});
+                             uniClassNew->getUcCode(),uniClassNew->getWeekDay(), uniClassNew->getClassType(),
+                             uniClassNew->getStartHour(),uniClassNew->getDuration()});
                 }
             }
         }
@@ -193,18 +192,29 @@ set<studentAndClass> Application::StudentSchedule(string studentCode) {
     return studentSchedule;
 }
 
-set<schedule> Application::ClassesSchedule(string classCode) {
+set<ClassSchelude> Application::ClassesSchedule(string classCode) {
     if (classSchedule.size() > 0) {
         return classSchedule;
     }
     set<schedule> classesPerStudentSet = readClassesPerUC();
-    set<schedule> classSchedule = {};
+    set<studentAndClass> studentAndClasses = StudentClass();
+    set<schedule> classScheduleAux = {};
+    set<ClassSchelude> classSchedule = {};
 
     for (auto newClassesPerStudentSet: classesPerStudentSet) {
         if (newClassesPerStudentSet.classCode == classCode) {
-            classSchedule.insert(newClassesPerStudentSet);
+            classScheduleAux.insert(newClassesPerStudentSet);
         }
     }
+
+    for (auto classesScheduleSet: classScheduleAux) {
+        for (auto x :studentAndClasses) {
+            if(classesScheduleSet.ucCode == x.ucCode && classesScheduleSet.classCode == x.classCode) {
+                classSchedule.insert({x.ucCode,x.weekDay, x.classType,x.startHour, x.duration});
+            }
+        }
+    }
+
     return classSchedule;
 }
 
@@ -239,7 +249,7 @@ BST<pair<string, string>> Application::StudentNumbYear(int ano) {
 
     for (auto studentList: student) {
         for (vector<string> st_class: studentList->getClasses()) {
-            if (st_class[1].at(0)-'0' == ano) {
+            if (st_class[1].at(0) - '0' == ano) {
                 pair<string, string> studentYear = {studentList->getName(), studentList->getStudentCode()};
                 studentYearBst.insert(studentYear);
             }
@@ -248,7 +258,7 @@ BST<pair<string, string>> Application::StudentNumbYear(int ano) {
     return studentYearBst;
 }
 
-BST<pair<string, string>> Application::StudentNumbUc(string uccode){
+BST<pair<string, string>> Application::StudentNumbUc(string uccode) {
     set<Student *> student = readStudents();
     BST<string> studentCount = BST<string>{""};
     pair<string, string> studentNull = {"", ""};

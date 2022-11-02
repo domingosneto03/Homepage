@@ -15,17 +15,18 @@ Menu::Menu() {
 void Menu::mainMenu() {
     int option;
     cout << "===============MAIN MENU===============" << endl;
-    cout << "1 - Horario de estudante" << endl;
-    cout << "2 - Menu das turmas" << endl;
-    cout << "3 - Estudantes com mais de n UCs" << endl;
-    cout << "4 - Sair" << endl;
+    cout << "1 - Student Schedule" << endl;
+    cout << "2 - Class Menu" << endl;
+    cout << "3 - Students with more than n Ucs" << endl;
+    cout << "4 - Request for schedule change" << endl;
+    cout << "5 - Exit" << endl;
     cout << "=======================================" << endl;
-    cout << "Escolha:";
+    cout << "Option:";
     cin >> option;
 
-    while (option < 1 || option > 4) {
-        cout << "Erro, por favor tente novamente!" << endl;
-        cout << "Escolha:";
+    while (option < 1 || option > 5) {
+        cout << "This option is not valid, try again!" << endl;
+        cout << "Option:";
         cin >> option;
     }
 
@@ -40,13 +41,16 @@ void Menu::mainMenu() {
             UcNumbers();
             break;
         case 4:
+            ChangeRequest();
+            break;
+        case 5:
             exit(-1);
     }
 }
 
 void Menu::SchedulePerStudent() {
     string option;
-    cout << "Introduza o seu numero de estudante:";
+    cout << "Enter your student code:";
     cin >> option;
     string nome;
     set<studentAndClass> studentAndClass = app.StudentSchedule(option);
@@ -69,32 +73,70 @@ void Menu::SchedulePerStudent() {
                  << app.FormatDate(endHour) << endl;
         }
         string conti;
-        cout << "Deseja ver mais algum horario? (y/n)" << endl;
+        cout << "Do you want to see any other schedule? (y/n)" << endl;
         cin >> conti;
         if (conti == "n" || conti == "N") {
             mainMenu();
         } else if (conti == "Y" || conti == "y") {
             SchedulePerStudent();
         } else {
-            cout << "A opcao nao e valida. Introduza novamente:" << endl;
+            cout << "This option is not valid, please enter it again: (y/n):" << endl;
             cin >> conti;
         }
     } else {
-        cout << "O numero que introduziu nao e valido!" << endl;
+        cout << "This option is not valid, try again!" << endl;
         SchedulePerStudent();
     }
+}
+
+void Menu::ChangeRequest(){
+    int option;
+    cout << "==============CHANGE MENU==============" << endl;
+    cout << "1 - Remove class" << endl;
+    cout << "2 - Add class" << endl;
+    cout << "3 - Change class" << endl;
+    cout << "4 - Back to the main menu" << endl;
+    cout << "======================================" << endl;
+    cout << "Option:";
+    cin >> option;
+    switch (option) {
+        case 1:
+            RemoveClass();
+            break;
+        case 2:
+            break;
+        case 3:
+
+            break;
+        case 4:
+            mainMenu();
+            break;
+    }
+}
+
+void Menu::RemoveClass() {
+    string studentCode;
+    cout << "Enter the Student code:";
+    cin >> studentCode;
+    string ucCode;
+    cout << "Enter the Uc code (format: L.EIC0XX):";
+    cin >> ucCode;
+    app.RemoveClass(studentCode, ucCode);
+    cout << "Your class was removed successfully!" << endl;
+    cout << endl;
+    mainMenu();
 }
 
 void Menu::ClassMenu() {
     int option;
     cout << "==============CLASS MENU==============" << endl;
-    cout << "1 - Horario da turma" << endl;
-    cout << "2 - Inscritos numa UC" << endl;
-    cout << "3 - Inscritos num ano" << endl;
-    cout << "4 - Ocupacao da turma" << endl;
-    cout << "5 - Voltar ao menu principal" << endl;
+    cout << "1 - Class Schedule" << endl;
+    cout << "2 - Enrolled in a UC" << endl;
+    cout << "3 - Enrolled in a year" << endl;
+    cout << "4 - Occupancy of a class" << endl;
+    cout << "5 - Back to the main menu" << endl;
     cout << "======================================" << endl;
-    cout << "Escolha uma opcao:";
+    cout << "Option:";
     cin >> option;
     switch (option) {
         case 1:
@@ -119,16 +161,16 @@ string Menu::ConstruirATurma() {
     int ano;
     int turma;
 
-    cout << "Introduza o ano curricular (1 a 3):" << endl;
+    cout << "Enter the year (1 a 3):" << endl;
     cin >> ano;
     while (ano < 1 || ano > 3) {
-        cout << "O ano introduzido e invalido! Introduza novamente:" << endl;
+        cout << "The year entered is invalid! Please enter it again:" << endl;
         cin >> ano;
     }
-    cout << "Introduza o numero da turma (1 a 16):" << endl;
+    cout << "Enter the class number (1 a 16):" << endl;
     cin >> turma;
     while (turma < 1 || turma > 16) {
-        cout << "A turma introduzida e invalida! Introduza novamente:" << endl;
+        cout << "The class entered is invalid! Please enter it again:" << endl;
         cin >> turma;
     }
     string turmaFinal;
@@ -143,7 +185,7 @@ string Menu::ConstruirATurma() {
 void Menu::SchedulePerClass() {
     string turmaFinal = ConstruirATurma();
     set<ClassSchelude> classesSchedule = app.ClassesSchedule(turmaFinal);
-    cout << "A turma " << turmaFinal << " tem o seguinte horario:" << endl;
+    cout << "The " << turmaFinal << " class has the following schedule:" << endl;
     vector<string> weekdayNames = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     vector<string> classTypeNames = {"T", "TP", "PL"};
     for (auto x: classesSchedule) {
@@ -155,28 +197,24 @@ void Menu::SchedulePerClass() {
     }
 
     string conti;
-    cout << "Deseja ver mais algum horario? (y/n)" <<
+    cout << "Do you want to see any more schedules? (y/n)" <<
          endl;
     cin >>
         conti;
     if (conti == "n" || conti == "N") {
         ClassMenu();
-
     } else if (conti == "Y" || conti == "y") {
         SchedulePerClass();
-
     } else {
-        cout << "A opcao nao e valida. Introduza novamente:" <<
-             endl;
-        cin >>
-            conti;
+        cout << "This option is not valid, Please enter it again:" << endl;
+        cin >> conti;
     }
 }
 
 void Menu::OcupationPerClass() {
     string turmaFinal = ConstruirATurma();
     string uccode;
-    cout << "Indique o codigo da Uc (formato: L.EIC00X):";
+    cout << "Enter the Uc code (format: L.EIC0XX):";
     cin >> uccode;
     BST<pair<string, string>> studentUc = app.StudentClassUc(uccode, turmaFinal);
     int count = 0;
@@ -184,27 +222,25 @@ void Menu::OcupationPerClass() {
         cout << (*i).first << " [" << (*i).second << "]" << endl;
         count++;
     }
-    cout << "Existem " << count << " estudantes inscritos em " << app.UcsMap[uccode] << " na turma " << turmaFinal
-         << endl;
+    cout << "There are " << count << " students enrolled in " << app.UcsMap[uccode] << " in class " << turmaFinal << endl;
     string conti;
-    cout << "Deseja ver mais alguma turma? (y/n)" << endl;
+    cout << "Wish to see any more classes? (y/n)" << endl;
     cin >> conti;
     if (conti == "n" || conti == "N") {
         ClassMenu();
     } else if (conti == "Y" || conti == "y") {
         OcupationPerClass();
     } else {
-        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cout << "This option is not valid, Please enter it again:" << endl;
         cin >> conti;
     }
 }
 
 void Menu::UcNumbers() {
     int n;
-    cout << "Indique o numero de Ucs:";
+    cout << "Introduce the number of Ucs:";
     cin >> n;
     int count = 0;
-
     BST<StudentUcs> studentUc = app.StudentUC();
 
     for (auto i = studentUc.begin(); i != studentUc.end(); i++) {
@@ -214,30 +250,30 @@ void Menu::UcNumbers() {
         }
     }
     if (count != 0) {
-        cout << "Existem " << count << " estudantes com mais de " << n << " UCs." << endl;
+        cout << "There are " << count << " students with more than " << n << " UCs." << endl;
     } else {
-        cout << "Nao existem estudantes com mais de " << n << " UCs." << endl;
+        cout << "There are no students with more than " << n << " UCs." << endl;
     }
 
     string conti;
-    cout << "Deseja ver mais algum numero de UCs? (y/n)" << endl;
+    cout << "Do you want to see any more numbers of UCs? (y/n)" << endl;
     cin >> conti;
     if (conti == "n" || conti == "N") {
         ClassMenu();
     } else if (conti == "Y" || conti == "y") {
         UcNumbers();
     } else {
-        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cout << "This option is not valid, Please enter it again:" << endl;
         cin >> conti;
     }
 }
 
 void Menu::StudentYears() {
     int ano;
-    cout << "Indique o ano (de 1 a 3):";
+    cout << "Enter the year (de 1 a 3):";
     cin >> ano;
     while (ano < 1 || ano > 3) {
-        cout << "O ano introduzido e invalido! Introduza novamente:" << endl;
+        cout << "The year entered is invalid! Please enter it again:" << endl;
         cin >> ano;
     }
     int count = 0;
@@ -246,23 +282,23 @@ void Menu::StudentYears() {
         cout << (*i).first << " [" << (*i).second << "]" << endl;
         count++;
     }
-    cout << "Existem " << count << " estudantes inscritos no " << ano << " ano." << endl;
+    cout << "Ther are " << count << " students enrolled in " << ano << " year." << endl;
     string conti;
-    cout << "Deseja ver mais algum ano? (y/n)" << endl;
+    cout << "Do you want to see another year? (y/n)" << endl;
     cin >> conti;
     if (conti == "n" || conti == "N") {
         ClassMenu();
     } else if (conti == "Y" || conti == "y") {
         StudentYears();
     } else {
-        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cout << "This option is not valid, Please enter it again:" << endl;
         cin >> conti;
     }
 }
 
 void Menu::StudentNUcs() {
     string uccode;
-    cout << "Indique o codigo da Uc (formato: L.EIC0XX):";
+    cout << "Enter de Uc code (format: L.EIC0XX):";
     cin >> uccode;
     BST<pair<string, string>> studentUc = app.StudentNumbUc(uccode);
     int count = 0;
@@ -270,16 +306,16 @@ void Menu::StudentNUcs() {
         cout << (*i).first << " [" << (*i).second << "]" << endl;
         count++;
     }
-    cout << "Existem " << count << " estudantes inscritos em " << app.UcsMap[uccode] << endl;
+    cout << "The are " << count << " students enrolled in " << app.UcsMap[uccode] << endl;
     string conti;
-    cout << "Deseja ver mais alguma UC? (y/n)" << endl;
+    cout << "Do you want to see another UC? (y/n)" << endl;
     cin >> conti;
     if (conti == "n" || conti == "N") {
         ClassMenu();
     } else if (conti == "Y" || conti == "y") {
         StudentNUcs();
     } else {
-        cout << "A opcao nao e valida. Introduza novamente:" << endl;
+        cout << "This option is not valid, Please enter it again:" << endl;
         cin >> conti;
     }
 }

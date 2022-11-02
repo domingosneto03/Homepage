@@ -192,6 +192,13 @@ public:
     */
     BST<pair<string, string>> StudentClassUc(string uccode, string turmaFinal);
 
+    /**
+    * Removes a class from a student.
+    * @param studentCode
+    * @param uccode
+    */
+    void RemoveClass(string studentCode, string ucCode);
+
     map<string, string> UcsMap = {{"L.EIC001", "ALGA"},
                                   {"L.EIC002", "AM I"},
                                   {"L.EIC003", "FP"},

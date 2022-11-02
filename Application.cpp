@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <algorithm>
 #include "Application.h"
 #include "UniClass.h"
 #include "Student.h"
@@ -137,7 +138,6 @@ set<schedule> Application::readClassesPerUC() {
     return classesPerUcSet;
 }
 
-//neste metodo criamos uma lista que junta tudo do primeiro e ultimo ficheiros
 set<studentAndClass> Application::StudentClass() {
     if (studentsClassSet.size() > 0) {
         return studentsClassSet;
@@ -277,7 +277,7 @@ BST<pair<string, string>> Application::StudentNumbUc(string uccode) {
 }
 
 BST<pair<string, string>> Application::StudentClassUc(string uccode, string turmaFinal) {
-    set<Student *> student = readStudents();
+    set<Student*> student = readStudents();
     BST<string> studentCount = BST<string>{""};
     pair<string, string> studentNull = {"", ""};
     BST<pair<string, string>> studentUcBst = BST<pair<string, string>>(studentNull);
@@ -285,10 +285,21 @@ BST<pair<string, string>> Application::StudentClassUc(string uccode, string turm
     for (auto studentList: student) {
         for (vector<string> st_class: studentList->getClasses()) {
             if (st_class[0] == uccode && st_class[1] == turmaFinal) {
-                pair<string, string> studentUc = {studentList->getName(), studentList->getStudentCode()};
+                pair <string, string> studentUc = {studentList->getName(), studentList->getStudentCode()};
                 studentUcBst.insert(studentUc);
             }
         }
     }
     return studentUcBst;
+}
+
+void Application::RemoveClass(string studentCode, string ucCode) {
+    if (studentsClassSet.size()==0){
+        StudentClass();
+    }
+    for(auto it = studentsClassSet.begin(); it != studentsClassSet.end(); it++){
+        if (it->studentCode==studentCode && it->ucCode==ucCode) {
+            studentsClassSet.erase(it);
+        }
+    }
 }

@@ -55,6 +55,10 @@ private:
     * Prints the name of all the students enrolled with more than x Ucs and the total number.
     */
     void StudentNUcs();
+
+    void ChangeRequest();
+
+    void RemoveClass();
 };
 
 #endif //PROJECTAED_G24_MENU_H

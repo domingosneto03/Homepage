@@ -116,6 +116,16 @@ struct ClassSchelude {
     }
 };
 
+enum REQUEST_TYPE{ADD, CHANGE, REMOVE};
+
+struct Request {
+    REQUEST_TYPE type;
+    string studentCode;
+    string ucCode;
+    string classCode;
+    int cap;
+};
+
 class Application {
 
 public:
@@ -199,6 +209,14 @@ public:
     */
     void RemoveClass(string studentCode, string ucCode);
 
+    string StudentName(string studentCode);
+    bool AddClass(string studentCode, string ucCode, string classCode, int ocupation, int Cap);
+    bool Overlapping(int weekday, double startHour, double duration, CLASS_TYPE classType);
+    void ResolveRequests();
+    void AddAddRequest(string studentCode, string ucCode, string classCode, int cap);
+    void AddRemoveRequest(string studentCode, string ucCode);
+    int OcupationPerUcClass(string ucCode, string classCode);
+
     map<string, string> UcsMap = {{"L.EIC001", "ALGA"},
                                   {"L.EIC002", "AM I"},
                                   {"L.EIC003", "FP"},
@@ -233,6 +251,8 @@ private:
     set<schedule> classesPerUcSet = {};
     set<studentAndClass> studentSchedule = {};
     set<ClassSchelude> classSchedule = {};
+    queue<Request> requests = {};
+    vector<Request> requestDenied = {};
 };
 
 #endif //PROJECTAED_G24_APPLICATION_H

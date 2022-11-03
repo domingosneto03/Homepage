@@ -107,7 +107,6 @@ set<schedule> Application::readClassesPerUC() {
     if (classesPerUcSet.size() > 0) {
         return classesPerUcSet;
     }
-
     fstream fin;
     fin.open("../schedule/classes_per_uc.csv", ios::in);
     vector<string> row;
@@ -206,7 +205,6 @@ set<ClassSchelude> Application::ClassesSchedule(string classCode) {
             classScheduleAux.insert(newClassesPerStudentSet);
         }
     }
-
     for (auto classesScheduleSet: classScheduleAux) {
         for (auto x :studentAndClasses) {
             if(classesScheduleSet.ucCode == x.ucCode && classesScheduleSet.classCode == x.classCode) {
@@ -214,7 +212,6 @@ set<ClassSchelude> Application::ClassesSchedule(string classCode) {
             }
         }
     }
-
     return classSchedule;
 }
 
@@ -300,6 +297,115 @@ void Application::RemoveClass(string studentCode, string ucCode) {
     for(auto it = studentsClassSet.begin(); it != studentsClassSet.end(); it++){
         if (it->studentCode==studentCode && it->ucCode==ucCode) {
             studentsClassSet.erase(it);
+        }
+    }
+}
+
+string Application::StudentName(string studentCode) {
+    for (auto x: studentsClassSet) {
+        if (x.studentCode==studentCode) {
+            return x.name;
+        }
+    }
+}
+
+bool Application::Overlapping(int weekday, double startHour, double duration, CLASS_TYPE classtype) {
+    vector<string> classTypeNames = {"T", "TP", "PL"};
+    for (auto x: studentSchedule) {
+        if ((x.weekDay == weekday) && (classTypeNames[x.classType]=="TP" || classTypeNames[x.classType]=="PL") && (x.classType!=classtype)) {
+            if(startHour + duration > x.startHour and startHour < x.startHour + duration) {
+                return false;
+            }
+            if(x.startHour + x.duration > startHour and x.startHour < startHour + duration) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+bool Application::AddClass(string studentCode, string ucCode, string classCode, int ocupation, int cap) {
+    bool sair = false;
+    int weekDay;
+    double startHour;
+    double duration;
+    CLASS_TYPE classtype;
+
+    for (auto x: studentsClassSet) {
+        if (x.ucCode==ucCode && x.classCode==classCode) {
+            weekDay = x.weekDay;
+            classtype = x.classType;
+            startHour = x.startHour;
+            duration = x.duration;
+            sair = true;
+        }
+        if (sair) continue;
+    }
+
+    if (studentsClassSet.size()==0) {
+        StudentClass();
+    }
+
+    if (ocupation>=cap) {
+        return false;
+    }
+    else if (!Overlapping(weekDay, startHour, duration,classtype)){
+        return false;
+    }
+    string name = StudentName(studentCode);
+    studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay,classtype, startHour, duration});
+    return true;
+}
+
+void Application::AddAddRequest(string studentCode, string ucCode, string classCode, int cap) {
+    Request newRequest = Request();
+    newRequest.type = ADD;
+    newRequest.studentCode = studentCode;
+    newRequest.ucCode = ucCode;
+    newRequest.classCode = classCode;
+    requests.push(newRequest);
+}
+/*
+void Application::AddChangeRequest() {
+    requests.push(Request());
+}
+*/
+
+void Application::AddRemoveRequest(string studentCode, string ucCode) {
+    Request newRequest = Request();
+    newRequest.type = REMOVE;
+    newRequest.studentCode = studentCode;
+    newRequest.ucCode = ucCode;
+    requests.push(newRequest);
+}
+
+int Application::OcupationPerUcClass(string ucCode, string classCode) {
+    BST<pair<string, string>> studentUc = StudentClassUc(ucCode, classCode);
+    int count = 0;
+    for (auto i = studentUc.begin(); i != studentUc.end(); i++) {
+        count++;
+    }
+    return count;
+}
+
+void Application::ResolveRequests() {
+    while(requests.size()){
+        Request requestNew = requests.front();
+        requests.pop();
+        switch(requestNew.type){
+            case ADD: {
+                int ocupation = OcupationPerUcClass(requestNew.ucCode, requestNew.classCode);
+                if (!AddClass(requestNew.studentCode, requestNew.ucCode, requestNew.classCode, ocupation,
+                              requestNew.cap)) {
+                    cout << "entrei" << endl;
+                    requestDenied.push_back(requestNew);
+                }
+                break;
+            }
+            case REMOVE: {
+                RemoveClass(requestNew.studentCode, requestNew.ucCode);
+                break;
+            }
         }
     }
 }

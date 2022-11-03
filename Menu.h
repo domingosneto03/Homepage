@@ -59,6 +59,10 @@ private:
     void ChangeRequest();
 
     void RemoveClass();
+
+    int OcupationPerUcClass(string ucCode, string classCode);
+
+    void AddClass();
 };
 
 #endif //PROJECTAED_G24_MENU_H

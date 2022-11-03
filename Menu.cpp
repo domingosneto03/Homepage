@@ -19,7 +19,8 @@ void Menu::mainMenu() {
     cout << "2 - Class Menu" << endl;
     cout << "3 - Students with more than n Ucs" << endl;
     cout << "4 - Request for schedule change" << endl;
-    cout << "5 - Exit" << endl;
+    cout << "5 - queue" << endl;
+    cout << "6 - Exit" << endl;
     cout << "=======================================" << endl;
     cout << "Option:";
     cin >> option;
@@ -44,6 +45,10 @@ void Menu::mainMenu() {
             ChangeRequest();
             break;
         case 5:
+            app.ResolveRequests();
+            mainMenu();
+            break;
+        case 6:
             exit(-1);
     }
 }
@@ -104,9 +109,9 @@ void Menu::ChangeRequest(){
             RemoveClass();
             break;
         case 2:
+            AddClass();
             break;
         case 3:
-
             break;
         case 4:
             mainMenu();
@@ -121,11 +126,27 @@ void Menu::RemoveClass() {
     string ucCode;
     cout << "Enter the Uc code (format: L.EIC0XX):";
     cin >> ucCode;
-    app.RemoveClass(studentCode, ucCode);
-    cout << "Your class was removed successfully!" << endl;
-    cout << endl;
+    app.AddRemoveRequest(studentCode,ucCode);
     mainMenu();
 }
+
+void Menu::AddClass() {
+    int cap;
+    cout << "Enter the capacity of a class:";
+    cin >> cap;
+    string studentCode;
+    cout << "Enter the Student code:";
+    cin >> studentCode;
+    string classCode;
+    cout << "Enter the ClassCode (format: XLEICXX):";
+    cin >> classCode;
+    string ucCode;
+    cout << "Enter the Uc code (format: L.EIC0XX):";
+    cin >> ucCode;
+    app.AddAddRequest(studentCode, ucCode, classCode, cap);
+    mainMenu();
+}
+
 
 void Menu::ClassMenu() {
     int option;
@@ -319,5 +340,6 @@ void Menu::StudentNUcs() {
         cin >> conti;
     }
 }
+
 
 #endif // PROJECT_AED_MENU_CPP

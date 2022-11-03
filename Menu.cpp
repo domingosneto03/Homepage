@@ -19,7 +19,7 @@ void Menu::mainMenu() {
     cout << "2 - Class Menu" << endl;
     cout << "3 - Students with more than n Ucs" << endl;
     cout << "4 - Request for schedule change" << endl;
-    cout << "5 - queue" << endl;
+    cout << "5 - Execute queue requests" << endl;
     cout << "6 - Exit" << endl;
     cout << "=======================================" << endl;
     cout << "Option:";
@@ -94,7 +94,7 @@ void Menu::SchedulePerStudent() {
     }
 }
 
-void Menu::ChangeRequest(){
+void Menu::ChangeRequest() {
     int option;
     cout << "==============CHANGE MENU==============" << endl;
     cout << "1 - Remove class" << endl;
@@ -340,6 +340,5 @@ void Menu::StudentNUcs() {
         cin >> conti;
     }
 }
-
 
 #endif // PROJECT_AED_MENU_CPP

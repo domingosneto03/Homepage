@@ -37,7 +37,7 @@ private:
     void SchedulePerClass();
 
     /**
-    * Prints  the name of all students enrolled in a WC in a specific class and the total number of students.
+    * Prints the name of all students enrolled in a WC in a specific class and the total number of students.
     */
     void OcupationPerClass();
 
@@ -56,12 +56,19 @@ private:
     */
     void StudentNUcs();
 
+    /**
+    * Prints the options about the change requests that the user can choose.
+    */
     void ChangeRequest();
 
+    /**
+    * Remove a class from a student.
+    */
     void RemoveClass();
 
-    int OcupationPerUcClass(string ucCode, string classCode);
-
+    /**
+    * Add a class on a student.
+    */
     void AddClass();
 };
 

@@ -209,12 +209,63 @@ public:
     */
     void RemoveClass(string studentCode, string ucCode);
 
+    /**
+    * Gets a name from student using their code.
+    * @param studentCode
+    * @return name
+    */
     string StudentName(string studentCode);
+
+    /**
+    * Add a class to a student.
+    * @param studentCode
+    * @param ucCode
+    * @param classCode
+    * @param ocupation
+    * @param Cap
+    * @return bool
+    */
     bool AddClass(string studentCode, string ucCode, string classCode, int ocupation, int Cap);
+
+    /**
+    * checks for overlapping lessons .
+    * @param weekday
+    * @param startHour
+    * @param duration
+    * @param classType
+    * @return bool
+    */
     bool Overlapping(int weekday, double startHour, double duration, CLASS_TYPE classType);
+
+    /**
+    * Executes all requests from the queue and adds the ones that cannot be executed to an array.
+    * @param studentCode
+    * @param uccode
+    */
     void ResolveRequests();
+
+    /**
+    * Adds a request to add a class to the queue.
+    * @param studentCode
+    * @param ucCode
+    * @param classCode
+    * @param cap
+    */
     void AddAddRequest(string studentCode, string ucCode, string classCode, int cap);
+
+    /**
+    * Adds a request to remove a class to the queue.
+    * @param studentCode
+    * @param ucCode
+    */
     void AddRemoveRequest(string studentCode, string ucCode);
+
+    /**
+    * Calculates the occupation of a class.
+    * @param ucCode
+    * @param classCode
+    * @return ocupation
+    */
     int OcupationPerUcClass(string ucCode, string classCode);
 
     map<string, string> UcsMap = {{"L.EIC001", "ALGA"},

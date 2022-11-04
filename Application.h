@@ -64,6 +64,7 @@ struct schedule {
         } else {
             return b.ucCode < a.ucCode;
         }
+        return false;
     }
 };
 
@@ -85,6 +86,7 @@ struct StudentUcs {
         } else {
             return b.name > a.name;
         }
+        return false;
     }
 };
 

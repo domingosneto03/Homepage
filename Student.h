@@ -53,10 +53,22 @@ public:
     */
     void addClass(vector<string> Class);
 
+    /**
+    * Compares if one attribute of a student is lower than the other.
+    * @param Student &s1
+    */
     bool operator<(const Student &s1) const;
 
+    /**
+    * Compares if one attribute of a student is higher than the other.
+    * @param Student &s1
+    */
     bool operator>(const Student &s1) const;
 
+    /**
+    * Does not allow duplicates.
+    * @param Student &s1
+    */
     bool operator==(const Student &s1) const;
 
 private:

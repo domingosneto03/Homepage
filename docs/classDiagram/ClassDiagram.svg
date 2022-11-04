@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1035.6px" preserveAspectRatio="none" style="width:558px;height:1035px;background:#FFFFFF;" version="1.1" viewBox="0 0 558 1035" width="558.6px" zoomAndPan="magnify"><defs/><g><!--MD5=[f0268dd29ee89052933f031546cb1cab]
+class Menu--><g id="elem_Menu"><rect codeLine="46" fill="#F1F1F1" height="166.1531" id="Menu" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="99.6" x="293.7" y="4.2"/><ellipse cx="330.45" cy="13.8" fill="#ADD1B2" rx="6.6" ry="6.6" style="stroke:#181818;stroke-width:0.6;"/><path d="M331.65,11.7 Q331.7719,11.4 331.9125,11.25 Q332.0531,11.1 332.2125,11.1 Q332.4938,11.1 332.6719,11.2687 Q332.85,11.4375 332.85,11.8312 L332.85,12.7687 Q332.85,13.1625 332.6813,13.3312 Q332.5125,13.5 332.25,13.5 Q332.0156,13.5 331.8656,13.3969 Q331.7156,13.2938 331.65,13.0219 Q331.6219,12.8344 331.5188,12.7313 Q331.3313,12.5344 330.9938,12.4219 Q330.6563,12.3 330.3187,12.3 Q329.8969,12.3 329.5406,12.4688 Q329.1937,12.6375 328.9219,13.0125 Q328.65,13.3875 328.65,13.9031 L328.65,14.4562 Q328.65,15.075 329.1563,15.4875 Q329.6625,15.9 330.5625,15.9 Q331.0969,15.9 331.4719,15.7781 Q331.6875,15.7125 331.9313,15.4969 Q332.0906,15.375 332.175,15.3375 Q332.2594,15.3 332.3625,15.3 Q332.5594,15.3 332.7,15.4594 Q332.85,15.6094 332.85,15.825 Q332.85,16.0313 332.6438,16.275 Q332.3438,16.6312 331.8656,16.8281 Q331.2375,17.1 330.4688,17.1 Q329.5687,17.1 328.8469,16.7438 Q328.2656,16.4625 327.8531,15.8531 Q327.45,15.2437 327.45,14.5219 L327.45,13.8656 Q327.45,13.1156 327.8063,12.4594 Q328.1719,11.8031 328.8,11.4562 Q329.4375,11.1 330.15,11.1 Q330.5813,11.1 330.9563,11.25 Q331.3313,11.4 331.65,11.7 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="21" x="342.75" y="17.2371">Menu</text><line style="stroke:#181818;stroke-width:0.3;" x1="294.3" x2="392.7" y1="23.4" y2="23.4"/><line style="stroke:#181818;stroke-width:0.3;" x1="294.3" x2="392.7" y1="28.2" y2="28.2"/><ellipse cx="300.3" cy="36.7828" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="45" x="305.7" y="39.3199">mainMenu()</text><ellipse cx="300.3" cy="47.3484" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="84" x="305.7" y="49.8855">SchedulePerStudent()</text><ellipse cx="300.3" cy="57.9141" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="48" x="305.7" y="60.4512">ClassMenu()</text><ellipse cx="300.3" cy="68.4797" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="70.8" x="305.7" y="71.0168">ConstruirATurma()</text><ellipse cx="300.3" cy="79.0453" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="75.6" x="305.7" y="81.5824">SchedulePerClass()</text><ellipse cx="300.3" cy="89.6109" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="79.2" x="305.7" y="92.148">OcupationPerClass()</text><ellipse cx="300.3" cy="100.1766" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="49.2" x="305.7" y="102.7137">UcNumbers()</text><ellipse cx="300.3" cy="110.7422" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="57.6" x="305.7" y="113.2793">StudentYears()</text><ellipse cx="300.3" cy="121.3078" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="54.6" x="305.7" y="123.8449">StudentNUcs()</text><ellipse cx="300.3" cy="131.8734" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="67.8" x="305.7" y="134.4105">ChangeRequest()</text><ellipse cx="300.3" cy="142.4391" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="58.2" x="305.7" y="144.9762">RemoveClass()</text><ellipse cx="300.3" cy="153.0047" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="42" x="305.7" y="155.5418">AddClass()</text><ellipse cx="300.3" cy="163.5703" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="57" x="305.7" y="166.1074">ChangeClass()</text></g><!--MD5=[0b4e4b4980470ea387cc45de9bd14b5b]
+class Application--><g id="elem_Application"><rect codeLine="10" fill="#F1F1F1" height="377.4656" id="Application" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="171.6" x="257.7" y="207"/><ellipse cx="320.25" cy="216.6" fill="#ADD1B2" rx="6.6" ry="6.6" style="stroke:#181818;stroke-width:0.6;"/><path d="M321.45,214.5 Q321.5719,214.2 321.7125,214.05 Q321.8531,213.9 322.0125,213.9 Q322.2938,213.9 322.4719,214.0688 Q322.65,214.2375 322.65,214.6313 L322.65,215.5688 Q322.65,215.9625 322.4813,216.1313 Q322.3125,216.3 322.05,216.3 Q321.8156,216.3 321.6656,216.1969 Q321.5156,216.0938 321.45,215.8219 Q321.4219,215.6344 321.3187,215.5313 Q321.1312,215.3344 320.7938,215.2219 Q320.4563,215.1 320.1188,215.1 Q319.6969,215.1 319.3406,215.2687 Q318.9938,215.4375 318.7219,215.8125 Q318.45,216.1875 318.45,216.7031 L318.45,217.2563 Q318.45,217.875 318.9563,218.2875 Q319.4625,218.7 320.3625,218.7 Q320.8969,218.7 321.2719,218.5781 Q321.4875,218.5125 321.7313,218.2969 Q321.8906,218.175 321.975,218.1375 Q322.0594,218.1 322.1625,218.1 Q322.3594,218.1 322.5,218.2594 Q322.65,218.4094 322.65,218.625 Q322.65,218.8312 322.4437,219.075 Q322.1438,219.4313 321.6656,219.6281 Q321.0375,219.9 320.2688,219.9 Q319.3688,219.9 318.6469,219.5438 Q318.0656,219.2625 317.6531,218.6531 Q317.25,218.0438 317.25,217.3219 L317.25,216.6656 Q317.25,215.9156 317.6063,215.2594 Q317.9719,214.6031 318.6,214.2563 Q319.2375,213.9 319.95,213.9 Q320.3812,213.9 320.7562,214.05 Q321.1312,214.2 321.45,214.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="41.4" x="332.55" y="220.0371">Application</text><line style="stroke:#181818;stroke-width:0.3;" x1="258.3" x2="428.7" y1="226.2" y2="226.2"/><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="232.9828"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="106.8" x="269.7" y="237.3199">uniClassSet: set&lt;UniClass*&gt;</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="243.5484"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="110.4" x="269.7" y="247.8855">studentSetset: set&lt;Student*&gt;</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="254.1141"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="123.6" x="269.7" y="258.4512">classesPerUcSet: set&lt;schedule&gt;</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="264.6797"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="156" x="269.7" y="269.0168">studentsClassSet: set&lt;studentAndClass&gt;</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="275.2453"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="153.6" x="269.7" y="279.5824">studentSchedule: set&lt;studentAndClass&gt;</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="285.8109"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="136.8" x="269.7" y="290.148">classSchedule: set&lt;ClassSchelude&gt;</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="296.3766"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="103.2" x="269.7" y="300.7137">requests: queue&lt;Request&gt;</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="306.9422"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="125.4" x="269.7" y="311.2793">requestDenied: vector&lt;Request&gt;</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="317.5078"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="90" x="269.7" y="321.8449">studentAndClass: struct</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="328.0734"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="60" x="269.7" y="332.4105">schedule: struct</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="338.6391"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="69" x="269.7" y="342.9762">StudentUcs: struct</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="349.2047"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="82.2" x="269.7" y="353.5418">ClassSchelude: struct</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="262.5" y="359.7703"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="57.6" x="269.7" y="364.1074">Request: struct</text><line style="stroke:#181818;stroke-width:0.3;" x1="258.3" x2="428.7" y1="368.3531" y2="368.3531"/><ellipse cx="264.3" cy="376.9359" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="63.6" x="269.7" y="379.473">readUniclasses()</text><ellipse cx="264.3" cy="387.5016" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="57" x="269.7" y="390.0387">readStudents()</text><ellipse cx="264.3" cy="398.0672" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="78" x="269.7" y="400.6043">readClassesPerUC()</text><ellipse cx="264.3" cy="408.6328" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="56.4" x="269.7" y="411.1699">StudentClass()</text><ellipse cx="264.3" cy="419.1984" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="70.8" x="269.7" y="421.7355">StudentSchedule()</text><ellipse cx="264.3" cy="429.7641" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="51" x="269.7" y="432.3012">FormatDate()</text><ellipse cx="264.3" cy="440.3297" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="71.4" x="269.7" y="442.8668">ClassesSchedule()</text><ellipse cx="264.3" cy="450.8953" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="46.8" x="269.7" y="453.4324">StudentUC()</text><ellipse cx="264.3" cy="461.4609" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="75" x="269.7" y="463.998">StudentNumbYear()</text><ellipse cx="264.3" cy="472.0266" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="66.6" x="269.7" y="474.5637">StudentNumbUc()</text><ellipse cx="264.3" cy="482.5922" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="66" x="269.7" y="485.1293">StudentClassUc()</text><ellipse cx="264.3" cy="493.1578" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="58.2" x="269.7" y="495.6949">RemoveClass()</text><ellipse cx="264.3" cy="503.7234" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="57" x="269.7" y="506.2605">StudentName()</text><ellipse cx="264.3" cy="514.2891" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="42" x="269.7" y="516.8262">AddClass()</text><ellipse cx="264.3" cy="524.8547" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="52.2" x="269.7" y="527.3918">Overlapping()</text><ellipse cx="264.3" cy="535.4203" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="72.6" x="269.7" y="537.9574">ResolveRequests()</text><ellipse cx="264.3" cy="545.9859" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="67.8" x="269.7" y="548.523">AddAddRequest()</text><ellipse cx="264.3" cy="556.5516" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="82.8" x="269.7" y="559.0887">AddChangeRequest()</text><ellipse cx="264.3" cy="567.1172" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="84" x="269.7" y="569.6543">AddRemoveRequest()</text><ellipse cx="264.3" cy="577.6828" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="88.8" x="269.7" y="580.2199">OcupationPerUcClass()</text></g><!--MD5=[b4a9ab6cffd58937cfea07eb2954e1bd]
+class BST--><g id="elem_BST"><rect codeLine="100" fill="#F1F1F1" height="292.9406" id="BST" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="250.2" x="4.2" y="621"/><ellipse cx="118.65" cy="630.6" fill="#ADD1B2" rx="6.6" ry="6.6" style="stroke:#181818;stroke-width:0.6;"/><path d="M119.85,628.5 Q119.9719,628.2 120.1125,628.05 Q120.2531,627.9 120.4125,627.9 Q120.6938,627.9 120.8719,628.0688 Q121.05,628.2375 121.05,628.6313 L121.05,629.5688 Q121.05,629.9625 120.8813,630.1313 Q120.7125,630.3 120.45,630.3 Q120.2156,630.3 120.0656,630.1969 Q119.9156,630.0938 119.85,629.8219 Q119.8219,629.6344 119.7188,629.5313 Q119.5313,629.3344 119.1938,629.2219 Q118.8562,629.1 118.5188,629.1 Q118.0969,629.1 117.7406,629.2688 Q117.3938,629.4375 117.1219,629.8125 Q116.85,630.1875 116.85,630.7031 L116.85,631.2563 Q116.85,631.875 117.3562,632.2875 Q117.8625,632.7 118.7625,632.7 Q119.2969,632.7 119.6719,632.5781 Q119.8875,632.5125 120.1313,632.2969 Q120.2906,632.175 120.375,632.1375 Q120.4594,632.1 120.5625,632.1 Q120.7594,632.1 120.9,632.2594 Q121.05,632.4094 121.05,632.625 Q121.05,632.8313 120.8438,633.075 Q120.5437,633.4313 120.0656,633.6281 Q119.4375,633.9 118.6687,633.9 Q117.7688,633.9 117.0469,633.5437 Q116.4656,633.2625 116.0531,632.6531 Q115.65,632.0437 115.65,631.3219 L115.65,630.6656 Q115.65,629.9156 116.0063,629.2594 Q116.3719,628.6031 117,628.2563 Q117.6375,627.9 118.35,627.9 Q118.7813,627.9 119.1563,628.05 Q119.5313,628.2 119.85,628.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="16.2" x="130.95" y="634.0371">BST</text><line style="stroke:#181818;stroke-width:0.3;" x1="4.8" x2="253.8" y1="640.2" y2="640.2"/><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="9" y="646.9828"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="122.4" x="16.2" y="651.3199">root: BinaryNode&lt;Comparable&gt;*</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="9" y="657.5484"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="126" x="16.2" y="661.8855">ITEM_NOT_FOUND: Comparable</text><line style="stroke:#181818;stroke-width:0.3;" x1="4.8" x2="253.8" y1="666.1313" y2="666.1313"/><ellipse cx="10.8" cy="674.7141" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="135.6" x="16.2" y="677.2512">BST(const Comparable&amp; notFound)</text><ellipse cx="10.8" cy="685.2797" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="81" x="16.2" y="687.8168">BST(const BST&amp; rhs)</text><ellipse cx="10.8" cy="695.8453" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="29.4" x="16.2" y="698.3824">~BST( )</text><ellipse cx="10.8" cy="706.4109" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="33" x="16.2" y="708.948">findMin()</text><ellipse cx="10.8" cy="716.9766" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="34.8" x="16.2" y="719.5137">findMax()</text><ellipse cx="10.8" cy="727.5422" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="100.2" x="16.2" y="730.0793">find(const Comparable&amp; x)</text><ellipse cx="10.8" cy="738.1078" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="35.4" x="16.2" y="740.6449">isEmpty()</text><ellipse cx="10.8" cy="748.6734" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="40.8" x="16.2" y="751.2105">printTree()</text><ellipse cx="10.8" cy="759.2391" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="49.8" x="16.2" y="761.7762">makeEmpty()</text><ellipse cx="10.8" cy="769.8047" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="107.4" x="16.2" y="772.3418">insert(const Comparable&amp; x)</text><ellipse cx="10.8" cy="780.3703" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="114.6" x="16.2" y="782.9074">remove(const Comparable&amp; x)</text><ellipse cx="10.8" cy="790.9359" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="128.4" x="16.2" y="793.473">BST&amp; operator= (const BST&amp; rhs)</text><ellipse cx="10.8" cy="801.5016" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="27" x="16.2" y="804.0387">begin()</text><ellipse cx="10.8" cy="812.0672" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="20.4" x="16.2" y="814.6043">end()</text><ellipse cx="10.8" cy="822.6328" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="228" x="16.2" y="825.1699">const Comparable&amp; elementAt(BinaryNode&lt;Comparable&gt;* t)</text><ellipse cx="10.8" cy="833.1984" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="227.4" x="16.2" y="835.7355">insert(const Comparable&amp; x, BinaryNode&lt;Comparable&gt;* &amp; t)</text><ellipse cx="10.8" cy="843.7641" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="234.6" x="16.2" y="846.3012">remove(const Comparable&amp; x, BinaryNode&lt;Comparable&gt;* &amp; t)</text><ellipse cx="10.8" cy="854.3297" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="140.4" x="16.2" y="856.8668">findMin(BinaryNode&lt;Comparable&gt;* t)</text><ellipse cx="10.8" cy="864.8953" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="142.2" x="16.2" y="867.4324">findMax(BinaryNode&lt;Comparable&gt;* t)</text><ellipse cx="10.8" cy="875.4609" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="212.4" x="16.2" y="877.998">find(const Comparable&amp; x, BinaryNode&lt;Comparable&gt;* t)</text><ellipse cx="10.8" cy="886.0266" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="165" x="16.2" y="888.5637">makeEmpty(BinaryNode&lt;Comparable&gt;* &amp; t)</text><ellipse cx="10.8" cy="896.5922" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="148.2" x="16.2" y="899.1293">printTree(BinaryNode&lt;Comparable&gt;* t)</text><ellipse cx="10.8" cy="907.1578" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="133.8" x="16.2" y="909.6949">clone(BinaryNode&lt;Comparable&gt;* t)</text></g><!--MD5=[9f2283f09793897a5a3db32f5092df96]
+class BinaryNode--><g id="elem_BinaryNode"><rect codeLine="128" fill="#F1F1F1" height="71.0625" id="BinaryNode" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="96.6" x="81" y="960.6"/><ellipse cx="105.12" cy="970.2" fill="#ADD1B2" rx="6.6" ry="6.6" style="stroke:#181818;stroke-width:0.6;"/><path d="M106.32,968.1 Q106.4419,967.8 106.5825,967.65 Q106.7231,967.5 106.8825,967.5 Q107.1638,967.5 107.3419,967.6687 Q107.52,967.8375 107.52,968.2312 L107.52,969.1687 Q107.52,969.5625 107.3513,969.7312 Q107.1825,969.9 106.92,969.9 Q106.6856,969.9 106.5356,969.7969 Q106.3856,969.6937 106.32,969.4219 Q106.2919,969.2344 106.1887,969.1312 Q106.0012,968.9344 105.6638,968.8219 Q105.3262,968.7 104.9888,968.7 Q104.5669,968.7 104.2106,968.8688 Q103.8638,969.0375 103.5919,969.4125 Q103.32,969.7875 103.32,970.3031 L103.32,970.8562 Q103.32,971.475 103.8262,971.8875 Q104.3325,972.3 105.2325,972.3 Q105.7669,972.3 106.1419,972.1781 Q106.3575,972.1125 106.6013,971.8969 Q106.7606,971.775 106.845,971.7375 Q106.9294,971.7 107.0325,971.7 Q107.2294,971.7 107.37,971.8594 Q107.52,972.0094 107.52,972.225 Q107.52,972.4313 107.3137,972.675 Q107.0137,973.0313 106.5356,973.2281 Q105.9075,973.5 105.1387,973.5 Q104.2388,973.5 103.5169,973.1438 Q102.9356,972.8625 102.5231,972.2531 Q102.12,971.6438 102.12,970.9219 L102.12,970.2656 Q102.12,969.5156 102.4763,968.8594 Q102.8419,968.2031 103.47,967.8562 Q104.1075,967.5 104.82,967.5 Q105.2512,967.5 105.6262,967.65 Q106.0012,967.8 106.32,968.1 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="43.8" x="116.88" y="973.6371">BinaryNode</text><line style="stroke:#181818;stroke-width:0.3;" x1="81.6" x2="177" y1="979.8" y2="979.8"/><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="85.8" y="986.5828"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="81" x="93" y="990.9199">element: Comparable</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="85.8" y="997.1484"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="63" x="93" y="1001.4855">left: BinaryNode*</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="85.8" y="1007.7141"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="68.4" x="93" y="1012.0512">right: BinaryNode*</text><line style="stroke:#181818;stroke-width:0.3;" x1="81.6" x2="177" y1="1016.2969" y2="1016.2969"/><ellipse cx="87.6" cy="1024.8797" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="49.8" x="93" y="1027.4168">BinaryNode()</text></g><!--MD5=[d6181cb537bdc20c0a3007a98a56832d]
+class Student--><g id="elem_Student"><rect codeLine="62" fill="#F1F1F1" height="166.1531" id="Student" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="135.6" x="275.7" y="684.3"/><ellipse cx="326.25" cy="693.9" fill="#ADD1B2" rx="6.6" ry="6.6" style="stroke:#181818;stroke-width:0.6;"/><path d="M327.45,691.8 Q327.5719,691.5 327.7125,691.35 Q327.8531,691.2 328.0125,691.2 Q328.2938,691.2 328.4719,691.3688 Q328.65,691.5375 328.65,691.9313 L328.65,692.8688 Q328.65,693.2625 328.4813,693.4313 Q328.3125,693.6 328.05,693.6 Q327.8156,693.6 327.6656,693.4969 Q327.5156,693.3938 327.45,693.1219 Q327.4219,692.9344 327.3187,692.8313 Q327.1312,692.6344 326.7938,692.5219 Q326.4563,692.4 326.1188,692.4 Q325.6969,692.4 325.3406,692.5688 Q324.9938,692.7375 324.7219,693.1125 Q324.45,693.4875 324.45,694.0031 L324.45,694.5563 Q324.45,695.175 324.9563,695.5875 Q325.4625,696 326.3625,696 Q326.8969,696 327.2719,695.8781 Q327.4875,695.8125 327.7313,695.5969 Q327.8906,695.475 327.975,695.4375 Q328.0594,695.4 328.1625,695.4 Q328.3594,695.4 328.5,695.5594 Q328.65,695.7094 328.65,695.925 Q328.65,696.1313 328.4437,696.375 Q328.1438,696.7312 327.6656,696.9281 Q327.0375,697.2 326.2688,697.2 Q325.3688,697.2 324.6469,696.8438 Q324.0656,696.5625 323.6531,695.9531 Q323.25,695.3438 323.25,694.6219 L323.25,693.9656 Q323.25,693.2156 323.6063,692.5594 Q323.9719,691.9031 324.6,691.5563 Q325.2375,691.2 325.95,691.2 Q326.3812,691.2 326.7562,691.35 Q327.1312,691.5 327.45,691.8 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="29.4" x="338.55" y="697.3371">Student</text><line style="stroke:#181818;stroke-width:0.3;" x1="276.3" x2="410.7" y1="703.5" y2="703.5"/><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="280.5" y="710.2828"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="74.4" x="287.7" y="714.6199">studentCode: string</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="280.5" y="720.8484"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="46.8" x="287.7" y="725.1855">name: string</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="280.5" y="731.4141"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="120" x="287.7" y="735.7512">classes: vector&lt;vector&lt;string&gt;&gt;</text><line style="stroke:#181818;stroke-width:0.3;" x1="276.3" x2="410.7" y1="739.9969" y2="739.9969"/><ellipse cx="282.3" cy="748.5797" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="35.4" x="287.7" y="751.1168">Student()</text><ellipse cx="282.3" cy="759.1453" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="39.6" x="287.7" y="761.6824">getName()</text><ellipse cx="282.3" cy="769.7109" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="67.8" x="287.7" y="772.248">getStudentCode()</text><ellipse cx="282.3" cy="780.2766" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="48" x="287.7" y="782.8137">getClasses()</text><ellipse cx="282.3" cy="790.8422" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="39" x="287.7" y="793.3793">setName()</text><ellipse cx="282.3" cy="801.4078" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="67.2" x="287.7" y="803.9449">setStudentCode()</text><ellipse cx="282.3" cy="811.9734" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="41.4" x="287.7" y="814.5105">addClass()</text><ellipse cx="282.3" cy="822.5391" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="43.2" x="287.7" y="825.0762">operator&lt;()</text><ellipse cx="282.3" cy="833.1047" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="43.2" x="287.7" y="835.6418">operator&gt;()</text><ellipse cx="282.3" cy="843.6703" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="43.2" x="287.7" y="846.2074">operator=()</text></g><!--MD5=[89ccdd9fa90d38ad838d9c095e7c46dd]
+class UniClass--><g id="elem_UniClass"><rect codeLine="78" fill="#F1F1F1" height="229.5469" id="UniClass" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="122.4" x="432.3" y="652.5"/><ellipse cx="474.45" cy="662.1" fill="#ADD1B2" rx="6.6" ry="6.6" style="stroke:#181818;stroke-width:0.6;"/><path d="M475.65,660 Q475.7719,659.7 475.9125,659.55 Q476.0531,659.4 476.2125,659.4 Q476.4938,659.4 476.6719,659.5688 Q476.85,659.7375 476.85,660.1313 L476.85,661.0688 Q476.85,661.4625 476.6813,661.6313 Q476.5125,661.8 476.25,661.8 Q476.0156,661.8 475.8656,661.6969 Q475.7156,661.5938 475.65,661.3219 Q475.6219,661.1344 475.5187,661.0313 Q475.3312,660.8344 474.9938,660.7219 Q474.6563,660.6 474.3187,660.6 Q473.8969,660.6 473.5406,660.7688 Q473.1937,660.9375 472.9219,661.3125 Q472.65,661.6875 472.65,662.2031 L472.65,662.7563 Q472.65,663.375 473.1563,663.7875 Q473.6625,664.2 474.5625,664.2 Q475.0969,664.2 475.4719,664.0781 Q475.6875,664.0125 475.9313,663.7969 Q476.0906,663.675 476.175,663.6375 Q476.2594,663.6 476.3625,663.6 Q476.5594,663.6 476.7,663.7594 Q476.85,663.9094 476.85,664.125 Q476.85,664.3313 476.6437,664.575 Q476.3438,664.9313 475.8656,665.1281 Q475.2375,665.4 474.4688,665.4 Q473.5687,665.4 472.8469,665.0437 Q472.2656,664.7625 471.8531,664.1531 Q471.45,663.5437 471.45,662.8219 L471.45,662.1656 Q471.45,661.4156 471.8063,660.7594 Q472.1719,660.1031 472.8,659.7563 Q473.4375,659.4 474.15,659.4 Q474.5812,659.4 474.9562,659.55 Q475.3312,659.7 475.65,660 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="33" x="486.75" y="665.5371">UniClass</text><line style="stroke:#181818;stroke-width:0.3;" x1="432.9" x2="554.1" y1="671.7" y2="671.7"/><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="437.1" y="678.4828"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="76.8" x="444.3" y="682.8199">CLASSCODE: string</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="437.1" y="689.0484"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="61.2" x="444.3" y="693.3855">UCCODE: string</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="437.1" y="699.6141"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="54.6" x="444.3" y="703.9512">WEEKDAY: int</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="437.1" y="710.1797"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="72" x="444.3" y="714.5168">STARTHOUR: float</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="437.1" y="720.7453"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="63" x="444.3" y="725.0824">DURATION: float</text><rect fill="none" height="3.6" style="stroke:#C82930;stroke-width:0.6;" width="3.6" x="437.1" y="731.3109"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="106.8" x="444.3" y="735.648">CLASSTYPE: CLASS_TYPE</text><line style="stroke:#181818;stroke-width:0.3;" x1="432.9" x2="554.1" y1="739.8938" y2="739.8938"/><ellipse cx="438.9" cy="748.4766" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="39" x="444.3" y="751.0137">UniClass()</text><ellipse cx="438.9" cy="759.0422" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="59.4" x="444.3" y="761.5793">getClassCode()</text><ellipse cx="438.9" cy="769.6078" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="48" x="444.3" y="772.1449">getUcCode()</text><ellipse cx="438.9" cy="780.1734" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="54.6" x="444.3" y="782.7105">getWeekDay()</text><ellipse cx="438.9" cy="790.7391" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="54" x="444.3" y="793.2762">getStartHour()</text><ellipse cx="438.9" cy="801.3047" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="50.4" x="444.3" y="803.8418">getDuration()</text><ellipse cx="438.9" cy="811.8703" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="58.2" x="444.3" y="814.4074">getClassType()</text><ellipse cx="438.9" cy="822.4359" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="58.8" x="444.3" y="824.973">setClassCode()</text><ellipse cx="438.9" cy="833.0016" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="47.4" x="444.3" y="835.5387">setUcCode()</text><ellipse cx="438.9" cy="843.5672" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="54" x="444.3" y="846.1043">setWeekDay()</text><ellipse cx="438.9" cy="854.1328" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="53.4" x="444.3" y="856.6699">setStartHour()</text><ellipse cx="438.9" cy="864.6984" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="49.8" x="444.3" y="867.2355">setDuration()</text><ellipse cx="438.9" cy="875.2641" fill="#84BE84" rx="1.8" ry="1.8" style="stroke:#038048;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="57.6" x="444.3" y="877.8012">setClassType()</text></g><!--MD5=[a9bbfabd31cede7b3134fdb1dba47b45]
+link Menu to Application--><g id="link_Menu_Application"><path codeLine="3" d="M343.5,170.424 C343.5,181.98 343.5,194.22 343.5,206.784 " fill="none" id="Menu-Application" style="stroke:#181818;stroke-width:0.6;"/></g><!--MD5=[2e7c885e03c0d0a4a189de9c614a912b]
+link BST to BinaryNode--><g id="link_BST_BinaryNode"><path codeLine="4" d="M129.3,913.944 C129.3,929.88 129.3,944.892 129.3,957.588 " fill="none" id="BST-to-BinaryNode" style="stroke:#181818;stroke-width:0.6;"/><polygon fill="#181818" points="129.3,960.594,131.7,955.194,129.3,957.594,126.9,955.194,129.3,960.594" style="stroke:#181818;stroke-width:0.6;"/><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="99.6" x="129.9" y="940.4971">&lt;Comparable-&gt;Comparable&gt;</text></g><!--MD5=[6d4c047e76847bc72bea8a64d019a12f]
+link Application to BST--><g id="link_Application_BST"><path codeLine="5" d="M257.61,544.86 C243.12,569.928 228.09,595.926 213.642,620.922 " fill="none" id="Application-BST" style="stroke:#181818;stroke-width:0.6;"/></g><!--MD5=[cd6fa43fdc102ba18e14e72dbdd49799]
+link Application to Student--><g id="link_Application_Student"><path codeLine="6" d="M343.5,584.532 C343.5,619.608 343.5,654.54 343.5,684.294 " fill="none" id="Application-Student" style="stroke:#181818;stroke-width:0.6;"/></g><!--MD5=[b0114c368919bce93060231ff6c61491]
+link Application to UniClass--><g id="link_Application_UniClass"><path codeLine="7" d="M419.706,584.532 C429.09,607.71 438.45,630.822 447.192,652.416 " fill="none" id="Application-UniClass" style="stroke:#181818;stroke-width:0.6;"/></g><!--MD5=[878f7e248a6c94f1a0aa9e5b781de40f]
+@startuml
+'https://plantuml.com/class-diagram
+
+Menu - - Application
+BST - -> BinaryNode: <Comparable->Comparable>
+Application - - BST
+Application - - Student
+Application - - UniClass
+
+
+class Application {
+    - uniClassSet: set<UniClass*>
+    - studentSetset: set<Student*>
+    - classesPerUcSet: set<schedule>
+    - studentsClassSet: set<studentAndClass>
+    - studentSchedule: set<studentAndClass>
+    - classSchedule: set<ClassSchelude>
+    - requests: queue<Request>
+    - requestDenied: vector<Request>
+    - studentAndClass: struct
+    - schedule: struct
+    - StudentUcs: struct
+    - ClassSchelude: struct
+    - Request: struct
+    + readUniclasses()
+    + readStudents()
+    + readClassesPerUC()
+    + StudentClass()
+    + StudentSchedule()
+    + FormatDate()
+    + ClassesSchedule()
+    + StudentUC()
+    + StudentNumbYear()
+    + StudentNumbUc()
+    + StudentClassUc()
+    + RemoveClass()
+    + StudentName()
+    + AddClass()
+    + Overlapping()
+    + ResolveRequests()
+    + AddAddRequest()
+    + AddChangeRequest()
+    + AddRemoveRequest()
+    + OcupationPerUcClass()
+}
+
+class Menu {
+    + mainMenu()
+    + SchedulePerStudent()
+    + ClassMenu()
+    + ConstruirATurma()
+    + SchedulePerClass()
+    + OcupationPerClass()
+    + UcNumbers()
+    + StudentYears()
+    + StudentNUcs()
+    + ChangeRequest()
+    + RemoveClass()
+    + AddClass()
+    + ChangeClass()
+}
+
+class Student {
+    - studentCode: string
+    - name: string
+    - classes: vector<vector<string>>
+    + Student()
+    + getName()
+    + getStudentCode()
+    + getClasses()
+    + setName()
+    + setStudentCode()
+    + addClass()
+    + operator<()
+    + operator>()
+    + operator=()
+}
+
+class UniClass {
+    - CLASSCODE: string
+    - UCCODE: string
+    - WEEKDAY: int
+    - STARTHOUR: float
+    - DURATION: float
+    - CLASSTYPE: CLASS_TYPE
+    + UniClass()
+    + getClassCode()
+    + getUcCode()
+    + getWeekDay()
+    + getStartHour()
+    + getDuration()
+    + getClassType()
+    + setClassCode()
+    + setUcCode()
+    + setWeekDay()
+    + setStartHour()
+    + setDuration()
+    + setClassType()
+}
+
+class BST {
+    - root: BinaryNode<Comparable>*
+    - ITEM_NOT_FOUND: Comparable
+    + BST(const Comparable& notFound)
+    + BST(const BST& rhs)
+    + ~BST( )
+    + findMin()
+    + findMax()
+    + find(const Comparable& x)
+    + isEmpty()
+    + printTree()
+    + makeEmpty()
+    + insert(const Comparable& x)
+    + remove(const Comparable& x)
+    + BST& operator= (const BST& rhs)
+    + begin()
+    + end()
+    + const Comparable& elementAt(BinaryNode<Comparable>* t)
+    + insert(const Comparable& x, BinaryNode<Comparable>* & t)
+    + remove(const Comparable& x, BinaryNode<Comparable>* & t)
+    + findMin(BinaryNode<Comparable>* t)
+    + findMax(BinaryNode<Comparable>* t)
+    + find(const Comparable& x, BinaryNode<Comparable>* t)
+    + makeEmpty(BinaryNode<Comparable>* & t)
+    + printTree(BinaryNode<Comparable>* t)
+    + clone(BinaryNode<Comparable>* t)
+}
+
+class BinaryNode {
+    - element: Comparable
+    - left: BinaryNode*
+    - right: BinaryNode*
+    + BinaryNode()
+}
+@enduml
+
+@startuml
+
+Menu - - Application
+BST - -> BinaryNode: <Comparable->Comparable>
+Application - - BST
+Application - - Student
+Application - - UniClass
+
+
+class Application {
+    - uniClassSet: set<UniClass*>
+    - studentSetset: set<Student*>
+    - classesPerUcSet: set<schedule>
+    - studentsClassSet: set<studentAndClass>
+    - studentSchedule: set<studentAndClass>
+    - classSchedule: set<ClassSchelude>
+    - requests: queue<Request>
+    - requestDenied: vector<Request>
+    - studentAndClass: struct
+    - schedule: struct
+    - StudentUcs: struct
+    - ClassSchelude: struct
+    - Request: struct
+    + readUniclasses()
+    + readStudents()
+    + readClassesPerUC()
+    + StudentClass()
+    + StudentSchedule()
+    + FormatDate()
+    + ClassesSchedule()
+    + StudentUC()
+    + StudentNumbYear()
+    + StudentNumbUc()
+    + StudentClassUc()
+    + RemoveClass()
+    + StudentName()
+    + AddClass()
+    + Overlapping()
+    + ResolveRequests()
+    + AddAddRequest()
+    + AddChangeRequest()
+    + AddRemoveRequest()
+    + OcupationPerUcClass()
+}
+
+class Menu {
+    + mainMenu()
+    + SchedulePerStudent()
+    + ClassMenu()
+    + ConstruirATurma()
+    + SchedulePerClass()
+    + OcupationPerClass()
+    + UcNumbers()
+    + StudentYears()
+    + StudentNUcs()
+    + ChangeRequest()
+    + RemoveClass()
+    + AddClass()
+    + ChangeClass()
+}
+
+class Student {
+    - studentCode: string
+    - name: string
+    - classes: vector<vector<string>>
+    + Student()
+    + getName()
+    + getStudentCode()
+    + getClasses()
+    + setName()
+    + setStudentCode()
+    + addClass()
+    + operator<()
+    + operator>()
+    + operator=()
+}
+
+class UniClass {
+    - CLASSCODE: string
+    - UCCODE: string
+    - WEEKDAY: int
+    - STARTHOUR: float
+    - DURATION: float
+    - CLASSTYPE: CLASS_TYPE
+    + UniClass()
+    + getClassCode()
+    + getUcCode()
+    + getWeekDay()
+    + getStartHour()
+    + getDuration()
+    + getClassType()
+    + setClassCode()
+    + setUcCode()
+    + setWeekDay()
+    + setStartHour()
+    + setDuration()
+    + setClassType()
+}
+
+class BST {
+    - root: BinaryNode<Comparable>*
+    - ITEM_NOT_FOUND: Comparable
+    + BST(const Comparable& notFound)
+    + BST(const BST& rhs)
+    + ~BST( )
+    + findMin()
+    + findMax()
+    + find(const Comparable& x)
+    + isEmpty()
+    + printTree()
+    + makeEmpty()
+    + insert(const Comparable& x)
+    + remove(const Comparable& x)
+    + BST& operator= (const BST& rhs)
+    + begin()
+    + end()
+    + const Comparable& elementAt(BinaryNode<Comparable>* t)
+    + insert(const Comparable& x, BinaryNode<Comparable>* & t)
+    + remove(const Comparable& x, BinaryNode<Comparable>* & t)
+    + findMin(BinaryNode<Comparable>* t)
+    + findMax(BinaryNode<Comparable>* t)
+    + find(const Comparable& x, BinaryNode<Comparable>* t)
+    + makeEmpty(BinaryNode<Comparable>* & t)
+    + printTree(BinaryNode<Comparable>* t)
+    + clone(BinaryNode<Comparable>* t)
+}
+
+class BinaryNode {
+    - element: Comparable
+    - left: BinaryNode*
+    - right: BinaryNode*
+    + BinaryNode()
+}
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 19:12:26 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: GB
+--></g></svg>

@@ -70,6 +70,11 @@ private:
     * Add a class on a student.
     */
     void AddClass();
+
+    /**
+    * Change a class on a student.
+    */
+    void ChangeClass();
 };
 
 #endif //PROJECTAED_G24_MENU_H

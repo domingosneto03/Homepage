@@ -112,6 +112,7 @@ void Menu::ChangeRequest() {
             AddClass();
             break;
         case 3:
+            ChangeClass();
             break;
         case 4:
             mainMenu();
@@ -144,6 +145,23 @@ void Menu::AddClass() {
     cout << "Enter the Uc code (format: L.EIC0XX):";
     cin >> ucCode;
     app.AddAddRequest(studentCode, ucCode, classCode, cap);
+    mainMenu();
+}
+
+void Menu::ChangeClass() {
+    int cap;
+    cout << "Enter the capacity of a class:";
+    cin >> cap;
+    string studentCode;
+    cout << "Enter the Student code:";
+    cin >> studentCode;
+    string classCode;
+    cout << "Enter the ClassCode (format: XLEICXX):";
+    cin >> classCode;
+    string ucCode;
+    cout << "Enter the Uc code (format: L.EIC0XX):";
+    cin >> ucCode;
+    app.AddChangeRequest(studentCode, ucCode, classCode, cap);
     mainMenu();
 }
 

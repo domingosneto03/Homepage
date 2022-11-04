@@ -1,7 +1,6 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include <algorithm>
 #include "Application.h"
 #include "UniClass.h"
 #include "Student.h"
@@ -365,11 +364,15 @@ void Application::AddAddRequest(string studentCode, string ucCode, string classC
     newRequest.classCode = classCode;
     requests.push(newRequest);
 }
-/*
-void Application::AddChangeRequest() {
-    requests.push(Request());
+
+void Application::AddChangeRequest(string studentCode, string ucCode, string classCode, int cap) {
+    Request newRequest = Request();
+    newRequest.type = CHANGE;
+    newRequest.studentCode = studentCode;
+    newRequest.ucCode = ucCode;
+    newRequest.classCode = classCode;
+    requests.push(newRequest);
 }
-*/
 
 void Application::AddRemoveRequest(string studentCode, string ucCode) {
     Request newRequest = Request();
@@ -406,6 +409,17 @@ void Application::ResolveRequests() {
                 RemoveClass(requestNew.studentCode, requestNew.ucCode);
                 break;
             }
+            case CHANGE: {
+                int ocupation = OcupationPerUcClass(requestNew.ucCode, requestNew.classCode);
+                if (!AddClass(requestNew.studentCode, requestNew.ucCode, requestNew.classCode, ocupation,
+                              requestNew.cap)) {
+                    cout << "entrei" << endl;
+                    requestDenied.push_back(requestNew);
+                } else {
+                    RemoveClass(requestNew.studentCode, requestNew.ucCode);
+                }
+                break;
+            };
         }
     }
 }

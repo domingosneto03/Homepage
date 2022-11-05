@@ -175,19 +175,14 @@ string Application::FormatDate(float hour) {
     return finalHour;
 }
 
-//neste metodo criamos uma lista com os estudantes que tinham o up que o utilizador introduziu
 set<studentAndClass> Application::StudentSchedule(string studentCode) {
-    if (studentSchedule.size() > 0) {
-        return studentSchedule;
-    }
     set<studentAndClass> studentAndClasses = StudentClass();
-    set<studentAndClass> studentScheduleList = {};
+    set<studentAndClass> studentSchedule = {};
     for (auto studentAndClassesSet: studentAndClasses) {
         if (studentAndClassesSet.studentCode == studentCode) {
-            studentScheduleList.insert(studentAndClassesSet);
+            studentSchedule.insert(studentAndClassesSet);
         }
     }
-    studentSchedule=studentScheduleList;
     return studentSchedule;
 }
 
@@ -312,10 +307,8 @@ string Application::StudentName(string studentCode) {
 }
 
 bool Application::Overlapping(int weekday, double startHour, double duration, CLASS_TYPE classtype) {
-    vector<string> classTypeNames = {"T", "TP", "PL"};
     for (auto x: studentSchedule) {
-        if (x.weekDay == weekday && (classTypeNames[x.classType]=="TP" || classTypeNames[x.classType]=="PL") && (classTypeNames[classtype]=="TP" || classTypeNames[classtype]=="PL")) {
-            cout << "entrei no if" << endl;
+        if (x.weekDay == weekday && (x.classType==TP || x.classType==PL)) {
             if (startHour + duration > x.startHour and startHour < x.startHour + duration) {
                 return true;
             }
@@ -328,42 +321,47 @@ bool Application::Overlapping(int weekday, double startHour, double duration, CL
 }
 
 bool Application::AddClass(string studentCode, string ucCode, string classCode, int ocupation, int cap) {
-    bool sair = false;
-    int weekDay;
-    double startHour;
-    double duration;
-    CLASS_TYPE classtype;
+    int weekDay_tp;
+    double startHour_tp;
+    double duration_tp;
+    CLASS_TYPE classtype_tp;
+    int weekDay_t;
+    double startHour_t;
+    double duration_t;
+    CLASS_TYPE classtype_t;
+    studentSchedule = StudentSchedule(studentCode);
+
     for (auto x: studentsClassSet) {
-        if (x.ucCode == ucCode && x.classCode == classCode) {
-            weekDay = x.weekDay;
-            classtype = x.classType;
-            startHour = x.startHour;
-            duration = x.duration;
-            sair = true;
+        if((x.classType == TP || x.classType == PL) && x.classCode == classCode && x.ucCode == ucCode){
+            weekDay_tp = x.weekDay;
+            classtype_tp = x.classType;
+            startHour_tp = x.startHour;
+            duration_tp = x.duration;
         }
-        if (sair) break;
+        if (x.classType == T && x.classCode == classCode && x.ucCode == ucCode) {
+            weekDay_t = x.weekDay;
+            classtype_t = x.classType;
+            startHour_t = x.startHour;
+            duration_t = x.duration;
+        }
     }
 
     if (studentsClassSet.size() == 0) {
         StudentClass();
     }
 
-    if (studentSchedule.size() == 0) {
-        StudentSchedule(studentCode);
-    }
-
     if (ocupation >= cap) {
-        cout << "estou muito ocupado" << endl;
-        return false;
-    } else if (Overlapping(weekDay, startHour, duration, classtype)) {
-        cout << "deu overlaping" << endl;
+        cout << "ocupado" << endl;
         return false;
     }
-    cout << "vou adicionar" << endl;
-    cout << studentsClassSet.size() << endl;
+    if (Overlapping(weekDay_tp, startHour_tp, duration_tp, classtype_tp)) {
+        cout << "overlapping" << endl;
+        return false;
+    }
+    cout << "imprimir" << endl;
     string name = StudentName(studentCode);
-    studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay, classtype, startHour, duration});
-    cout << studentsClassSet.size() << endl;
+    studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay_tp, classtype_tp, startHour_tp, duration_tp});
+    studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay_t, classtype_t, startHour_t, duration_t});
     return true;
 }
 

@@ -25,7 +25,7 @@ void Menu::mainMenu() {
     cout << "Option:";
     cin >> option;
 
-    while (option < 1 || option > 5) {
+    while (option < 1 || option > 6) {
         cout << "This option is not valid, try again!" << endl;
         cout << "Option:";
         cin >> option;

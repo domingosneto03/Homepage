@@ -351,14 +351,11 @@ bool Application::AddClass(string studentCode, string ucCode, string classCode, 
     }
 
     if (ocupation >= cap) {
-        cout << "ocupado" << endl;
         return false;
     }
     if (Overlapping(weekDay_tp, startHour_tp, duration_tp, classtype_tp)) {
-        cout << "overlapping" << endl;
         return false;
     }
-    cout << "imprimir" << endl;
     string name = StudentName(studentCode);
     studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay_tp, classtype_tp, startHour_tp, duration_tp});
     studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay_t, classtype_t, startHour_t, duration_t});

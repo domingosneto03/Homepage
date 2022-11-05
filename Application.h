@@ -20,30 +20,31 @@ struct studentAndClass {
 
     friend bool operator<(studentAndClass a, studentAndClass b) {
         if (b.weekDay == a.weekDay) {
-            if (b.studentCode == a.studentCode) {
-                if (b.name == a.name) {
-                    if (b.classCode == a.classCode) {
-                        if (b.ucCode == a.ucCode) {
-                            if (b.classType == a.classType) {
-                                if (b.startHour == a.startHour) {
+            if (b.startHour == a.startHour) {
+                if (b.studentCode == a.studentCode) {
+                    if (b.name == a.name) {
+                        if (b.classCode == a.classCode) {
+                            if (b.ucCode == a.ucCode) {
+                                if (b.classType == a.classType) {
                                     return b.duration < a.duration;
+
                                 } else {
-                                    return b.startHour < a.startHour;
+                                    return b.classType < a.classType;
                                 }
                             } else {
-                                return b.classType < a.classType;
+                                return b.ucCode < a.ucCode;
                             }
                         } else {
-                            return b.ucCode < a.ucCode;
+                            return b.classCode < a.classCode;
                         }
                     } else {
-                        return b.classCode < a.classCode;
+                        return b.name < a.name;
                     }
                 } else {
-                    return b.name < a.name;
+                    return b.studentCode < a.studentCode;
                 }
             } else {
-                return b.studentCode < a.studentCode;
+                return b.startHour > a.startHour;
             }
         } else {
             return b.weekDay > a.weekDay;
@@ -99,18 +100,18 @@ struct ClassSchelude {
 
     friend bool operator<(ClassSchelude a, ClassSchelude b) {
         if (b.weekDay == a.weekDay) {
-            if (b.ucCode == a.ucCode) {
-                if (b.classType == a.classType) {
-                    if (b.startHour == a.startHour) {
+            if (b.startHour == a.startHour) {
+                if (b.ucCode == a.ucCode) {
+                    if (b.classType == a.classType) {
                         return b.duration < a.duration;
                     } else {
-                        return b.startHour < a.startHour;
+                        return b.classType < a.classType;
                     }
                 } else {
-                    return b.classType < a.classType;
+                    return b.ucCode < a.ucCode;
                 }
             } else {
-                return b.ucCode < a.ucCode;
+                return b.startHour > a.startHour;
             }
         } else {
             return b.weekDay > a.weekDay;
@@ -118,7 +119,9 @@ struct ClassSchelude {
     }
 };
 
-enum REQUEST_TYPE{ADD, CHANGE, REMOVE};
+enum REQUEST_TYPE {
+    ADD, CHANGE, REMOVE
+};
 
 struct Request {
     REQUEST_TYPE type;
@@ -309,8 +312,8 @@ public:
 
 private:
     set<studentAndClass> studentsClassSet = {};
-    set<UniClass*> uniClassSet = {};
-    set<Student*> studentSet = {};
+    set<UniClass *> uniClassSet = {};
+    set<Student *> studentSet = {};
     set<schedule> classesPerUcSet = {};
     set<studentAndClass> studentSchedule = {};
     set<ClassSchelude> classSchedule = {};

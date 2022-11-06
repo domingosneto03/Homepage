@@ -210,7 +210,7 @@ set<ClassSchelude> Application::ClassesSchedule(string classCode) {
             }
         }
     }
-    classSchedule=classScheduleList;
+    classSchedule = classScheduleList;
     return classSchedule;
 }
 
@@ -311,7 +311,7 @@ string Application::StudentName(string studentCode) {
 
 bool Application::Overlapping(int weekday, double startHour, double duration, CLASS_TYPE classtype) {
     for (auto x: studentSchedule) {
-        if (x.weekDay == weekday && (x.classType==TP || x.classType==PL)) {
+        if (x.weekDay == weekday && (x.classType == TP || x.classType == PL)) {
             if (startHour + duration > x.startHour and startHour < x.startHour + duration) {
                 return true;
             }
@@ -324,6 +324,7 @@ bool Application::Overlapping(int weekday, double startHour, double duration, CL
 }
 
 bool Application::AddClass(string studentCode, string ucCode, string classCode, int ocupation, int cap) {
+    bool teorica = false;
     int weekDay_tp;
     double startHour_tp;
     double duration_tp;
@@ -332,20 +333,31 @@ bool Application::AddClass(string studentCode, string ucCode, string classCode, 
     double startHour_t;
     double duration_t;
     CLASS_TYPE classtype_t;
+    int weekDay_t2=0;
+    double startHour_t2;
+    double duration_t2;
+    CLASS_TYPE classtype_t2;
     studentSchedule = StudentSchedule(studentCode);
 
     for (auto x: studentsClassSet) {
-        if((x.classType == TP || x.classType == PL) && x.classCode == classCode && x.ucCode == ucCode){
+        if ((x.classType == TP || x.classType == PL) && x.classCode == classCode && x.ucCode == ucCode) {
             weekDay_tp = x.weekDay;
             classtype_tp = x.classType;
             startHour_tp = x.startHour;
             duration_tp = x.duration;
         }
-        if (x.classType == T && x.classCode == classCode && x.ucCode == ucCode) {
+        if (x.classType == T && x.classCode == classCode && x.ucCode == ucCode && !teorica) {
             weekDay_t = x.weekDay;
             classtype_t = x.classType;
             startHour_t = x.startHour;
             duration_t = x.duration;
+            teorica=true;
+        }
+        if (x.classType == T && x.classCode == classCode && x.ucCode == ucCode && teorica) {
+            weekDay_t2 = x.weekDay;
+            classtype_t2 = x.classType;
+            startHour_t2 = x.startHour;
+            duration_t2 = x.duration;
         }
     }
 
@@ -362,6 +374,9 @@ bool Application::AddClass(string studentCode, string ucCode, string classCode, 
     string name = StudentName(studentCode);
     studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay_tp, classtype_tp, startHour_tp, duration_tp});
     studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay_t, classtype_t, startHour_t, duration_t});
+    if(weekDay_t2 != 0){
+        studentsClassSet.insert({studentCode, name, classCode, ucCode, weekDay_t2, classtype_t2, startHour_t2, duration_t2});
+    }
     return true;
 }
 
@@ -371,7 +386,7 @@ void Application::AddAddRequest(string studentCode, string ucCode, string classC
     newRequest.studentCode = studentCode;
     newRequest.ucCode = ucCode;
     newRequest.classCode = classCode;
-    newRequest.cap= cap;
+    newRequest.cap = cap;
     requests.push(newRequest);
 }
 
@@ -381,7 +396,7 @@ void Application::AddChangeRequest(string studentCode, string ucCode, string cla
     newRequest.studentCode = studentCode;
     newRequest.ucCode = ucCode;
     newRequest.classCode = classCode;
-    newRequest.cap= cap;
+    newRequest.cap = cap;
     requests.push(newRequest);
 }
 
@@ -422,8 +437,8 @@ void Application::ResolveRequests() {
 
             case CHANGE: {
                 int ocupation = OcupationPerUcClass(requestNew.ucCode, requestNew.classCode);
-                if (!AddClass(requestNew.studentCode, requestNew.ucCode, requestNew.classCode, ocupation,
-                              requestNew.cap)) {
+                RemoveClass(requestNew.studentCode, requestNew.ucCode);
+                if (!AddClass(requestNew.studentCode, requestNew.ucCode, requestNew.classCode, ocupation,requestNew.cap)) {
                     requestDenied.push_back(requestNew);
                 } else {
                     RemoveClass(requestNew.studentCode, requestNew.ucCode);
@@ -435,9 +450,9 @@ void Application::ResolveRequests() {
 }
 
 void Application::saveStudents() {
-    set <Ficheiro> tirarduplicados = {};
+    set<Ficheiro> tirarduplicados = {};
 
-    for (auto  x: studentsClassSet) {
+    for (auto x: studentsClassSet) {
         Ficheiro ficheiro;
         ficheiro.studentCode = x.studentCode;
         ficheiro.name = x.name;
@@ -449,9 +464,9 @@ void Application::saveStudents() {
     std::ofstream fileTXT;
 
     fileTXT.open(fileNameTXT, std::ofstream::out | std::ofstream::trunc); //clearfile
-    fileTXT << "StudentCode," <<  "StudentName," << "UcCode," << "ClassCode" << "\n";
+    fileTXT << "StudentCode," << "StudentName," << "UcCode," << "ClassCode" << "\n";
 
-    for (auto x : tirarduplicados) {
+    for (auto x: tirarduplicados) {
         fileTXT << x.studentCode << "," << x.name << "," << x.ucCode << "," << x.classCode << "\n";
     }
     fileTXT.close();

@@ -6,7 +6,7 @@
 #include "bst.h"
 #include <map>
 #include <set>
-#include "bits/stdc++.h"
+
 
 struct studentAndClass {
     string studentCode;
@@ -186,44 +186,51 @@ public:
 
     /**
     * Reads the file classes.csv and stores it in a set, using the UniClass constructor.
+    * Complexity : O(1)
     * @return set<UniClass*>
     */
     set<UniClass *> readUniclasses();
 
     /**
     * Reads the file students_classes.csv and stores it in a set, using the Student constructor.
+    * Complexity : O(n)
     * @return set<UniClass*>
     */
     set<Student *> readStudents();
 
     /**
     * Reads the file classes_per_uc.csv and stores it in a set, using the schedule struct.
+    * Complexity : O(n)
     * @return set<UniClass*>
     */
     set<schedule> readClassesPerUC();
 
     /**
     * Joins the sets from the functions readUniclasses and readStudents into a single set, to join all the information about schedules and students.
+    * Complexity : O(n^3)
     * @return set<studentAndClass>
     */
     set<studentAndClass> StudentClass();
 
     /**
-    * Goes through the set of the function StudentClass and adds to a new set (without duplicates) the student's classes that the user entered.
-    * @param studentCode
-    * @return set<UniClass*>
-    */
-    set<studentAndClass> StudentSchedule(string studentCode);
-
-    /**
     * Puts the time in the correct format (hh:mm).
+    * Complexity : O(1)
     * @param hour
     * @return hourStart
     */
     string FormatDate(float hour);
 
     /**
+    * Goes through the set of the function StudentClass and adds to a new set (without duplicates) the student's classes that the user entered.
+    * Complexity : O(n)
+    * @param studentCode
+    * @return set<UniClass*>
+    */
+    set<studentAndClass> StudentSchedule(string studentCode);
+
+    /**
     * Creates a set with all the lessons in a class, entered by the use.
+    * Complexity : O(n^2)
     * @param classCode
     * @return set<studentAndClass>
     */
@@ -231,12 +238,14 @@ public:
 
     /**
     * Create a bst with all students and their number of Ucs
+    * Complexity : O(n^2)
     * @return BST<StudentUcs>
     */
     BST<StudentUcs> StudentUC();
 
     /**
     * Creates a bst with all students of a certain year (1, 2 or 3).
+    * Complexity : O(n^2)
     * @param ano
     * @return  BST<pair<string, string>>
     */
@@ -244,6 +253,7 @@ public:
 
     /**
     * Creates a bst with all students enrolled in a given Uc.
+    * Complexity : O(n^2)
     * @param uccode
     * @return BST<pair<string, string>>
     */
@@ -251,6 +261,7 @@ public:
 
     /**
     * Creates a bst with all students enrolled in a specific Uc in a specific class.
+    * Complexity : O(n^2)
     * @param uccode
     * @param turmaFinal
     * @return set<UniClass*>
@@ -259,6 +270,7 @@ public:
 
     /**
     * Removes a class from a student.
+    * Complexity : O(n)
     * @param studentCode
     * @param uccode
     */
@@ -266,13 +278,26 @@ public:
 
     /**
     * Gets a name from student using their code.
+    * Complexity : O(n)
     * @param studentCode
     * @return name
     */
     string StudentName(string studentCode);
 
     /**
+    * checks for overlapping lessons .
+    * Complexity : O(n)
+    * @param weekday
+    * @param startHour
+    * @param duration
+    * @param classType
+    * @return bool
+    */
+    bool Overlapping(int weekday, double startHour, double duration, CLASS_TYPE classType);
+
+    /**
     * Add a class to a student.
+    * Complexity : O(n)
     * @param studentCode
     * @param ucCode
     * @param classCode
@@ -283,17 +308,8 @@ public:
     bool AddClass(string studentCode, string ucCode, string classCode, int ocupation, int Cap);
 
     /**
-    * checks for overlapping lessons .
-    * @param weekday
-    * @param startHour
-    * @param duration
-    * @param classType
-    * @return bool
-    */
-    bool Overlapping(int weekday, double startHour, double duration, CLASS_TYPE classType);
-
-    /**
     * Executes all requests from the queue and adds the ones that cannot be executed to an array.
+    * Complexity : O(n)
     * @param studentCode
     * @param uccode
     */
@@ -301,6 +317,7 @@ public:
 
     /**
     * Adds a request to add a class to the queue.
+    * Complexity : O(1)
     * @param studentCode
     * @param ucCode
     * @param classCode
@@ -310,6 +327,7 @@ public:
 
     /**
     * Adds a request to change a class to the queue.
+    * Complexity : O(1)
     * @param studentCode
     * @param ucCode
     * @param classCode
@@ -319,6 +337,7 @@ public:
 
     /**
     * Adds a request to remove a class to the queue.
+    * Complexity : O(1)
     * @param studentCode
     * @param ucCode
     */
@@ -326,6 +345,7 @@ public:
 
     /**
     * Calculates the occupation of a class.
+    * Complexity : O(n)
     * @param ucCode
     * @param classCode
     * @return ocupation
@@ -334,6 +354,7 @@ public:
 
     /**
     * Saves all changes to a file.
+    * Complexity : O(n)
     */
     void saveStudents();
 

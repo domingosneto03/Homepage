@@ -7,6 +7,9 @@
 #include "bst.h"
 #include <iterator>
 #include <set>
+#include <fstream>
+#include <sstream>
+
 
 using namespace std;
 

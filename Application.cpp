@@ -442,7 +442,7 @@ void Application::saveStudents() {
         ficheiro.classCode = x.classCode;
         tirarduplicados.insert(ficheiro);
     }
-    std::string fileNameTXT = "../schedule/student_classes_mod.txt";
+    std::string fileNameTXT = "../schedule/students_classes_mod.txt";
     std::ofstream fileTXT;
 
     fileTXT.open(fileNameTXT, std::ofstream::out | std::ofstream::trunc); //clearfile

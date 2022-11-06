@@ -1,12 +1,6 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-Menu -- Application
-BST --> BinaryNode: <Comparable->Comparable>
-Application -- BST
-Application -- Student
-Application -- UniClass
-
 
 class Application {
     - uniClassSet: set<UniClass*>
@@ -42,6 +36,7 @@ class Application {
     + AddChangeRequest()
     + AddRemoveRequest()
     + OcupationPerUcClass()
+    + saveStudents()
 }
 
 class Menu {

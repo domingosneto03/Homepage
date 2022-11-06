@@ -119,6 +119,29 @@ struct ClassSchelude {
     }
 };
 
+struct Ficheiro {
+    string studentCode;
+    string name;
+    string ucCode;
+    string classCode;
+
+    friend bool operator<(Ficheiro a, Ficheiro b) {
+        if (b.studentCode == a.studentCode) {
+            if (b.name == a.name) {
+                if (b.ucCode == a.ucCode) {
+                    return b.classCode > a.classCode;
+                } else {
+                    return b.ucCode > a.ucCode;
+                }
+            } else {
+                return b.name > a.name;
+            }
+        } else {
+            return b.studentCode > a.studentCode;
+        }
+    }
+};
+
 enum REQUEST_TYPE {
     ADD, CHANGE, REMOVE
 };
@@ -309,6 +332,10 @@ public:
     */
     int OcupationPerUcClass(string ucCode, string classCode);
 
+    /**
+    * Saves all changes to a file.
+    */
+    void saveStudents();
 
 private:
     set<studentAndClass> studentsClassSet = {};

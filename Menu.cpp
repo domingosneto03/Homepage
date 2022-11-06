@@ -49,6 +49,7 @@ void Menu::mainMenu() {
             mainMenu();
             break;
         case 6:
+            app.saveStudents();
             exit(-1);
     }
 }

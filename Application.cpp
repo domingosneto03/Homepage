@@ -430,3 +430,26 @@ void Application::ResolveRequests() {
         }
     }
 }
+
+void Application::saveStudents() {
+    set <Ficheiro> tirarduplicados = {};
+
+    for (auto  x: studentsClassSet) {
+        Ficheiro ficheiro;
+        ficheiro.studentCode = x.studentCode;
+        ficheiro.name = x.name;
+        ficheiro.ucCode = x.ucCode;
+        ficheiro.classCode = x.classCode;
+        tirarduplicados.insert(ficheiro);
+    }
+    std::string fileNameTXT = "../schedule/student_classes_mod.txt";
+    std::ofstream fileTXT;
+
+    fileTXT.open(fileNameTXT, std::ofstream::out | std::ofstream::trunc); //clearfile
+    fileTXT << "StudentCode," <<  "StudentName," << "UcCode," << "ClassCode" << "\n";
+
+    for (auto x : tirarduplicados) {
+        fileTXT << x.studentCode << "," << x.name << "," << x.ucCode << "," << x.classCode << "\n";
+    }
+    fileTXT.close();
+}

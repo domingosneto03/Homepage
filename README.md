@@ -1,4 +1,4 @@
-# ProjectAED_G24
+# Homepage
 
 The goal of this project is to create a program to manage leic student's schedules.
 
